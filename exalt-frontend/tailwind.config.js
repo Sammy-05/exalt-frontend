@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        georgia: ['Georgia', 'serif'],
+        roboto: ['Roboto', 'sans-serif'],
+      },
+    },
     colors: {
       navyblue: "#051C2C",
       black: "#060200",
