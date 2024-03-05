@@ -2,11 +2,14 @@ import image1 from "../assets/cmeeting1.png";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const LeftFiller = (props) => {
+const RightFiller = (props) => {
   const { heading, subheading, text, buttontext } = props;
 
   return (
     <div className="bg-navyblue w-full text-white flex text-left">
+      <div className="w-1/2 h-[520px]">
+        <img src={image1} alt="meeting" className="w-full h-full" />
+      </div>
       <div className="w-1/2 flex items-center">
         <div className="mx-20 py-10">
           <div className="font-georgia text-[40px]">
@@ -33,12 +36,8 @@ const LeftFiller = (props) => {
           ) : null}
         </div>
       </div>
-
-      <div className="w-1/2 h-[520px]">
-        <img src={image1} alt="meeting" className="w-full h-full" />
-      </div>
     </div>
   );
 };
 
-export default LeftFiller;
+export default RightFiller;
