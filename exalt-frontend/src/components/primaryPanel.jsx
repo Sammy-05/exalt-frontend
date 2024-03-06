@@ -1,4 +1,4 @@
-import background from "../assets/homeBackground1.jpg";
+import background from "../assets/homeBackground3.jpg";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -6,14 +6,15 @@ const primaryPanel = (props) => {
   const { heading, text, buttontext } = props;
 
   return (
-    <div className=" relative w-full h-[800px]  ">
+    <div className=" relative w-full h-screen">
+      <div className="h-screen w-full bg-navyblue absolute opacity-70"></div>
       <img src={background} alt="meeting" className="w-full h-full object-cover " />
       <div className="mx-20 absolute inset-0 flex flex-col justify-center items-center text-white text-left font-bold">
         <div >
-          <div className="font-georgia text-7xl w-7/12">
+          <div className="font-georgia text-6xl w-2/3 leading-normal">
             <h1>{heading}</h1>
           </div>
-          <div className="font-roboto pt-12 text-4xl font-normal w-1/2">
+          <div className="font-roboto pt-10 text-4xl font-light w-2/3">
             <p>{text}</p>
           </div>
           {buttontext ? (

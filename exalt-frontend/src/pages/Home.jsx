@@ -1,11 +1,13 @@
 import LeftFiller from '../components/LeftFiller';
 import RightFiller from '../components/RightFiller';
+import CenterFiller from '../components/centerFiller';
 import Companies from '../components/companies';
 import Insights from '../components/insights';
 import MembersPanel from '../components/membersPanel';
 import PrimaryPanel from '../components/primaryPanel';
 import SecondaryPanel from '../components/secondaryPanel';
 import ServicesPanel from '../components/servicesPanel';
+
 
 const Home = () => {
   return (
@@ -35,6 +37,13 @@ const Home = () => {
         buttontext="Book a Call"
       />
       <Insights/>
+      <CenterFiller
+        heading="Ready to Elevate Your Business with Global Expertise?"
+        text="Let’s discuss how we can tailor our services to your unique needs."
+        buttontext="Get Started"
+        pictureHeight="500"
+      />
+
     </div>
   );
 };

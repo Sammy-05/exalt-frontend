@@ -3,24 +3,24 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const RightFiller = (props) => {
-  const { heading, subheading, text, buttontext } = props;
+  const { heading, subheading, text, buttontext, pictureHeight} = props;
 
   return (
     <div className="bg-navyblue w-full text-white flex text-left">
-      <div className="w-1/2 h-[620px]">
+      <div className={`w-1/2 h-[${pictureHeight}px]`}>
         <img src={image1} alt="meeting" className="w-full h-full" />
       </div>
       <div className="w-1/2 flex items-center">
         <div className="mx-20 py-10">
-          <div className="font-georgia text-[40px]">
+          <div className="font-georgia text-heading">
             <h1>{heading}</h1>
           </div>
           {subheading ? (
-            <div className="text-[22px] font-thin">
+            <div className="text-subheading font-thin">
               <p>{subheading}</p>
             </div>
           ) : null}
-          <div className="pt-12 text-lg">
+          <div className="pt-12 text-p">
             <p>{text}</p>
           </div>
           {buttontext ? (

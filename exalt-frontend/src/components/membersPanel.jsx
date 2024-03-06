@@ -1,6 +1,4 @@
 import memberPhoto1 from '../assets/memberPhoto1.png';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MembersPanel = () => {
   //   const { heading, subheading, text, buttontext } = props;
