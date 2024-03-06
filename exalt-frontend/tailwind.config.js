@@ -8,11 +8,13 @@ module.exports = {
         georgia: ['Georgia', 'serif'],
         roboto: ['Roboto', 'sans-serif'],
       },
-      fontWeight: {
-        normal: 400,
-        medium: 500,
-        bold: 700,
-        // Add any other font weights you need here
+      fontSize: {
+        'p': '18px',
+        'subheading': '22px',
+        'heading': '40px',
+        'mainheading': '50px',
+        'button': '20px',
+        // Add more font sizes as needed
       },
     },
     colors: {
