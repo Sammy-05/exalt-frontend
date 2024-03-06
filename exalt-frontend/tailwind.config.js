@@ -8,6 +8,12 @@ module.exports = {
         georgia: ['Georgia', 'serif'],
         roboto: ['Roboto', 'sans-serif'],
       },
+      fontWeight: {
+        normal: 400,
+        medium: 500,
+        bold: 700,
+        // Add any other font weights you need here
+      },
     },
     colors: {
       navyblue: "#051C2C",

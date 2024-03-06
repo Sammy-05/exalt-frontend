@@ -7,7 +7,7 @@ const RightFiller = (props) => {
 
   return (
     <div className="bg-navyblue w-full text-white flex text-left">
-      <div className="w-1/2 h-[520px]">
+      <div className="w-1/2 h-[620px]">
         <img src={image1} alt="meeting" className="w-full h-full" />
       </div>
       <div className="w-1/2 flex items-center">
