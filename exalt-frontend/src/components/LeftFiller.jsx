@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const LeftFiller = (props) => {
   const { heading, subheading, text, buttontext, pictureHeight } = props;
 
+
+
   return (
     <div className="bg-navyblue w-full text-white flex text-left">
       <div className="w-1/2 flex items-center">

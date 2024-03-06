@@ -39,7 +39,7 @@ const Home = () => {
       <Insights/>
       <CenterFiller
         heading="Ready to Elevate Your Business with Global Expertise?"
-        text="Let’s discuss how we can tailor our services to your unique needs."
+        text="Let's discuss how we can tailor our services to your unique needs."
         buttontext="Get Started"
         pictureHeight="500"
       />
