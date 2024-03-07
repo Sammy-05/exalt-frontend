@@ -28,7 +28,7 @@ const Home = () => {
         // subheading="A place to learn and grow"
         text="Why Exalt Solutions? Because we understand the pulse of global business. Our expertise lies in harnessing the potential of the global south, offering cost-effective solutions without compromising on quality. With Exalt Solutions, experience seamless integration of international talent into your business processes."
         buttontext="Book a Call"
-        pictureHeight = "500"
+        pageName="home"
       />
       <Companies />
       <RightFiller
@@ -36,14 +36,13 @@ const Home = () => {
         // subheading="A place to learn and grow"
         text="Why Exalt Solutions? Because we understand the pulse of global business. Our expertise lies in harnessing the potential of the global south, offering cost-effective solutions without compromising on quality. With Exalt Solutions, experience seamless integration of international talent into your business processes."
         buttontext="Book a Call"
-        pictureHeight = "500"
+        pageName="home"
       />
       <Insights/>
       <CenterFiller
         heading="Ready to Elevate Your Business with Global Expertise?"
         text="Let's discuss how we can tailor our services to your unique needs."
-        buttontext="Book a Meeting Now"
-        pictureHeight = "100"
+        buttontext="Get Started"
       />
 
     </div>
