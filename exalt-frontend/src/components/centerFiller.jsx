@@ -3,18 +3,18 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CenterFiller = (props) => {
-  const { heading, text, buttontext, pictureHeight } = props;
+  const { heading, text, buttontext } = props;
 
   return (
-    <div className={`h-[${pictureHeight}px] absolute w-full `}>
-      <div className={`h-[${pictureHeight}px] absolute w-full `}>
+    <div className={`h-[500px] absolute w-full `}>
+      <div className={`h-[500px] absolute w-full `}>
         <img
           src={background}
           alt="meeting"
           className="w-full h-full object-cover"
         />
       </div>
-      <div className={`h-[${pictureHeight}px] w-2/5 ml-40 bg-navyblue opacity-80 absolute`}></div>
+      <div className={`h-[500px] w-2/5 ml-40 bg-navyblue opacity-80 absolute`}></div>
       <div className="mx-10 text-white absolute w-1/3 ml-48 flex flex-col justify-center h-full">
         <div className="font-georgia text-heading">
           <h1>{heading}</h1>
