@@ -85,35 +85,35 @@ const About = () => {
         heading="Cores Values"
         subheading="Rooted in Integrity, Driven by Innovation"
         text="Why Exalt Solutions? Because we understand the pulse of global business. Our expertise lies in harnessing the potential of the global south, offering cost-effective solutions without compromising on quality. With Exalt Solutions, experience seamless integration of international talent into your business processes."
-        pictureHeight="500"
+        pageName="about"
         />
       <RightFiller
         heading="Vision Statement"
         subheading="A Vision for Global Business Synergy"
         text="Our vision is to become a leading force in the outsourcing industry, seamlessly integrating businesses from diverse markets. We aspire to be the bridge that connects ambitions to realities, facilitating growth and success in new and flourishing markets."
         // buttontext="Book a Call"
-        pictureHeight="500"
+        pageName="about"
         />
       <LeftFiller
         heading="Our Mission"
         subheading="Empowering Global Businesses, One Project at a Time"
         text="Exalt Solutions is dedicated to empowering businesses with exceptional outsourcing services. From insightful market research to cutting-edge data analysis and comprehensive software solutions, we tailor each service to meet and exceed the unique demands of our clients."
         // buttontext="Book a Call"
-        pictureHeight="500"
+        pageName="about"
         />
       <RightFiller
         heading="Our Strategic Approach"
         subheading="Client-Centric, Transparent, and Efficient"
         text="Our approach is grounded in a deep understanding of our clients' needs. We embrace transparency and efficiency at every stage, ensuring a streamlined and satisfying experience from the initial engagement to project completion."
         buttontext="Unveil Our Process"
-        pictureHeight="500"
+        pageName="about"
         />
       <LeftFiller
         heading="Impact and Legacy"
         subheading="Creating Enduring Value and Relationships"
         text="Our journey is marked by numerous success stories, from aiding companies in establishing their foothold in the UAE and Dubai to long-term collaborations across various sectors. Our true impact lies in the enduring relationships and mutual growth we foster with our clients."
         buttontext="Book a Call"
-        pictureHeight="500"
+        pageName="about"
         />
     </div>
   );
