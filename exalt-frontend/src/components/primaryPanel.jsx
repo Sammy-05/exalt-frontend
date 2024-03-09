@@ -5,6 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const primaryPanel = (props) => {
   const { heading, text, buttontext } = props;
 
+  const handleButtonClick = () => {
+    const destination = window.innerHeight;
+    window.scrollTo({
+      top: destination,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <div className=" relative w-full ">
       <div className=" w-full h-screen bg-navyblue absolute opacity-70"></div>
@@ -23,7 +31,7 @@ const primaryPanel = (props) => {
           </div>
           {buttontext ? (
             <div className="pt-20">
-              <button className="font-georgia font-bold hover:bg-violet bg-lightblue text-white px-7 py-3 flex  items-center">
+              <button onClick={handleButtonClick} className="font-georgia font-bold hover:bg-violet bg-lightblue text-white px-7 py-3 flex  items-center">
                 {buttontext}
                 <FontAwesomeIcon
                   icon={faArrowRight}

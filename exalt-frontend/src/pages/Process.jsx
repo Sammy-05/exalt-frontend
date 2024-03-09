@@ -12,7 +12,9 @@ import pic6 from "../assets/process/pic6.jpg"
 import pic7 from "../assets/process/pic7.jpg"
 
 
+
 const Process = () => {
+
   return (
     <div>
       <TertiaryPanel

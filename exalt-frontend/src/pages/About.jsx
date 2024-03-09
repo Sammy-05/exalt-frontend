@@ -5,6 +5,14 @@ import SecondaryPanel from "../components/secondaryPanel";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
+import pic1 from "../assets/about/pic1.jpg";
+import pic2 from "../assets/about/pic2.jpg";
+import pic3 from "../assets/about/pic3.jpg";
+import pic4 from "../assets/about/pic4.jpg";
+import pic5 from "../assets/about/pic5.jpg";
+
 
 const About = () => {
   // useEffect(() => {
@@ -36,6 +44,8 @@ const About = () => {
   const clientsCounterRef = useRef(null);
   const expertsCounterRef = useRef(null);
   const entriesCounterRef = useRef(null);
+
+   const navigate = useNavigate();
 
   useEffect(() => {
     const animateValue = (element, start, end, duration) => {
@@ -160,6 +170,7 @@ const About = () => {
         subheading="Rooted in Integrity, Driven by Innovation"
         text="Why Exalt Solutions? Because we understand the pulse of global business. Our expertise lies in harnessing the potential of the global south, offering cost-effective solutions without compromising on quality. With Exalt Solutions, experience seamless integration of international talent into your business processes."
         pageName="about"
+        picName={pic1}
       />
       <RightFiller
         heading="Vision Statement"
@@ -167,6 +178,7 @@ const About = () => {
         text="Our vision is to become a leading force in the outsourcing industry, seamlessly integrating businesses from diverse markets. We aspire to be the bridge that connects ambitions to realities, facilitating growth and success in new and flourishing markets."
         // buttontext="Book a Call"
         pageName="about"
+        picName={pic2}
       />
       <LeftFiller
         heading="Our Mission"
@@ -174,6 +186,7 @@ const About = () => {
         text="Exalt Solutions is dedicated to empowering businesses with exceptional outsourcing services. From insightful market research to cutting-edge data analysis and comprehensive software solutions, we tailor each service to meet and exceed the unique demands of our clients."
         // buttontext="Book a Call"
         pageName="about"
+        picName={pic3}
       />
       <RightFiller
         heading="Our Strategic Approach"
@@ -181,6 +194,8 @@ const About = () => {
         text="Our approach is grounded in a deep understanding of our clients' needs. We embrace transparency and efficiency at every stage, ensuring a streamlined and satisfying experience from the initial engagement to project completion."
         buttontext="Unveil Our Process"
         pageName="about"
+        picName={pic4}
+        onclickFunction={"/process"}
       />
       <LeftFiller
         heading="Impact and Legacy"
@@ -188,6 +203,7 @@ const About = () => {
         text="Our journey is marked by numerous success stories, from aiding companies in establishing their foothold in the UAE and Dubai to long-term collaborations across various sectors. Our true impact lies in the enduring relationships and mutual growth we foster with our clients."
         buttontext="Book a Call"
         pageName="about"
+        picName={pic5}
       />
     </div>
   );
