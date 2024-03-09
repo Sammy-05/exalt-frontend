@@ -7,11 +7,11 @@ const primaryPanel = (props) => {
 
   return (
     <div className=" relative w-full ">
-      <div className=" w-full bg-navyblue absolute opacity-70"></div>
+      <div className=" w-full h-screen bg-navyblue absolute opacity-70"></div>
       <img
         src={background}
         alt="meeting"
-        className="w-full h-[800px] object-cover "
+        className="w-full h-screen object-cover "
       />
       <div className="mx-20 absolute inset-0 flex flex-col justify-center items-center text-white text-left font-bold">
         <div>

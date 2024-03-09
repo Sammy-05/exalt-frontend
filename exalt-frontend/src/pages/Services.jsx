@@ -3,7 +3,6 @@ import LeftFiller from '../components/LeftFiller';
 import CenterFiller from '../components/centerFiller';
 
 import ServicesPrimaryPanel from '../components/servicesPrimaryPanel';
-import ServicesPanel from '../components/servicesPanel';
 import ServicesSecondaryPanel from '../components/servicesSecondaryPanel copy';
 import ServicesMembersPanel from '../components/servicesMembersPanel';
 
@@ -24,18 +23,15 @@ const Services = () => {
       <ServicesMembersPanel />
       <LeftFiller
         heading="Tailored Services for Unique Business Requirements"
-        // subheading="A place to learn and grow"
         text="Don’t see exactly what you need? At Exalt Solutions, we pride ourselves on flexibility and customization. Reach out to us to discuss how we can tailor our services to meet your unique business challenges."
         buttontext="Book a Call"
-        pageName="home"
+        pageName="services"
       />
 
       <CenterFiller
         heading="Empower Your Business with Expert Outsourcing"
-        // subheading="A place to learn and grow"
         text="Contact us today to learn more about how we can support your growth."
         buttontext="Get Started"
-        pageName="home"
       />
     </div>
   );

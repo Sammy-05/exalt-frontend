@@ -18,6 +18,7 @@ module.exports = {
       },
     },
     colors: {
+      asterisk:"FF0000",
       navyblue: "#051C2C",
       black: "#060200",
       lightblue: "#00A9F4",

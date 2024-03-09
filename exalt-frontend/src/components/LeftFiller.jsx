@@ -3,12 +3,13 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const LeftFiller = (props) => {
-  const { heading, subheading, text, buttontext, pageName } = props;
+  const { heading, subheading, text, buttontext, pageName, picName } = props;
 
   const pageNames = {
     "about": "h-[500px]",
     "home": "h-[600px]",
-    "process": "h-[400px]"
+    "process": "h-[400px]",
+    "services": "h-[500px]",
   }
 
   return (
@@ -40,7 +41,7 @@ const LeftFiller = (props) => {
         </div>
       </div>
       <div className={`w-1/2 ${pageNames[pageName]}`}>
-        <img src={image1} alt="meeting" className="w-full h-full" />
+        <img src={picName} alt="meeting" className="w-full h-full object-cover" />
       </div>
     </div>
   );

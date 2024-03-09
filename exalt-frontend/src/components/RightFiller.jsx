@@ -1,20 +1,21 @@
-import image1 from "../assets/cmeeting1.png";
+// import image1 from "../assets/cmeeting1.png";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const RightFiller = (props) => {
-  const { heading, subheading, text, buttontext, pageName} = props;
+  const { heading, subheading, text, buttontext, pageName, picName} = props;
 
   const pageNames = {
     "about": "h-[500px]",
     "home": "h-[600px]",
-    "process": "h-[400px]"
+    "process": "h-[400px]",
+    "services": "h-[500px]",
   }
-
+  
   return (
     <div className="bg-navyblue w-full text-white flex text-left">
       <div className={`w-1/2 ${pageNames[pageName]}`}>
-        <img src={image1} alt="meeting" className="w-full h-full" />
+        <img src={picName} alt="meeting" className="w-full h-full object-cover" />
       </div>
       <div className="w-1/2 flex items-center">
         <div className="mx-20 py-10">
