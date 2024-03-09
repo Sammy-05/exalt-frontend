@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
+import Links from "../assets/links.json"
+
 import pic1 from "../assets/about/pic1.jpg";
 import pic2 from "../assets/about/pic2.jpg";
 import pic3 from "../assets/about/pic3.jpg";
@@ -45,8 +47,6 @@ const About = () => {
   const expertsCounterRef = useRef(null);
   const entriesCounterRef = useRef(null);
 
-   const navigate = useNavigate();
-
   useEffect(() => {
     const animateValue = (element, start, end, duration) => {
       let startTimestamp = null;
@@ -66,6 +66,7 @@ const About = () => {
       threshold: 0.5, // When 50% of the element is visible
     };
 
+  
     const handleIntersect = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -90,6 +91,11 @@ const About = () => {
       observer.disconnect(); // Cleanup when component unmounts
     };
   }, []);
+
+  const handleButtonClick = (url) => {
+    // open the url in the new tab
+    window.open(url, '_blank');
+  };
 
   return (
     <div className="">
@@ -156,7 +162,7 @@ const About = () => {
         </div>
 
         <div className="flex justify-center">
-          <button className="font-georgia font-bold hover:bg-violet bg-navyblue text-white px-5 rounded-xl py-2 flex border-2 border-white items-center">
+          <button onClick={() => handleButtonClick(Links.Calendly)} className="font-georgia font-bold hover:bg-violet bg-navyblue text-white px-5 rounded-xl py-2 flex border-2 border-white items-center">
             Start Your Journey With Us
             <FontAwesomeIcon
               icon={faArrowRight}
@@ -204,6 +210,7 @@ const About = () => {
         buttontext="Book a Call"
         pageName="about"
         picName={pic5}
+        onclickFunction="call"
       />
     </div>
   );

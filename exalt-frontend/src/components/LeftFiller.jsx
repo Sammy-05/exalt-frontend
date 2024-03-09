@@ -1,9 +1,11 @@
 import image1 from "../assets/cmeeting1.png";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
+import Links from "../assets/links.json";
 
 const LeftFiller = (props) => {
-  const { heading, subheading, text, buttontext, pageName, picName } = props;
+  const { heading, subheading, text, buttontext, pageName, picName, onclickFunction } = props;
 
   const pageNames = {
     "about": "h-[500px]",
@@ -11,6 +13,22 @@ const LeftFiller = (props) => {
     "process": "h-[400px]",
     "services": "h-[500px]",
   }
+
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    // check if onclick function is either one of about home process services or blogs:
+    // if it is, then navigate to that page
+    // else, call the onclick function
+    if (
+      onclickFunction === "call" 
+    ) {
+      window.open(Links.Calendly, "_blank");
+    } else {
+      window.scrollTo(0, 0);
+      navigate(onclickFunction);
+    }
+  };
 
   return (
     <div className="bg-navyblue w-full text-white flex text-left">
@@ -29,7 +47,7 @@ const LeftFiller = (props) => {
           </div>
           {buttontext ? (
             <div className="pt-20">
-              <button className="font-georgia font-bold hover:bg-violet bg-navyblue text-white px-5 rounded-xl py-2 flex border-2 border-white items-center">
+              <button onClick={handleNavigate} className="font-georgia font-bold hover:bg-violet bg-navyblue text-white px-5 rounded-xl py-2 flex border-2 border-white items-center">
                 {buttontext}
                 <FontAwesomeIcon
                   icon={faArrowRight}

@@ -1,9 +1,15 @@
 import background from "../assets/homeBackground3.jpg";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Links from "../assets/links.json";
+
 
 const CenterFiller = (props) => {
   const { heading, text, buttontext } = props;
+
+  const handleButtonClick = () => {
+    window.open(Links.Calendly, "_blank");   
+  };
 
   return (
     <div className={`h-[500px] absolute w-full `}>
@@ -25,7 +31,7 @@ const CenterFiller = (props) => {
         </div>
         {buttontext ? (
           <div className="pt-20">
-            <button className="font-georgia font-bold hover:bg-violet text-white px-5 rounded-xl py-2 flex border-2 border-white items-center">
+            <button onClick={handleButtonClick} className="font-georgia font-bold hover:bg-violet text-white px-5 rounded-xl py-2 flex border-2 border-white items-center">
               {buttontext}
               <FontAwesomeIcon
                 icon={faArrowRight}
