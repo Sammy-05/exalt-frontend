@@ -7,11 +7,14 @@ import MembersPanel from '../components/membersPanel';
 import PrimaryPanel from '../components/primaryPanel';
 import SecondaryPanel from '../components/secondaryPanel';
 import ServicesPanel from '../components/servicesPanel';
+import Navbar from '../components/Navbar';
+import Footer from "../components/Footer";
 
 
 const Home = () => {
   return (
     <div className="">
+      <Navbar />
       <PrimaryPanel
         heading="Empowering Your Business with Global Talent"
         text="Outsource with Excellence, Deliver with Confidence."
@@ -44,6 +47,7 @@ const Home = () => {
         text="Let's discuss how we can tailor our services to your unique needs."
         buttontext="Get Started"
       />
+      <Footer />
 
     </div>
   );

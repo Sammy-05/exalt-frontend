@@ -1,12 +1,37 @@
 import background from '../assets/homeBackground3.jpg';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
 
-const primaryPanel = (props) => {
+const PrimaryPanel = (props) => {
   const { heading, text, buttontext } = props;
 
+  const [navbarHeight, setNavbarHeight] = useState(0);
+
+  useEffect(() => {
+    // Function to get the height of the Navbar component
+    const getNavbarHeight = () => {
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        const navbarHeight = navbar.offsetHeight;
+        setNavbarHeight(navbarHeight);
+
+        console.log('Navbar Height:', navbarHeight);
+        // You can use navbarHeight as needed
+      }
+    };
+
+    // Call the function when the component mounts
+    getNavbarHeight();
+
+    // Optionally, you can add cleanup code if needed
+    return () => {
+      // Cleanup code
+    };
+  }, []);
+
   const handleButtonClick = () => {
-    const destination = window.innerHeight;
+    const destination = window.innerHeight + navbarHeight;
     window.scrollTo({
       top: destination,
       behavior: "smooth"
@@ -46,4 +71,4 @@ const primaryPanel = (props) => {
   );
 };
 
-export default primaryPanel;
+export default PrimaryPanel;

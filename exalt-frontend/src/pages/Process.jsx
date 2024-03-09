@@ -2,6 +2,8 @@ import TertiaryPanel from "../components/tertiaryPanel";
 import LeftFiller from "../components/LeftFiller";
 import RightFiller from "../components/RightFiller";
 import CenterFiller from "../components/centerFiller";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import pic1 from "../assets/process/pic1.jpg"
 import pic2 from "../assets/process/pic2.jpg"
@@ -17,6 +19,7 @@ const Process = () => {
 
   return (
     <div>
+      <Navbar />
       <TertiaryPanel
         heading="Streamlined Process for Superior Results"
         subheading="Efficient, Transparent, and Tailored to Your Needs"
@@ -82,6 +85,7 @@ const Process = () => {
         buttontext="Book a Meeting Now"
         pageName="process"
       />
+        <Footer />
     </div>
   );
 };

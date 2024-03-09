@@ -1,6 +1,9 @@
 import { useState } from "react";
 import background from "../assets/homeBackground3.jpg";
 import HalfPrimaryPanel from "../components/halfPrimaryPanel";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -48,6 +51,7 @@ const Contact = () => {
 
   return (
     <div>
+      <Navbar />
       <HalfPrimaryPanel
         heading="Get in Touch with Exalt Solutions"
         text="We’re Here to Answer Your Questions and Start Your Journey"
@@ -133,6 +137,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

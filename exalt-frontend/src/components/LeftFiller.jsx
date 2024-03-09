@@ -1,4 +1,3 @@
-import image1 from "../assets/cmeeting1.png";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
@@ -17,9 +16,6 @@ const LeftFiller = (props) => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    // check if onclick function is either one of about home process services or blogs:
-    // if it is, then navigate to that page
-    // else, call the onclick function
     if (
       onclickFunction === "call" 
     ) {

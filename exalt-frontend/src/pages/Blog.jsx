@@ -2,6 +2,10 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import servicePhoto from "../assets/servicePhoto.png";
 import HalfPrimaryPanel from "../components/halfPrimaryPanel";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
+
 
 const Blog = () => {
   const blogs = [
@@ -39,6 +43,7 @@ const Blog = () => {
 
   return (
     <div>
+      <Navbar />
       <HalfPrimaryPanel heading="Featured Insights" />
 
       {blogs.map((blog, index) => {
@@ -143,6 +148,7 @@ const Blog = () => {
           </div>
         );
       })}
+      <Footer />
     </div>
   );
 };

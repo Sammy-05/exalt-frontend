@@ -1,14 +1,16 @@
 import LeftFiller from '../components/LeftFiller';
-
 import CenterFiller from '../components/centerFiller';
-
 import ServicesPrimaryPanel from '../components/servicesPrimaryPanel';
 import ServicesSecondaryPanel from '../components/servicesSecondaryPanel copy';
 import ServicesMembersPanel from '../components/servicesMembersPanel';
+import Navbar from '../components/Navbar';
+import Footer from "../components/Footer";
+
 
 const Services = () => {
   return (
     <div className="">
+      <Navbar />
       <ServicesPrimaryPanel
         heading="Our Services - Tailored to Your Business Needs"
         text="Discover a Range of Solutions from Global Experts."
@@ -33,6 +35,7 @@ const Services = () => {
         text="Contact us today to learn more about how we can support your growth."
         buttontext="Get Started"
       />
+      <Footer />
     </div>
   );
 };

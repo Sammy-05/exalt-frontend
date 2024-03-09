@@ -1,3 +1,5 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import LeftFiller from "../components/LeftFiller";
 import RightFiller from "../components/RightFiller";
 import PrimaryPanel from "../components/primaryPanel";
@@ -5,7 +7,6 @@ import SecondaryPanel from "../components/secondaryPanel";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 
 import Links from "../assets/links.json"
 
@@ -97,8 +98,9 @@ const About = () => {
     window.open(url, '_blank');
   };
 
-  return (
+    return (
     <div className="">
+      <Navbar />
       <PrimaryPanel
         heading="Shaping the Future of Outsourcing"
         text="Empowerment Through Innovation, Integrity, and Collaboration"
@@ -212,6 +214,7 @@ const About = () => {
         picName={pic5}
         onclickFunction="call"
       />
+      <Footer />
     </div>
   );
 };

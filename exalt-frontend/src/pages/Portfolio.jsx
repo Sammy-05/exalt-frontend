@@ -3,6 +3,8 @@ import pic2 from "../assets/portfolio/portfolio2.jpg";
 import pic3 from "../assets/portfolio/portfolio3.jpg";
 import pic4 from "../assets/portfolio/portfolio4.jpg";
 import CenterFiller from "../components/centerFiller";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Portfolio = () => {
   const portfolio = [
@@ -46,6 +48,7 @@ const Portfolio = () => {
 
   return (
     <div>
+      <Navbar />
       <div className="h-screen relative">
         {portfolio.map((item, index) => {
           return (
@@ -105,8 +108,10 @@ const Portfolio = () => {
         text="Let's discuss how we can tailor our services to your unique needs."
         buttontext="Book a Meeting Now"
       />
+      <Footer />
       </div>
     </div>
+
   );
 };
 export default Portfolio;

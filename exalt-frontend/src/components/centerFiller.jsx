@@ -12,7 +12,7 @@ const CenterFiller = (props) => {
   };
 
   return (
-    <div className={`h-[500px] absolute w-full `}>
+    <div className={`h-[500px] relative w-full `}>
       <div className={`h-[500px] absolute w-full `}>
         <img
           src={background}
