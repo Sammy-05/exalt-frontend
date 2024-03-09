@@ -2,6 +2,9 @@ import pic1 from "../assets/portfolio/portfolio1.jpg";
 import pic2 from "../assets/portfolio/portfolio2.jpg";
 import pic3 from "../assets/portfolio/portfolio3.jpg";
 import pic4 from "../assets/portfolio/portfolio4.jpg";
+import CenterFiller from "../components/centerFiller";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Portfolio = () => {
   const portfolio = [
@@ -33,20 +36,19 @@ const Portfolio = () => {
         image2: pic4,
         heading2: "GDP Forecasting Model",
         subheading2:
-          "Advanced forecasting model project predicting economic trends, aiding strategic planning and decision-making.",
+          "Advanced forecasting model project predicting economic trends, aiding strategic planning and decision-making. ",
         url2: "https://drive.google.com/file/d/1ViJpFCvDm0UBx1Br7FhcRU8pK3PcrpLu/view?usp=sharing",
       },
     ],
   ];
 
   const handleButtonClick = (url) => {
-    window.open(url, "_blank"); // Open the URL in a new tab/window
+    window.open(url, "_blank");
   };
-
-  
 
   return (
     <div>
+      <Navbar />
       <div className="h-screen relative">
         {portfolio.map((item, index) => {
           return (
@@ -59,11 +61,11 @@ const Portfolio = () => {
                   className="w-full h-full object-cover absolute"
                 />
                 <div className="absolute flex flex-col justify-center items-center h-screen z-20">
-                  <div className="flex flex-col gap-y-10 w-3/4">
-                    <h1 className="text-white text-heading font-georgia font-bold">
+                  <div className="flex flex-col w-3/4">
+                    <h1 className="text-white text-mainheading font-georgia font-bold h-40">
                       {item[0].heading1}
                     </h1>
-                    <p className="text-subheading text-white">
+                    <p className="text-subheading text-white h-44">
                       {item[0].subheading1}
                     </p>
 
@@ -82,11 +84,11 @@ const Portfolio = () => {
                   className="w-full h-full object-cover absolute"
                 />
                 <div className="absolute flex flex-col justify-center items-center h-screen z-20">
-                  <div className="flex flex-col gap-y-10 w-3/4">
-                    <h1 className="text-white text-heading font-georgia font-bold">
+                  <div className="flex flex-col w-3/4">
+                    <h1 className="text-white text-mainheading font-georgia font-bold h-40">
                       {item[1].heading2}
                     </h1>
-                    <p className="text-subheading text-white">
+                    <p className="text-subheading text-white h-44">
                       {item[1].subheading2}
                     </p>
 
@@ -101,8 +103,15 @@ const Portfolio = () => {
             </div>
           );
         })}
+      <CenterFiller
+        heading="Ready to Elevate Your Business with Global Expertise?"
+        text="Let's discuss how we can tailor our services to your unique needs."
+        buttontext="Book a Meeting Now"
+      />
+      <Footer />
       </div>
     </div>
+
   );
 };
 export default Portfolio;

@@ -48,10 +48,25 @@ const servicesList = [
     service: 'Recruiting',
     text: 'Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.',
   },
+  {
+    serviceNumber: 10,
+    service: '',
+    text: '',
+  },
+  {
+    serviceNumber: 11,
+    service: 'Copy Writing',
+    text: 'Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.',
+  },
+  {
+    serviceNumber: 12,
+    service: '',
+    text: '',
+  },
 ];
 
 const ServicesMembersPanel = () => {
-  //   const { heading, subheading, text, buttontext } = props;
+  //   const { [34px], sub[34px], text, buttontext } = props;
 
   return (
     <div>
@@ -60,7 +75,7 @@ const ServicesMembersPanel = () => {
           <div>
             <div className="relative flex justify-center items-center">
               <div className="absolute inset-0 bg-white "></div>
-              <div className="relative w-2/3 flex flex-col  my-20 text-navyblue gap-y-10">
+              <div className="relative w-3/4 flex flex-col my-20 text-navyblue gap-y-10">
                 <div className="w-full ">
                   <img
                     src={servicePhoto}
@@ -68,7 +83,7 @@ const ServicesMembersPanel = () => {
                     className="w-full h-full"
                   />
                 </div>
-                <div className="text-heading font-normal font-georgia text-left h-20">
+                <div className="text-[34px] font-normal font-georgia text-left h-16">
                   <h1>{service.service}</h1>
                 </div>
                 <div className="text-lg font-normal h-44">
@@ -84,7 +99,7 @@ const ServicesMembersPanel = () => {
           <div>
             <div className="relative flex justify-center items-center">
               <div className="absolute inset-0 bg-navyblue "></div>
-              <div className="relative w-2/3 flex flex-col  my-20 text-white gap-y-10">
+              <div className="relative w-3/4 flex flex-col  my-20 text-white gap-y-10">
                 <div className="w-full ">
                   <img
                     src={servicePhoto}
@@ -92,7 +107,7 @@ const ServicesMembersPanel = () => {
                     className="w-full h-full"
                   />
                 </div>
-                <div className="text-heading font-normal font-georgia text-left h-20">
+                <div className="text-[34px] font-normal font-georgia text-left h-16">
                   <h1>{service.service}</h1>
                 </div>
                 <div className="text-lg font-normal h-44">
@@ -108,7 +123,7 @@ const ServicesMembersPanel = () => {
           <div>
             <div className="relative flex justify-center items-center">
               <div className="absolute inset-0 bg-white "></div>
-              <div className="relative w-2/3 flex flex-col  my-20 text-navyblue gap-y-10">
+              <div className="relative w-3/4 flex flex-col  my-20 text-navyblue gap-y-10">
                 <div className="w-full ">
                   <img
                     src={servicePhoto}
@@ -116,7 +131,7 @@ const ServicesMembersPanel = () => {
                     className="w-full h-full"
                   />
                 </div>
-                <div className="text-heading font-normal font-georgia text-left h-20">
+                <div className="text-[34px] font-normal font-georgia text-left h-16">
                   <h1>{service.service}</h1>
                 </div>
                 <div className="text-lg font-normal h-44">
@@ -127,7 +142,31 @@ const ServicesMembersPanel = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center items-center pb-10">
+      <div className="grid grid-cols-3">
+        {servicesList.slice(9, 12).map((service) => (
+          <div>
+            <div className="relative flex justify-center items-center">
+              <div className="absolute inset-0 bg-navyblue "></div>
+              <div className="relative w-3/4 flex flex-col  my-20 text-white gap-y-10">
+                <div className="w-full ">
+                  <img
+                    src={servicePhoto}
+                    alt="meeting"
+                    className="w-full h-full"
+                  />
+                </div>
+                <div className="text-[34px] font-normal font-georgia text-left h-16">
+                  <h1>{service.service}</h1>
+                </div>
+                <div className="text-lg font-normal h-44">
+                  <p>{service.text}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center items-center py-10">
         <button className="font-georgia bg-navyblue font-bold hover:bg-violet text-white px-5 rounded-xl py-2 flex  items-center">
         Let’s Discuss Your Business Needs
           <FontAwesomeIcon

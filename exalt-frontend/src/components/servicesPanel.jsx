@@ -38,6 +38,10 @@ const servicesList = [
     "service number": 9,
     service: "Financial Modeling",
   },
+  {
+    "service number": 10,
+    service: "Copy Writing",
+  },
 ];
 
 const ServicesPanel = () => {
@@ -62,8 +66,8 @@ const ServicesPanel = () => {
             </div>
           ))}
         </div>
-        <div className=" grid grid-cols-4 justify-center items-center ">
-          {servicesList.slice(5, 9).map((service) => (
+        <div className=" grid grid-cols-5 justify-center items-center ">
+          {servicesList.slice(5, 10).map((service) => (
             <div className="flex flex-col justify-center items-center text-center">
               <FontAwesomeIcon
                 icon={faGlobe}

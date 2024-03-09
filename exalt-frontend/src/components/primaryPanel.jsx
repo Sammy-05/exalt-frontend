@@ -1,17 +1,50 @@
 import background from '../assets/homeBackground3.jpg';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
 
-const primaryPanel = (props) => {
+const PrimaryPanel = (props) => {
   const { heading, text, buttontext } = props;
+
+  const [navbarHeight, setNavbarHeight] = useState(0);
+
+  useEffect(() => {
+    // Function to get the height of the Navbar component
+    const getNavbarHeight = () => {
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        const navbarHeight = navbar.offsetHeight;
+        setNavbarHeight(navbarHeight);
+
+        console.log('Navbar Height:', navbarHeight);
+        // You can use navbarHeight as needed
+      }
+    };
+
+    // Call the function when the component mounts
+    getNavbarHeight();
+
+    // Optionally, you can add cleanup code if needed
+    return () => {
+      // Cleanup code
+    };
+  }, []);
+
+  const handleButtonClick = () => {
+    const destination = window.innerHeight + navbarHeight;
+    window.scrollTo({
+      top: destination,
+      behavior: "smooth"
+    });
+  };
 
   return (
     <div className=" relative w-full ">
-      <div className=" w-full bg-navyblue absolute opacity-70"></div>
+      <div className=" w-full h-screen bg-navyblue absolute opacity-70"></div>
       <img
         src={background}
         alt="meeting"
-        className="w-full h-[800px] object-cover "
+        className="w-full h-screen object-cover "
       />
       <div className="mx-20 absolute inset-0 flex flex-col justify-center items-center text-white text-left font-bold">
         <div>
@@ -23,7 +56,7 @@ const primaryPanel = (props) => {
           </div>
           {buttontext ? (
             <div className="pt-20">
-              <button className="font-georgia font-bold hover:bg-violet bg-lightblue text-white px-7 py-3 flex  items-center">
+              <button onClick={handleButtonClick} className="font-georgia font-bold hover:bg-violet bg-lightblue text-white px-7 py-3 flex  items-center">
                 {buttontext}
                 <FontAwesomeIcon
                   icon={faArrowRight}
@@ -38,4 +71,4 @@ const primaryPanel = (props) => {
   );
 };
 
-export default primaryPanel;
+export default PrimaryPanel;

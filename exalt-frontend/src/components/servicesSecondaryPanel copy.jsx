@@ -1,5 +1,3 @@
-import homeBackground2 from '../assets/homeBackground2.png';
-
 const ServicesSecondaryPanel = (props) => {
   const { heading, text } = props;
 
