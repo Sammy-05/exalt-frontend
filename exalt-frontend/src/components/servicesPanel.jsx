@@ -1,5 +1,6 @@
 import { faArrowRight, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Links from "../assets/links.json";
 
 const servicesList = [
   {
@@ -46,6 +47,9 @@ const servicesList = [
 
 const ServicesPanel = () => {
   //   const { heading, text, buttontext } = props;
+  const handleButtonClick = () => {
+    window.open(Links.Calendly, "_blank");   
+  };
 
   return (
     <div className="bg-navyblue w-full text-white py-20">
@@ -80,18 +84,10 @@ const ServicesPanel = () => {
           ))}
         </div>
       </div>
-      {/* <div className="flex justify-center items-center">
-        <button className="font-georgia font-bold hover:bg-violet hover:text-white bg-white text-navyblue px-5 rounded-xl py-2 flex border-2 border-white items-center">
-          Book a Meeting
-          <FontAwesomeIcon
-            icon={faArrowRight}
-            className="text-navyblue text-2xl ml-4 "
-          />
-        </button>
-      </div> */}
+      
       <div className="flex justify-center items-center">
         <div className="group">
-          <button className="font-georgia font-bold bg-white text-navyblue px-5 rounded-xl py-2 flex border-2 border-white items-center group-hover:bg-violet group-hover:text-white">
+          <button onClick={handleButtonClick} className="font-georgia font-bold bg-white text-navyblue px-5 rounded-xl py-2 flex border-2 border-white items-center group-hover:bg-violet group-hover:text-white">
             Book a Meeting
             <FontAwesomeIcon
               icon={faArrowRight}

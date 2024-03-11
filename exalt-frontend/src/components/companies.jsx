@@ -1,60 +1,58 @@
 import companies from '../assets/companies.png';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
-
+import logo1 from "../assets/Home/logo1.jpg";
+import logo2 from "../assets/Home/logo2.png";
+import logo3 from "../assets/Home/logo3.png";
+import logo4 from "../assets/Home/logo4.png";
 
 
 const Companies = () => {
   //   const { heading, text, buttontext } = props;
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+  const logos = [logo1, logo2, logo3, logo4];
+
+
 
   return (
-    <div className="bg-white w-full text-white px-20">
-      {/* <div className="w-full flex justify-center items-center text-6xl font-georgia font-normal">
-        <h1>Our Services</h1>
-      </div>
-      <div className="mx-20 py-10">
-        <div className=" grid grid-cols-5 justify-center items-center pb-10">
-          {servicesList.slice(0, 5).map((service) => (
-            <div className="flex flex-col justify-center items-center text-center">
-              <FontAwesomeIcon
-                icon={faGlobe}
-                className="text-white text-7xl m-5"
-              />
-              <h1 className="text-xl font-roboto font-medium w-2/3 h-20">
-                {service.service}
-              </h1>
-            </div>
-          ))}
+    <Slider {...settings} className='py-10 bg-white'>
+      {logos.map((logo, index) => (
+        <div key={index}>
+          <img src={logo} alt="Company Logo" style={{ width: "100%", height: "auto" }} />
         </div>
-        <div className=" grid grid-cols-4 justify-center items-center ">
-          {servicesList.slice(5, 9).map((service) => (
-            <div className="flex flex-col justify-center items-center text-center">
-              <FontAwesomeIcon
-                icon={faGlobe}
-                className="text-white text-7xl m-5"
-              />
-              <h1 className="text-xl font-roboto font-medium w-2/3 h-20">
-                {service.service}
-              </h1>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="flex justify-center items-center">
-        <button className="text-2xl font-georgia font-bold hover:bg-navyblue hover:text-white bg-white text-navyblue px-5 rounded-xl py-2 flex border-2 border-white items-center">
-          Book a Meeting
-          <FontAwesomeIcon
-            icon={faArrowRight}
-            className=" text-2xl ml-4"
-          />
-        </button>
-      </div> */}
-      <div className="">
-        <img src={companies} alt="meeting" className="w-full h-full" />
-      </div>
-      <div className="">
-        <img src={companies} alt="meeting" className="w-full h-full" />
-      </div>
-    </div>
+      ))}
+    </Slider>
   );
 };
 
