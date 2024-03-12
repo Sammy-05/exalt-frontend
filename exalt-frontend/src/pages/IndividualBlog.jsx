@@ -1,19 +1,20 @@
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import servicePhoto from '../assets/servicePhoto.png';
-import HalfPrimaryPanel from '../components/halfPrimaryPanel';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import blogData from '../assets/blogsData.json';
 import { useParams } from 'react-router-dom';
 import TertiaryPanel from '../components/tertiaryPanel';
 import CenterFiller from '../components/centerFiller';
-import RightFiller from '../components/RightFiller';
 import LeftFiller from '../components/LeftFiller';
 import pic3 from "../assets/about/pic3.jpg";
+import { useEffect } from 'react';
 
 const IndividualBlog = ({ props }) => {
   const { blogId } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -28,12 +29,12 @@ const IndividualBlog = ({ props }) => {
           <div
             key={index}
             className={`${
-              Math.floor(index / 2) % 2 === 0
+              index % 2 === 0
                 ? 'bg-navyblue text-white'
                 : 'bg-white'
-            } px-20 flex flex-col gap-y-5 py-16`}
+            } px-20 flex flex-col gap-y-5 py-8`}
           >
-            <h1 className="font-georgia text-4xl pb-10 ">
+            <h1 className="font-georgia text-4xl">
               {bodyItem.bodyHeading}
             </h1>
             {bodyItem.text?.map((text) => (
