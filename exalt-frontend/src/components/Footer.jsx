@@ -86,7 +86,7 @@ const Footer = () => {
             <h1
             className="hover:text-violet text-navyblue hover:cursor-pointer"
               onClick={() => {
-                handleNavigate("/portfolio");
+                handleNavigate("/contact");
               }}
             >
               Contact Us
