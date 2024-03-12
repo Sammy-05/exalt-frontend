@@ -10,6 +10,9 @@ import ServicesPanel from '../components/servicesPanel';
 import Navbar from '../components/Navbar';
 import Footer from "../components/Footer";
 
+import pic1 from "../assets/Home/pic1.jpg";
+import pic2 from "../assets/Home/pic2.jpg";
+
 
 const Home = () => {
   return (
@@ -32,14 +35,17 @@ const Home = () => {
         text="Why Exalt Solutions? Because we understand the pulse of global business. Our expertise lies in harnessing the potential of the global south, offering cost-effective solutions without compromising on quality. With Exalt Solutions, experience seamless integration of international talent into your business processes."
         buttontext="Book a Call"
         pageName="home"
+        picName={pic1}
       />
       <Companies />
       <RightFiller
-        heading="Your Partner for Global Outsourcing Excellence"
+        heading="Dedicated to Delivering Excellence"
         // subheading="A place to learn and grow"
-        text="Why Exalt Solutions? Because we understand the pulse of global business. Our expertise lies in harnessing the potential of the global south, offering cost-effective solutions without compromising on quality. With Exalt Solutions, experience seamless integration of international talent into your business processes."
+        text="Quality and reliability are the cornerstones of our service. At Exalt Solutions, we are committed to delivering excellence in every project, ensuring your business objectives are met with precision and professionalism."
         buttontext="Book a Call"
         pageName="home"
+        picName={pic2}
+        
       />
       <Insights/>
       <CenterFiller
