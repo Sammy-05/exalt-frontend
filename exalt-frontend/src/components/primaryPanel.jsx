@@ -39,14 +39,14 @@ const PrimaryPanel = (props) => {
   };
 
   return (
-    <div className=" relative w-full ">
+    <div className="relative w-full">
       <div className=" w-full h-screen bg-navyblue absolute opacity-70"></div>
       <img
         src={background}
         alt="meeting"
         className="w-full h-screen object-cover "
       />
-      <div className="mx-20 absolute inset-0 flex flex-col justify-center items-center text-white text-left font-bold">
+      <div className="mx-20 absolute inset-0 flex flex-col justify-center text-white text-left font-bold">
         <div>
           <div className="font-georgia text-6xl w-2/3 leading-normal">
             <h1>{heading}</h1>

@@ -1,52 +1,71 @@
-import servicePhoto from '../assets/servicePhoto.png';
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import pic1 from "../assets/services/pic1.jpg";
+import pic2 from "../assets/services/pic2.jpg";
+import pic3 from "../assets/services/pic3.jpg";
+import pic4 from "../assets/services/pic4.jpg";
+import pic5 from "../assets/services/pic5.jpg";
+import pic6 from "../assets/services/pic6.jpg";
+import pic7 from "../assets/services/pic7.jpg";
+import pic8 from "../assets/services/pic8.jpg";
+import pic9 from "../assets/services/pic9.jpg";
+import pic10 from "../assets/services/pic10.jpg";
+import Links from "../assets/links.json"
 
 const servicesList = [
   {
     serviceNumber: 1,
     service: 'Market Research',
     text: 'Unlock market insights and drive your business strategy with our comprehensive market research services. Our team provides in-depth analysis of market trends, consumer behavior, and competitive landscapes to inform your decision-making process.',
+    pic: pic1,
   },
   {
     serviceNumber: 2,
     service: 'Data Analysis',
     text: 'Transform data into actionable insights with our data analysis services. We specialize in interpreting complex data sets to provide clear, concise, and relevant information that supports your business objectives.',
+    pic: pic2,
   },
   {
     serviceNumber: 3,
     service: 'ML/AI Devlopment',
     text: 'Harness the power of cutting-edge technology with our expertise in developing machine learning and AI solutions tailored to optimize and elevate your business processes.',
+    pic: pic3,
   },
   {
     serviceNumber: 4,
     service: 'Software Development',
     text: 'Craft innovative, scalable, and customized software solutions with our dedicated team. From conceptualization to implementation, we deliver reliable software that aligns seamlessly with your business goals.',
+    pic: pic4,
   },
   {
     serviceNumber: 5,
     service: 'Web/App Development',
     text: 'Transform your digital presence with our expert web and app development services. We create user-centric, responsive, and feature-rich solutions, ensuring a seamless and engaging experience for your audience.',
+    pic: pic5,
   },
   {
     serviceNumber: 6,
     service: 'Data Labelling',
     text: 'Expertly annotated data for AI and machine learning success. Our team specializes in precise data labeling for image, text, and more, ensuring quality training for your innovative projects.',
+    pic: pic6,
   },
   {
     serviceNumber: 7,
     service: 'Bookkeeping',
     text: 'Keep your finances in order and ensure compliance with our professional bookkeeping services. From managing ledgers to preparing financial statements, we handle all aspects of bookkeeping with meticulous attention to detail.',
+    pic: pic7,
   },
   {
     serviceNumber: 8,
     service: 'Financial Modeling',
     text: 'Plan for the future with confidence using our financial forecasting services. We provide insights into financial trends, helping you make informed decisions and strategize for long-term success.',
+    pic: pic8,
   },
   {
     serviceNumber: 9,
     service: 'Recruiting',
     text: 'Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.',
+    pic: pic9,
   },
   {
     serviceNumber: 10,
@@ -57,6 +76,7 @@ const servicesList = [
     serviceNumber: 11,
     service: 'Copy Writing',
     text: 'Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.',
+    pic: pic10,
   },
   {
     serviceNumber: 12,
@@ -68,6 +88,11 @@ const servicesList = [
 const ServicesMembersPanel = () => {
   //   const { [34px], sub[34px], text, buttontext } = props;
 
+  const handleButtonClick = (url) => {
+    // open the url in the new tab
+    window.open(url, '_blank');
+  };
+
   return (
     <div>
       <div className="grid grid-cols-3">
@@ -78,9 +103,9 @@ const ServicesMembersPanel = () => {
               <div className="relative w-3/4 flex flex-col my-20 text-navyblue gap-y-10">
                 <div className="w-full ">
                   <img
-                    src={servicePhoto}
+                    src={service.pic}
                     alt="meeting"
-                    className="w-full h-full"
+                    className="w-full h-[250px] object-cover"
                   />
                 </div>
                 <div className="text-[34px] font-normal font-georgia text-left h-16">
@@ -100,9 +125,9 @@ const ServicesMembersPanel = () => {
             <div className="relative flex justify-center items-center">
               <div className="absolute inset-0 bg-navyblue "></div>
               <div className="relative w-3/4 flex flex-col  my-20 text-white gap-y-10">
-                <div className="w-full ">
+                <div className="w-full h-[250px]">
                   <img
-                    src={servicePhoto}
+                    src={service.pic}
                     alt="meeting"
                     className="w-full h-full"
                   />
@@ -124,9 +149,9 @@ const ServicesMembersPanel = () => {
             <div className="relative flex justify-center items-center">
               <div className="absolute inset-0 bg-white "></div>
               <div className="relative w-3/4 flex flex-col  my-20 text-navyblue gap-y-10">
-                <div className="w-full ">
+                <div className="w-full h-[250px]">
                   <img
-                    src={servicePhoto}
+                    src={service.pic}
                     alt="meeting"
                     className="w-full h-full"
                   />
@@ -148,12 +173,13 @@ const ServicesMembersPanel = () => {
             <div className="relative flex justify-center items-center">
               <div className="absolute inset-0 bg-navyblue "></div>
               <div className="relative w-3/4 flex flex-col  my-20 text-white gap-y-10">
-                <div className="w-full ">
-                  <img
-                    src={servicePhoto}
-                    alt="meeting"
+                <div className="w-full h-[250px]">
+                  {service.pic ? 
+                  (<img
+                    src={service.pic}
+                    alt=""
                     className="w-full h-full"
-                  />
+                  /> ) : null }
                 </div>
                 <div className="text-[34px] font-normal font-georgia text-left h-16">
                   <h1>{service.service}</h1>
@@ -167,7 +193,7 @@ const ServicesMembersPanel = () => {
         ))}
       </div>
       <div className="flex justify-center items-center py-10">
-        <button className="font-georgia bg-navyblue font-bold hover:bg-violet text-white px-5 rounded-xl py-2 flex  items-center">
+        <button onClick={()=>{handleButtonClick(Links.Calendly)}} className="font-georgia bg-navyblue font-bold hover:bg-violet text-white px-5 rounded-xl py-2 flex  items-center">
         Let’s Discuss Your Business Needs
           <FontAwesomeIcon
             icon={faArrowRight}

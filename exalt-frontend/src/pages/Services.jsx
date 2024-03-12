@@ -5,14 +5,16 @@ import ServicesSecondaryPanel from '../components/servicesSecondaryPanel copy';
 import ServicesMembersPanel from '../components/servicesMembersPanel';
 import Navbar from '../components/Navbar';
 import Footer from "../components/Footer";
-import Links from "../assets/links.json";
+import PrimaryPanel from '../components/primaryPanel';
+import pic11 from "../assets/services/pic11.jpg";
+
 
 const Services = () => {
   
   return (
     <div className="">
       <Navbar />
-      <ServicesPrimaryPanel
+      <PrimaryPanel
         heading="Our Services - Tailored to Your Business Needs"
         text="Discover a Range of Solutions from Global Experts."
         buttontext="Explore"
@@ -29,6 +31,9 @@ const Services = () => {
         text="Don’t see exactly what you need? At Exalt Solutions, we pride ourselves on flexibility and customization. Reach out to us to discuss how we can tailor our services to meet your unique business challenges."
         buttontext="Book a Call"
         pageName="services"
+        picName={pic11}
+        onclickFunction="call"
+
       />
 
       <CenterFiller
