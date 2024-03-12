@@ -14,6 +14,11 @@ module.exports = {
         'heading': '40px',
         'mainheading': '50px',
         'button': '20px',
+        'mobile-p': '12px',
+        'mobile-subheading': '16px',
+        'mobile-heading': '26px',
+        'mobile-mainheading': '32px',
+        'mobile-button': '14px',
         // Add more font sizes as needed
       },
     },

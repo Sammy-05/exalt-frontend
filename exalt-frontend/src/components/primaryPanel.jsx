@@ -48,7 +48,7 @@ const PrimaryPanel = (props) => {
       />
       <div className="mx-20 absolute inset-0 flex flex-col justify-center text-white text-left font-bold">
         <div>
-          <div className="font-georgia text-6xl w-2/3 leading-normal">
+          <div className="font-georgia text-3xl md:text-6xl w-2/3 leading-normal">
             <h1>{heading}</h1>
           </div>
           <div className="font-roboto pt-10 text-4xl font-light w-2/3">

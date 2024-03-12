@@ -8,14 +8,13 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef } from "react";
 
-import Links from "../assets/links.json"
+import Links from "../assets/links.json";
 
 import pic1 from "../assets/about/pic1.jpg";
 import pic2 from "../assets/about/pic2.jpg";
 import pic3 from "../assets/about/pic3.jpg";
 import pic4 from "../assets/about/pic4.jpg";
 import pic5 from "../assets/about/pic5.jpg";
-
 
 const About = () => {
   // useEffect(() => {
@@ -67,7 +66,6 @@ const About = () => {
       threshold: 0.5, // When 50% of the element is visible
     };
 
-  
     const handleIntersect = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -95,10 +93,10 @@ const About = () => {
 
   const handleButtonClick = (url) => {
     // open the url in the new tab
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
-    return (
+  return (
     <div className="">
       <Navbar />
       <PrimaryPanel
@@ -111,9 +109,9 @@ const About = () => {
         text="Founded in 2020, Exalt Solutions has rapidly become a trusted outsourcing partner for businesses in the Middle East and the West. Specializing in market research, data analysis, and strategic business support, we've enabled numerous companies to successfully launch and expand in dynamic markets like UAE and Dubai. Our diverse team of 15 in-house professionals, supplemented by a vast network of part-time talent, brings expertise in data science, software and IT, finance, recruiting, and business development. We're driven by the vision of our founders, who recognized a unique opportunity to fill critical market gaps by providing high-quality services at a fraction of the cost of in-house employees.
         "
       />
-      <div className="bg-navyblue h-screen flex flex-col justify-center gap-y-32">
+      <div className="bg-navyblue py-20 md:py-0 md:h-screen flex flex-col justify-center gap-y-20 md:gap-y-32">
         <div className="flex justify-center">
-          <h1 className="font-georgia text-heading text-white">
+          <h1 className="font-georgia text-mobile-heading md:text-heading text-white">
             Milestones Of Success
           </h1>
         </div>
@@ -121,54 +119,65 @@ const About = () => {
           <div className="text-center">
             <p
               ref={projectsCounterRef}
-              className="text-[66px] font-georgia"
+              className="text-mobile-heading md:text-[66px] font-georgia"
               data-value="50"
             >
               0+
             </p>
-            <p className="text-button font-thin">Successful Projects</p>
+            <p className="text-mobile-p md:text-button font-thin">
+              Successful Projects
+            </p>
           </div>
-          <div className="flex items-center justify-center w-2 h-64 border-l"></div>
+          <div className="flex items-center justify-center w-2 h-32 md:h-64 border-l"></div>
           <div className="text-center">
             <p
               ref={clientsCounterRef}
-              className="text-[66px] font-georgia"
+              className="text-mobile-heading md:text-[66px] font-georgia"
               data-value="10"
             >
               0+
             </p>
-            <p className="text-button font-thin">Global Clients</p>
+            <p className="text-mobile-p md:text-button font-thin">
+              Global Clients
+            </p>
           </div>
-          <div className="flex items-center justify-center w-2 h-64 border-l"></div>
+          <div className="flex items-center justify-center w-2 h-32 md:h-64 border-l"></div>
           <div className="text-center">
             <p
               ref={expertsCounterRef}
-              className="text-[66px] font-georgia"
+              className="text-mobile-heading md:text-[66px] font-georgia"
               data-value="5"
             >
               0+
             </p>
-            <p className="text-button font-thin">In-House Experts</p>
+            <p className="text-mobile-p md:text-button font-thin">
+              In-House Experts
+            </p>
           </div>
-          <div className="flex items-center justify-center w-2 h-64 border-l"></div>
+          <div className="flex items-center justify-center w-2 h-32 md:h-64 border-l"></div>
           <div className="text-center">
             <p
               ref={entriesCounterRef}
-              className="text-[66px] font-georgia"
+              className="text-mobile-heading md:text-[66px] font-georgia"
               data-value="15"
             >
               0+
             </p>
-            <p className="text-button font-thin">Market Entries Facilitated</p>
+            <p className="text-mobile-p md:text-button font-thin">
+              Market Entries Facilitated
+            </p>
           </div>
         </div>
 
         <div className="flex justify-center">
-          <button onClick={() => handleButtonClick(Links.Calendly)} className="font-georgia font-bold hover:bg-violet bg-navyblue text-white px-5 rounded-xl py-2 flex border-2 border-white items-center">
+          <button
+            onClick={() => handleButtonClick(Links.Calendly)}
+            className="font-georgia font-bold text-mobile-p md:text-base hover:bg-violet bg-navyblue text-white rounded-xl px-3 md:px-5 py-2 md:py-2 flex border-2 border-white items-center"
+          >
             Start Your Journey With Us
             <FontAwesomeIcon
               icon={faArrowRight}
-              className="text-white text-2xl ml-4"
+              className="text-white md:text-2xl ml-4"
             />
           </button>
         </div>
