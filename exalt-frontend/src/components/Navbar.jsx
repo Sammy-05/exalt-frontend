@@ -58,8 +58,8 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="hover:bg-violet hover:cursor-pointer bg-lightblue h-full w-1/2 flex items-center justify-center transition duration-300 ease-in-out">
-          <button onClick={()=>{handleNavigate("/contact")}} className="text-white text-button">Contact Us</button>
+        <div onClick={()=>{handleNavigate("/contact")}} className="hover:bg-violet hover:cursor-pointer bg-lightblue h-full w-1/2 flex items-center justify-center transition duration-300 ease-in-out">
+          <button  className="text-white text-button">Contact Us</button>
         </div>
       </div>
     </div>

@@ -63,7 +63,7 @@ const Contact = () => {
           alt="meeting"
           className="w-full h-screen object-cover absolute"
         />
-        <div className="w-1/3 ml-48 h-screen bg-navyblue absolute opacity-90">
+        <div className="w-1/3 ml-48 h-screen bg-navyblue relative opacity-90">
           <div className="absolute inset-0 flex flex-col gap-y-10 justify-center ml-16 text-white text-left">
             <div>
               <div className="font-georgia text-6xl pb-14">
