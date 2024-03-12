@@ -14,11 +14,11 @@ const Companies = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 5000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 0,
     cssEase: "linear",
     responsive: [
       {
@@ -46,10 +46,10 @@ const Companies = () => {
 
 
   return (
-    <Slider {...settings} className='py-10 bg-white'>
+    <Slider {...settings} className='py-10 bg-white px-20'>
       {logos.map((logo, index) => (
         <div key={index}>
-          <img src={logo} alt="Company Logo" style={{ width: "100%", height: "auto" }} />
+          <img src={logo} alt="Company Logo" className='w-[200px]' />
         </div>
       ))}
     </Slider>
