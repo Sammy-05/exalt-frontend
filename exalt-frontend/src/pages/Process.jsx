@@ -27,7 +27,7 @@ const Process = () => {
         buttontext="Explore"
       />
       <div>
-        <h1 className="text-heading text-navyblue flex font-georgia justify-center py-10">
+        <h1 className="text-mobile-heading md:text-heading text-navyblue flex font-georgia justify-center py-10">
           Here Is How We Work
         </h1>
       </div>
@@ -63,7 +63,7 @@ const Process = () => {
         picName={pic5}
       />
       <div>
-        <h1 className="text-heading text-navyblue flex font-georgia justify-center py-10">
+        <h1 className="text-mobile-heading md:text-heading text-center text-navyblue flex font-georgia justify-center py-10">
           Recruiting Process at Exalt Solutions
         </h1>
       </div>

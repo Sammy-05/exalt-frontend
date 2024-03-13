@@ -15,11 +15,11 @@ const HalfPrimaryPanel = (props) => {
           alt="meeting"
           className="w-full h-[60vh] object-cover "
         />
-        <div className="mx-20 absolute inset-0 flex flex-col gap-y-10 justify-center items-center text-white text-left font-bold">
-          <div className="font-georgia text-6xl">
+        <div className="mx-10 md:mx-20 absolute inset-0 flex flex-col gap-y-10 justify-center items-center text-white text-left font-bold">
+          <div className="font-georgia text-mobile-mainheading text-center md:text-6xl">
             <h1>{heading}</h1>
           </div>
-          <div className="text-[32px] font-thin">
+          <div className="text-mobile-subheading text-center md:text-[32px] font-thin">
             <p>{text}</p>
           </div>
         </div>

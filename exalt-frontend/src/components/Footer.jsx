@@ -12,7 +12,7 @@ const Footer = () => {
   };
   return (
     <div
-      className="md:block hidden font-georgia w-full flex bg-white grid grid-cols-8 gap-x-20"
+      className="font-georgia w-full flex flex-col md:flex-row bg-white md:grid md:grid-cols-8 gap-x-20"
     >
       <div className="col-span-2 flex justify-center">
         <img src={logo} alt="logo" className="py-10" />

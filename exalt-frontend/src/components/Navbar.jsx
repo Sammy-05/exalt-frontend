@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="z-50 font-georgia w-full flex bg-white grid grid-cols-8"
+      className="md:block hidden z-50 font-georgia w-full flex bg-white grid grid-cols-8"
       id="navbar"
     >
       <div className="col-span-2">

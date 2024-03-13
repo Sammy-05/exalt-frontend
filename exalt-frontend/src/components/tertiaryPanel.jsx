@@ -48,22 +48,22 @@ const TertiaryPanel = (props) => {
       <div className="h-screen w-full bg-navyblue absolute opacity-80"></div>
 
       <div className="absolute text-white flex flex-col items-center justify-center h-full w-full text-center">
-        <div className="font-georgia text-6xl">
+        <div className="font-georgia text-mobile-mainheading md:text-6xl">
           <h1>{heading}</h1>
         </div>
-        <div className="pt-8 font-roboto font-thin text-4xl">
+        <div className="pt-8 font-roboto font-thin text-mobile-subheading md:text-4xl">
           <p>{subheading}</p>
         </div>
-        <div className="w-3/5 text-p pt-20">
+        <div className="w-3/5 text-mobile-p md:text-p pt-10 md:pt-20">
           <p>{text}</p>
         </div>
         {buttontext ? (
           <div className="pt-20">
-            <button onClick={handleButtonClick} className="font-georgia font-bold hover:bg-violet bg-lightblue text-white px-7 py-3 flex  items-center">
+            <button onClick={handleButtonClick} className="font-georgia font-bold text-mobile-button md:text-base hover:bg-violet bg-lightblue text-white px-3 py-2 md:px-7 md:py-3 flex  items-center">
               {buttontext}
               <FontAwesomeIcon
                 icon={faArrowRight}
-                className="text-white text-2xl ml-4"
+                className="text-white md:text-2xl ml-4"
               />
             </button>
           </div>
