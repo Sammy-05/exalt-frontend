@@ -15,7 +15,7 @@ module.exports = {
         'mainheading': '50px',
         'button': '20px',
         'mobile-p': '12px',
-        'mobile-subheading': '16px',
+        'mobile-subheading': '18px',
         'mobile-heading': '26px',
         'mobile-mainheading': '32px',
         'mobile-button': '14px',
