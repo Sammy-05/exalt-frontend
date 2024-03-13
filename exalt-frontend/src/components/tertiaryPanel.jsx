@@ -54,7 +54,7 @@ const TertiaryPanel = (props) => {
         <div className="pt-8 font-roboto font-thin text-mobile-subheading md:text-4xl">
           <p>{subheading}</p>
         </div>
-        <div className="w-3/5 text-mobile-p md:text-p pt-10 md:pt-20">
+        <div className="w-5/6 md:w-3/5 text-mobile-p md:text-p pt-10 md:pt-20">
           <p>{text}</p>
         </div>
         {buttontext ? (

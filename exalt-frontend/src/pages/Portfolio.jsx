@@ -52,7 +52,7 @@ const Portfolio = () => {
       <div className="h-screen relative">
         {portfolio.map((item, index) => {
           return (
-            <div className="grid grid-cols-2 h-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 h-full">
               <div className="h-screen w-full bg-navyblue absolute opacity-60 z-10"></div>
               <div className="relative">
                 <img
@@ -60,12 +60,12 @@ const Portfolio = () => {
                   alt="meeting"
                   className="w-full h-full object-cover absolute"
                 />
-                <div className="absolute flex flex-col justify-center items-center h-screen z-20">
-                  <div className="flex flex-col w-3/4">
-                    <h1 className="text-white text-mainheading font-georgia font-bold h-40">
+                <div className="absolute flex flex-col justify-center items-center h-full md:h-screen z-20">
+                  <div className="flex flex-col gap-y-7 mx-10 md:mx-0 md:w-3/4">
+                    <h1 className="text-white text-mobile-mainheading md:text-mainheading font-georgia font-bold md:h-40">
                       {item[0].heading1}
                     </h1>
-                    <p className="text-subheading text-white h-44">
+                    <p className="text-mobile-subheading md:text-subheading text-white md:h-44">
                       {item[0].subheading1}
                     </p>
 
@@ -83,12 +83,12 @@ const Portfolio = () => {
                   alt="meeting"
                   className="w-full h-full object-cover absolute"
                 />
-                <div className="absolute flex flex-col justify-center items-center h-screen z-20">
-                  <div className="flex flex-col w-3/4">
-                    <h1 className="text-white text-mainheading font-georgia font-bold h-40">
+                <div className="absolute flex flex-col justify-center items-center h-full md:h-screen z-20">
+                  <div className="flex flex-col gap-y-7 mx-10  md:mx-0 md:w-3/4">
+                    <h1 className="text-white text-mobile-mainheading md:text-mainheading font-georgia font-bold md:h-40">
                       {item[1].heading2}
                     </h1>
-                    <p className="text-subheading text-white h-44">
+                    <p className="text-mobile-subheading md:text-subheading text-white md:h-44">
                       {item[1].subheading2}
                     </p>
 

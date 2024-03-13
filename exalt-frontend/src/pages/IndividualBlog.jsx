@@ -29,9 +29,7 @@ const IndividualBlog = ({ props }) => {
           <div
             key={index}
             className={`${
-              index % 2 === 0
-                ? 'bg-navyblue text-white'
-                : 'bg-white'
+              'bg-white'
             } px-20 flex flex-col gap-y-5 py-8`}
           >
             <h1 className="font-georgia text-4xl">
@@ -53,6 +51,7 @@ const IndividualBlog = ({ props }) => {
             subheading={blogData[blogId]['Upwork Profile Link']}
             text={blogData[blogId]?.authortext}
             picName = {pic3}
+            pageName="blog"
           />
         ) : (
           []

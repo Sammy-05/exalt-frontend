@@ -13,6 +13,7 @@ const LeftFiller = (props) => {
     "home": {isMobile: "h-[300px]", isDesktop: "h-[600px]"},
     "process": {isMobile: "h-[200px]", isDesktop: "h-[400px]"},
     "services": {isMobile: "h-[250px]", isDesktop: "h-[500px]"},
+    "blog": {isMobile: "h-[250px]", isDesktop: "h-[500px]"},
   }
 
   const navigate = useNavigate();
