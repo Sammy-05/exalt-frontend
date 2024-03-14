@@ -76,32 +76,19 @@ const ServicesPanel = () => {
   };
 
   return (
-    <div className="bg-navyblue w-full text-white py-20">
+    <div className="bg-navyblue w-full text-white py-10 md:py-20">
       <div className="w-full flex justify-center items-center text-mainheading font-georgia font-normal">
         <h1>Our Services</h1>
       </div>
-      <div className="mx-20 py-20">
-        <div className=" grid grid-cols-5 justify-center items-center pb-10">
-          {servicesList.slice(0, 5).map((service) => (
+      <div className="md:mx-20 py-10 md:py-20">
+        <div className=" grid grid-cols-2 md:grid-cols-5 justify-center items-center pb-10">
+          {servicesList.map((service) => (
             <div className="flex flex-col justify-center items-center text-center">
               <FontAwesomeIcon
                 icon={service.logo}
-                className="text-white text-5xl m-5"
+                className="text-white text-2xl md:text-5xl m-2 md:m-5"
               />
-              <h1 className="text-p font-roboto w-2/3 h-20">
-                {service.service}
-              </h1>
-            </div>
-          ))}
-        </div>
-        <div className=" grid grid-cols-5 justify-center items-center ">
-          {servicesList.slice(5, 10).map((service) => (
-            <div className="flex flex-col justify-center items-center text-center">
-              <FontAwesomeIcon
-                icon={service.logo}
-                className="text-white text-5xl m-5"
-              />
-              <h1 className="text-p font-roboto w-2/3 h-20">
+              <h1 className="text-mobile-subheading md:text-p  font-roboto w-2/3 h-20">
                 {service.service}
               </h1>
             </div>
