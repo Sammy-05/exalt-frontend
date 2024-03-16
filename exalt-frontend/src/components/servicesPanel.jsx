@@ -10,7 +10,7 @@ import {
   faReceipt,
   faChartSimple,
   faCopy,
-  faUserTie
+  faUserTie,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Links from '../assets/links.json';
@@ -19,53 +19,52 @@ const servicesList = [
   {
     'service number': 1,
     service: 'ML & AI Development',
-    "logo": faMicrochip
+    logo: faMicrochip,
   },
   {
     'service number': 2,
     service: 'Data Analysis',
-    "logo": faMagnifyingGlassChart
+    logo: faMagnifyingGlassChart,
   },
   {
     'service number': 3,
     service: 'Data Labelling',
-    "logo": faTable
+    logo: faTable,
   },
   {
     'service number': 4,
     service: 'Market Research',
-    "logo": faMoneyBillTrendUp
+    logo: faMoneyBillTrendUp,
   },
   {
     'service number': 5,
     service: 'Software Development',
-    "logo": faTerminal
+    logo: faTerminal,
   },
   {
     'service number': 6,
     service: 'Web/App Development',
-    "logo": faCode
+    logo: faCode,
   },
   {
     'service number': 7,
     service: 'Bookkeeping',
-    "logo": faReceipt
+    logo: faReceipt,
   },
   {
     'service number': 8,
     service: 'Recruiting',
-    "logo": faUserTie
+    logo: faUserTie,
   },
   {
     'service number': 9,
     service: 'Financial Modeling',
-    "logo": faChartSimple
-
+    logo: faChartSimple,
   },
   {
     'service number': 10,
-    service: 'Copy Writing',
-    "logo": faCopy
+    service: 'Copywriting',
+    logo: faCopy,
   },
 ];
 
@@ -83,11 +82,13 @@ const ServicesPanel = () => {
       <div className="md:mx-20 py-10 md:py-20">
         <div className=" grid grid-cols-2 md:grid-cols-5 justify-center items-center pb-10">
           {servicesList.map((service) => (
-            <div className="flex flex-col justify-center items-center text-center">
-              <FontAwesomeIcon
-                icon={service.logo}
-                className="text-white text-2xl md:text-5xl m-2 md:m-5"
-              />
+            <div className="flex flex-col justify-center items-center text-center ">
+              <div className='w-4/5 h-16'>
+                <FontAwesomeIcon
+                  icon={service.logo}
+                  className="text-white  text-2xl md:text-5xl  hover:text-6xl"
+                />
+              </div>
               <h1 className="text-mobile-subheading md:text-p  font-roboto w-2/3 h-20">
                 {service.service}
               </h1>
