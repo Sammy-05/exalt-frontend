@@ -17,31 +17,6 @@ import pic4 from "../assets/about/pic4.jpg";
 import pic5 from "../assets/about/pic5.jpg";
 
 const About = () => {
-  // useEffect(() => {
-  //   const animateValue = (element, start, end, duration) => {
-  //     let startTimestamp = null;
-  //     const step = (timestamp) => {
-  //       if (!startTimestamp) startTimestamp = timestamp;
-  //       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-  //       element.textContent = Math.floor(progress * (end - start) + start) + "+"; // Append plus sign
-  //       if (progress < 1) {
-  //         window.requestAnimationFrame(step);
-  //       }
-  //     };
-  //     window.requestAnimationFrame(step);
-  //   };
-
-  //   const projectsCounter = document.getElementById("projectsCounter");
-  //   const clientsCounter = document.getElementById("clientsCounter");
-  //   const expertsCounter = document.getElementById("expertsCounter");
-  //   const entriesCounter = document.getElementById("entriesCounter");
-
-  //   animateValue(projectsCounter, 0, 50, 800);
-  //   animateValue(clientsCounter, 0, 10, 800);
-  //   animateValue(expertsCounter, 0, 5, 800);
-  //   animateValue(entriesCounter, 0, 15, 800);
-  // }, []);
-
   const projectsCounterRef = useRef(null);
   const clientsCounterRef = useRef(null);
   const expertsCounterRef = useRef(null);

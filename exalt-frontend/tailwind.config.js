@@ -30,6 +30,7 @@ module.exports = {
       violet: "#2251FF",
       white: "#ffffff",
       grey: "#F0F0F0",
+      navbarscroll: "#313236",
     },
   },
   plugins: [],
