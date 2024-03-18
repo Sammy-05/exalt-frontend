@@ -17,8 +17,8 @@ const Footer = () => {
       <div className="col-span-2 flex justify-center">
         <img src={logo} alt="logo" className="py-10" />
       </div>
-      <div className="text-p font-thin gap-y-10 col-span-4 flex flex-col items-end py-10">
-        <div className="flex justify-end flex-row gap-x-16">
+      <div className="text-p font-thin gap-y-5 md:gap-y-10 col-span-4 flex flex-col md:items-end py-10">
+        <div className="flex items-center justify-end flex-col gap-y-5 md:flex-row md:gap-x-16">
           <div>
             <h1
             className="hover:text-violet text-navyblue hover:cursor-pointer"
@@ -61,7 +61,7 @@ const Footer = () => {
             </h1>
           </div>
         </div>
-        <div className="flex justify-end flex-row gap-x-10">
+        <div className="flex items-center md:justify-end flex-col gap-y-5 md:flex-row md:gap-x-10">
           <div>
             <h1
             className="hover:text-violet text-navyblue hover:cursor-pointer"
@@ -94,15 +94,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-2 flex flex-col justify-start py-10 gap-y-5 ">
+      <div className="col-span-2 flex flex-col items-center md:items-start text-center md:text-left md:justify-start py-10 gap-y-5 ">
         <div className="flex flex-col">
           <div>
             <h1 className="font-georgia text-p font-bold text-navyblue">Email:</h1>
           </div>
-          <div>
-            <p>faraz.zafar@exaltsolutions.co</p>
-          </div>
-          <div>
+                    <div>
             <p>info@exaltsolutions.co</p>
           </div>
         </div>
@@ -111,7 +108,7 @@ const Footer = () => {
             <h1 className="font-georgia text-p font-bold text-navyblue">Phone Number:</h1>
           </div>
           <div>
-            <p>+971 50 199 0860</p>
+            <p>+971 58 525 6280</p>
           </div>
         </div>
         <div className="flex gap-x-5">
@@ -119,18 +116,18 @@ const Footer = () => {
             icon={faWhatsapp}
             className="text-lightblue text-3xl hover:text-violet cursor-pointer"
           />
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faFacebook}
             className="text-lightblue text-3xl hover:text-violet cursor-pointer"
-          />
+          /> */}
           <FontAwesomeIcon
             icon={faLinkedin}
             className="text-lightblue text-3xl hover:text-violet cursor-pointer"
           />
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faInstagram}
             className="text-lightblue text-3xl hover:text-violet cursor-pointer"
-          />
+          /> */}
         </div>
       </div>
     </div>

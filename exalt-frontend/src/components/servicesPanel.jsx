@@ -77,7 +77,7 @@ const ServicesPanel = () => {
 
   return (
     <div className="bg-navyblue w-full text-white py-10 md:py-20">
-      <div className="w-full flex justify-center items-center text-mainheading font-georgia font-normal">
+      <div className="w-full flex justify-center items-center text-mobile-mainheading md:text-mainheading font-georgia font-normal">
         <h1>Our Services</h1>
       </div>
       <div className="md:mx-20 py-10 md:py-20">
