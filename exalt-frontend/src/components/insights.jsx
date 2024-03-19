@@ -1,7 +1,8 @@
-import blogPhoto1 from "../assets/blogPhoto1.png";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import blogPhoto1 from '../assets/blogPhoto1.png';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import blogsData from '../assets/blogsData.json';
+
 import Links from "../assets/links.json";
 
 const Insights = () => {
@@ -23,12 +24,12 @@ const Insights = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20">
-        {blogsData.slice(0,2).map((blog) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 ">
+        {blogsData.slice(0, 2).map((blog) => (
           <div className="w-full flex justify-center items-center">
             <div
-              key={blog["blog number"]}
-              className="flex flex-col text-white my-5 bg-navyblue rounded-2xl"
+              key={blog['blog number']}
+              className="flex flex-col w-10/12 hover:w-11/12 py-0 hover:pb-10 text-white my-5 bg-navyblue rounded-2xl "
             >
               <div className="w-full">
                 <img
@@ -41,8 +42,12 @@ const Insights = () => {
                 <h1 className="font-georgia font-normal text-mobile-heading  md:text-heading ">
                   {blog.mainHeading}
                 </h1>
-                <h2 className="font-roboto font-normal text-mobile-subheading md:text-subheading ">{blog.mainSubHeading}</h2>
-                <p className="font-roboto font-normal text-mobile-p md:text-p  h-48 ">{blog.displayText}</p>
+                <h2 className="font-roboto font-normal text-mobile-subheading md:text-subheading ">
+                  {blog.mainSubHeading}
+                </h2>
+                <p className="font-roboto font-normal text-mobile-p md:text-p  h-48 ">
+                  {blog.displayText}
+                </p>
               </div>
               <div className="w-full flex justify-end items-center pt-5 mb-3">
                 <div className="group">
@@ -65,6 +70,7 @@ const Insights = () => {
           <FontAwesomeIcon icon={faArrowRight} className=" ml-4" />
         </button>
       </div> */}
+
       <div className="flex justify-center pt-10 md:pt-10">
       
             <div className="mt-10 md:mt-20 ">
@@ -85,6 +91,7 @@ const Insights = () => {
             </div>
     
         </div>
+
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Home = () => {
       />
       <SecondaryPanel
         heading="Welcome to Exalt Solutions"
-        text="At Exalt Solutions, we bridge the gap between dynamic business needs and exceptional global talent. Specializing in outsourcing services, we work with top professionals from the global south to fuel your international market success. From Market Research to Financial Forecasting, our diverse offerings are tailored to elevate your business."
+        text="At Exalt Solutions, we bridge the gap between dynamic business needs and exceptional global talent. Specializing in outsourcing services, we work with top professionals from the global south to fuel your international market success."
       />
       <ServicesPanel />
       <MembersPanel />

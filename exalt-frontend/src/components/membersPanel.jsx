@@ -7,7 +7,7 @@ const MembersPanel = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3">
       <div className="relative flex justify-center items-center pb-10">
-        <div className="absolute inset-0 bg-navyblue opacity-80 "></div>
+        <div className="absolute inset-0 bg-navyblue opacity-70 "></div>
         <div className="relative w-4/5 md:w-2/3 flex flex-col justify-center items-center my-5 md:my-20 text-white gap-y-10">
           <div className="md:w-10/12 ">
             <img
@@ -28,7 +28,7 @@ const MembersPanel = () => {
         </div>
       </div>
       <div className="relative flex justify-center items-center pb-10">
-        <div className="absolute inset-0 bg-navyblue opacity-90 "></div>
+        <div className="absolute inset-0 bg-navyblue opacity-80 "></div>
         <div className="relative w-4/5 md:w-2/3 flex flex-col justify-center items-center my-5 md:my-20 text-white gap-y-10">
           <div className="md:w-10/12 ">
             <img
@@ -50,7 +50,7 @@ const MembersPanel = () => {
         </div>
       </div>
       <div className="relative flex justify-center items-center pb-10">
-        <div className="absolute inset-0 bg-navyblue opacity-100 "></div>
+        <div className="absolute inset-0 bg-navyblue opacity-90 "></div>
         <div className="relative w-4/5 md:w-2/3 flex flex-col justify-center items-center my-5 md:my-20 text-white gap-y-10">
           <div className="md:w-10/12 ">
             <img
