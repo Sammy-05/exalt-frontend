@@ -219,7 +219,7 @@ const ServicesPanel = () => {
           
           <button
             onClick={handleButtonClick}
-            className="font-georgia font-bold bg-white text-navyblue px-5 rounded-xl py-2 flex border-2 border-white items-center group-hover:bg-navyblue group-hover:text-white transition-colors"
+            className="md:text-button font-georgia font-bold bg-white text-navyblue px-5 rounded-xl py-2 flex border-2 border-white items-center group-hover:bg-navyblue group-hover:text-white transition-colors"
           >
             Book a Meeting
             

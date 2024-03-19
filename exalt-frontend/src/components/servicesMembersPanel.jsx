@@ -137,7 +137,7 @@ const ServicesMembersPanel = () => {
       {rows.map((row, rowIndex) => (
         <div
           key={rowIndex}
-          className={`grid grid-cols-${chunkSize} justify-center items-center ${
+          className={`grid ${chunkSize === 3 ? "grid-cols-3" : "grid-cols-2"} justify-center items-center ${
             rowIndex % 2 === 0 ? 'bg-white' : 'bg-navyblue'
           }`}
         >

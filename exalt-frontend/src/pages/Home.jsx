@@ -12,6 +12,7 @@ import Footer from "../components/Footer";
 
 import pic1 from "../assets/Home/pic1.jpg";
 import pic2 from "../assets/Home/pic2.jpg";
+import homeBackground5 from "../assets/homeBackground5.jpg";
 
 
 const Home = () => {
@@ -23,11 +24,22 @@ const Home = () => {
         text="Outsource with Excellence, Deliver with Confidence."
         buttontext="Explore"
       />
+      
+      {/* <CenterFiller
+        heading="Welcome to Exalt Solutions"
+        text="At Exalt Solutions, we bridge the gap between dynamic business needs and exceptional global talent. Specializing in outsourcing services, we work with top professionals from the global south to fuel your international market success."
+        // buttontext="Get Started"
+      /> */}
       <SecondaryPanel
         heading="Welcome to Exalt Solutions"
         text="At Exalt Solutions, we bridge the gap between dynamic business needs and exceptional global talent. Specializing in outsourcing services, we work with top professionals from the global south to fuel your international market success."
       />
       <ServicesPanel />
+      <div className='bg-navyblue opacity-60'>
+        <h1 className="text-mobile-heading md:text-mainheading text-white flex font-georgia justify-center py-10 ">
+          Client Testimonials
+        </h1>
+      </div>
       <MembersPanel />
       <LeftFiller
         heading="Your Partner for Global Outsourcing Excellence"
