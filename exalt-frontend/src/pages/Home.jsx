@@ -32,7 +32,8 @@ const Home = () => {
       <LeftFiller
         heading="Your Partner for Global Outsourcing Excellence"
         // subheading="A place to learn and grow"
-        text="Why Exalt Solutions? Because we understand the pulse of global business. Our expertise lies in harnessing the potential of the global south, offering cost-effective solutions without compromising on quality. With Exalt Solutions, experience seamless integration of international talent into your business processes."
+        text="Why Exalt Solutions? Because we understand the pulse of global business. Our expertise lies in harnessing the potential of the global south, offering cost-effective solutions without compromising on quality."
+        text2="With Exalt Solutions, experience seamless integration of international talent into your business processes."
         buttontext="Book a Call"
         pageName="home"
         picName={pic1}

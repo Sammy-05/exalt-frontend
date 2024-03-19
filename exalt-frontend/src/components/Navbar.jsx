@@ -211,31 +211,35 @@ const Navbar = () => {
 
   return (
     <div
+    // className={`z-50 font-georgia w-full flex md:grid grid-cols-8 fixed ${
+    //   scrolled ? "bg-navyblue text-white" : "bg-white text-navyblue"
+    // } transition-all duration-500`}
     className={`z-50 font-georgia w-full flex md:grid grid-cols-8 fixed ${
       scrolled ? "bg-navyblue text-white" : "bg-white text-navyblue"
-    } transition-all duration-500`}
+    } transition-all duration-500 drop-shadow-2xl`}
+    
     id="navbar"
     >
       <div className="col-span-2">
-        <img src={logo} alt="logo" className="w-[17%]" />
+        <img src={logo} alt="logo" className="w-[25%]  pb-2" />
       </div>
       <div className="text-p font-thin col-span-4 flex justify-evenly items-center">
-        <div className={activePage === "/" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "text-navyblue cursor-pointer") }>
+        <div className={activePage === "/" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "hover:text-violet cursor-pointer") }>
           <h1 onClick={() => handleNavigate("/")}>Home</h1>
         </div>
-        <div className={activePage === "/about" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "text-navyblue cursor-pointer") }>
+        <div className={activePage === "/about" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "hover:text-violet cursor-pointer") }>
           <h1 onClick={() => handleNavigate("/about")}>About</h1>
         </div>
-        <div className={activePage === "/services" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "text-navyblue cursor-pointer") }>
+        <div className={activePage === "/services" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "hover:text-violet cursor-pointer") }>
           <h1 onClick={() => handleNavigate("/services")}>Services</h1>
         </div>
-        <div className={activePage === "/blog" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "text-navyblue cursor-pointer") }>
+        <div className={activePage === "/blog" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "hover:text-violet cursor-pointer") }>
           <h1 onClick={() => handleNavigate("/blog")}>Blog</h1>
         </div>
-        <div className={activePage === "/process" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "text-navyblue cursor-pointer") }>
+        <div className={activePage === "/process" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "hover:text-violet cursor-pointer") }>
           <h1 onClick={() => handleNavigate("/process")}>Process</h1>
         </div>
-        <div className={activePage === "/portfolio" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "text-navyblue cursor-pointer") }>
+        <div className={activePage === "/portfolio" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "hover:text-violet cursor-pointer") }>
           <h1 onClick={() => handleNavigate("/portfolio")}>Portfolio</h1>
         </div>
         <div className={activePage === "/contact" ? (scrolled ? "text-lightblue" : "text-violet") : (scrolled ? "hover:text-lightblue cursor-pointer" : "text-navyblue cursor-pointer") }>
