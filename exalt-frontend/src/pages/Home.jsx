@@ -35,8 +35,8 @@ const Home = () => {
         text="At Exalt Solutions, we bridge the gap between dynamic business needs and exceptional global talent. Specializing in outsourcing services, we work with top professionals from the global south to fuel your international market success."
       />
       <ServicesPanel />
-      <div className='bg-navyblue opacity-60'>
-        <h1 className="text-mobile-heading md:text-mainheading text-white flex font-georgia justify-center py-10 ">
+      <div className='bg-white'>
+        <h1 className="text-mobile-heading md:text-mainheading text-navyblue flex font-georgia justify-center py-10 ">
           Client Testimonials
         </h1>
       </div>

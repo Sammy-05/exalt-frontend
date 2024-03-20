@@ -14,8 +14,8 @@ const SecondaryPanel = (props) => {
               className="max-w-full h-auto"
             />
           </div>
-          <div className="md:mx-10 md:mx-0 md:w-1/2 flex items-center justify-start md:justify-center text-center md:text-left">
-            <div className="pt-10 md:py-0 w-full md:w-5/6">
+          <div className="md:w-1/2 flex items-center justify-start md:justify-center text-center md:text-left">
+            <div className="py-5 md:pt-10 md:py-0 w-full md:w-5/6">
               <div className="font-serif text-mobile-heading md:text-mainheading">
                 <h1>{heading}</h1>
               </div>

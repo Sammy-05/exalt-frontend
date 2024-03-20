@@ -26,7 +26,7 @@ const Insights = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 ">
         {blogsData.slice(0, 2).map((blog) => (
-          <div className="w-full flex justify-center items-center transition-transform transform hover:scale-110">
+          <div className="w-full flex justify-center items-center transition-transform transform hover:scale-110 duration-300 ease-in-out">
             <div
               key={blog['blog number']}
               className="flex flex-col md:w-10/12   text-white my-5 bg-navyblue rounded-2xl "
