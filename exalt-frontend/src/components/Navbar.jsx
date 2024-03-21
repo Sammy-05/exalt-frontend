@@ -3,6 +3,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Links from "../assets/links.json";
 
 const Navbar = () => {
   const whatsappNumber = "+971585256280";
@@ -40,9 +41,6 @@ const Navbar = () => {
 
   return (
     <div
-    // className={`z-50 font-georgia w-full flex md:grid grid-cols-8 fixed ${
-    //   scrolled ? "bg-navyblue text-white" : "bg-white text-navyblue"
-    // } transition-all duration-500`}
     className={`z-50 font-georgia w-full flex md:grid grid-cols-8 fixed ${
       scrolled ? "bg-navyblue text-white" : "bg-white text-navyblue"
     } transition-all duration-500 drop-shadow-2xl`}
@@ -86,7 +84,7 @@ const Navbar = () => {
         </div>
         <div
           onClick={() => {
-            handleNavigate("/contact");
+            window.location.href = Links.Calendly;
           }}
           className={`hover:bg-${scrolled ? "lightblue" : "violet"} hover:cursor-pointer bg-lightblue h-full w-1/2 flex items-center justify-center transition duration-300 ease-in-out`}
         >

@@ -158,7 +158,7 @@ const About = () => {
         </div>
       </div>
       <LeftFiller
-        heading="Cores Values"
+        heading="Core Values"
         subheading="Rooted in Integrity, Driven by Innovation"
         text="Why Exalt Solutions? Because we understand the pulse of global business. Our expertise lies in harnessing the potential of the global south, offering cost-effective solutions without compromising on quality. With Exalt Solutions, experience seamless integration of international talent into your business processes."
         pageName="about"
