@@ -1,7 +1,7 @@
-import blogPhoto1 from '../assets/blogPhoto1.png';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import blogsData from '../assets/blogsData.json';
+import blogPhoto1 from "../assets/blogPhoto1.png";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import blogsData from "../assets/blogsData.json";
 
 import Links from "../assets/links.json";
 
@@ -9,8 +9,18 @@ const Insights = () => {
   //   const { heading, text, buttontext } = props;
 
   const handleNavigate = () => {
-      window.open(Links.Calendly, "_blank");
-    };
+    window.open(Links.Calendly, "_blank");
+  };
+
+  const truncateText = (text, maxLength) => {
+
+    console.log(text);
+    console.log("type of text: ", typeof(text));
+    const words = text.split('.');
+    const truncatedWords = words.slice(0, 2);
+    return truncatedWords.join(' ') + '...';
+  };
+  
 
   return (
     <div className=" bg-white w-full px-10 md:px-20 py-5 md:py-10">
@@ -24,11 +34,11 @@ const Insights = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 ">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         {blogsData.slice(0, 2).map((blog) => (
           <div className="w-full flex justify-center items-center transition-transform transform hover:scale-110 duration-300 ease-in-out">
             <div
-              key={blog['blog number']}
+              key={blog["blog number"]}
               className="flex flex-col md:w-10/12   text-white my-5 bg-navyblue rounded-2xl "
             >
               <div className="w-full">
@@ -45,8 +55,8 @@ const Insights = () => {
                 <h2 className="font-roboto font-normal text-mobile-subheading md:text-subheading ">
                   {blog.mainSubHeading}
                 </h2>
-                <p className="font-roboto font-normal text-mobile-p md:text-p  h-48 ">
-                  {blog.displayText}
+                <p className="font-roboto font-normal text-mobile-p md:text-p h-28 ">
+                  {truncateText(blog.displayText[0], 25)}
                 </p>
               </div>
               <div className="w-full flex justify-end items-center pt-5 mb-3">
@@ -72,26 +82,23 @@ const Insights = () => {
       </div> */}
 
       <div className="flex justify-center pt-10 md:pt-10">
-      
-            <div className="mt-10 md:mt-20 ">
-              <div className="">
-                <button
-                  onClick={handleNavigate}
-                  className="font-georgia font-bold text-mobile-p md:text-base hover:border-navyblue  rounded-xl px-3 md:px-5 py-2 md:py-3 flex border-2 border-white items-center bg-navyblue hover:bg-white transition-colors group"
-                >
-                  <div className="text-button flex items-center group-hover:text-navyblue  text-white">
-                    Start Your Journey With Us
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className="text-white md:text-2xl ml-4 group-hover:text-navyblue"
-                    />
-                  </div>
-                </button>
+        <div className="mt-10 md:mt-20 ">
+          <div className="">
+            <button
+              onClick={handleNavigate}
+              className="font-georgia font-bold text-mobile-p md:text-base hover:border-navyblue  rounded-xl px-3 md:px-5 py-2 md:py-3 flex border-2 border-white items-center bg-navyblue hover:bg-white transition-colors group"
+            >
+              <div className="text-button flex items-center group-hover:text-navyblue  text-white">
+                Start Your Journey With Us
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className="text-white md:text-2xl ml-4 group-hover:text-navyblue"
+                />
               </div>
-            </div>
-    
+            </button>
+          </div>
         </div>
-
+      </div>
     </div>
   );
 };
