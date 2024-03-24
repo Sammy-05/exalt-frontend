@@ -15,7 +15,7 @@ const Footer = () => {
       className="font-georgia w-full flex flex-col md:flex-row bg-white md:grid md:grid-cols-8 gap-x-20"
     >
       <div className="col-span-2 flex justify-center">
-        <img src={logo} alt="logo" className="py-10" />
+        <img src={logo} alt="logo" onClick={() => handleNavigate("/")} className="py-10 transition-transform transform hover:scale-110 hover:cursor-pointer" />
       </div>
       <div className="text-p font-thin gap-y-5 md:gap-y-10 col-span-4 flex flex-col md:items-end py-10">
         <div className="flex items-center justify-end flex-col gap-y-5 md:flex-row md:gap-x-16">

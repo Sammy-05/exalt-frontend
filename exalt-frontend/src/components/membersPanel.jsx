@@ -10,7 +10,7 @@ const MembersPanel = () => {
     <div className="grid grid-cols-1 md:grid-cols-3">
       <div className="relative flex justify-center items-center pb-10 ">
         <div className="absolute inset-0 bg-navyblue opacity-80  "></div>
-        <div className="relative w-4/5 md:w-2/3 flex flex-col justify-center items-center my-5 md:my-20 text-white gap-y-10 transition-transform transform hover:scale-110">
+        <div className="relative w-4/5 md:w-full md:mx-10 flex flex-col justify-center items-center my-5 md:my-20 text-white gap-y-10 transition-transform transform hover:scale-110">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-mainheading font-georgia">Khalid Mahdi</h1>
             <h1 className="text-subheading font-roboto font-thin">
@@ -35,7 +35,7 @@ const MembersPanel = () => {
       </div>
       <div className="relative flex justify-center items-center pb-10 ">
         <div className="absolute inset-0 bg-navyblue opacity-90  "></div>
-        <div className="relative w-4/5 md:w-2/3 flex flex-col justify-center items-center my-5 md:my-20 text-white gap-y-10 transition-transform transform hover:scale-110">
+        <div className="relative w-4/5 md:w-full md:mx-10 flex flex-col justify-center items-center my-5 md:my-20 text-white gap-y-10 transition-transform transform hover:scale-110">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-mainheading font-georgia"> Alexandre Soued</h1>
             <h1 className="text-subheading font-roboto font-thin">
@@ -62,7 +62,7 @@ const MembersPanel = () => {
       
       <div className="relative flex justify-center items-center pb-10 ">
         <div className="absolute inset-0 bg-navyblue"></div>
-        <div className="relative w-4/5 md:w-2/3 flex flex-col justify-center items-center my-5 md:my-20 text-white gap-y-10 transition-transform transform hover:scale-110">
+        <div className="relative w-4/5 md:w-full md:mx-10 flex flex-col justify-center items-center my-5 md:my-20 text-white gap-y-10 transition-transform transform hover:scale-105">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-mainheading font-georgia">Khalid Mahdi</h1>
             <h1 className="text-subheading font-roboto font-thin">
