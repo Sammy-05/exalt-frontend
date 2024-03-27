@@ -51,7 +51,7 @@ const Companies = () => {
   const logos = [logo1, logo2, logo3, logo4, logo5, logo7, logo10, logo11];
 
   return (
-    <div className="py-10 bg-white px-20">
+    <div className="py-10 bg-white px-10 md:px-20">
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <div>

@@ -48,14 +48,14 @@ const Insights = () => {
                   className="w-full h-[200px] md:h-[300px] rounded-2xl"
                 />
               </div>
-              <div className="px-5 md:px-10 py-5 flex flex-col gap-y-10">
-                <h1 className="font-georgia font-normal text-mobile-heading  md:text-heading ">
+              <div className="px-5 md:px-10 py-5 flex flex-col gap-y-3 md:gap-y-10">
+                <h1 className="font-georgia font-normal text-[24px]  md:text-heading ">
                   {blog.mainHeading}
                 </h1>
                 <h2 className="font-roboto font-normal text-mobile-subheading md:text-subheading ">
                   {blog.mainSubHeading}
                 </h2>
-                <p className="font-roboto font-normal text-mobile-p md:text-p h-28 ">
+                <p className="font-roboto font-normal text-mobile-p md:text-p  ">
                   {truncateText(blog.displayText[0], 25)}
                 </p>
               </div>
@@ -81,14 +81,14 @@ const Insights = () => {
         </button>
       </div> */}
 
-      <div className="flex justify-center pt-10 md:pt-10">
+      <div className="flex justify-center  md:pt-10">
         <div className="mt-10 md:mt-20 ">
           <div className="">
             <button
               onClick={handleNavigate}
               className="font-georgia font-bold text-mobile-p md:text-base hover:border-navyblue  rounded-xl px-3 md:px-5 py-2 md:py-3 flex border-2 border-white items-center bg-navyblue hover:bg-white transition-colors group"
             >
-              <div className="text-button flex items-center group-hover:text-navyblue  text-white">
+              <div className="text-mobile-button md:text-button flex items-center group-hover:text-navyblue  text-white">
                 Start Your Journey With Us
                 <FontAwesomeIcon
                   icon={faArrowRight}
