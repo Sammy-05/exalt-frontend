@@ -1,8 +1,11 @@
 import { useState } from "react";
-import background from "../assets/homeBackground3.jpg";
 import HalfPrimaryPanel from "../components/halfPrimaryPanel";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import background from "../assets/Backgrounds/bg5.jpg";
+import background1 from "../assets/Backgrounds/bg3.jpg";
+
+
 
 
 const Contact = () => {
@@ -55,11 +58,12 @@ const Contact = () => {
       <HalfPrimaryPanel
         heading="Get in Touch with Exalt Solutions"
         text="We’re Here to Answer Your Questions and Start Your Journey"
+        image={background}
       />
 
       <div className="relative w-full">
         <img
-          src={background}
+          src={background1}
           alt="meeting"
           className="w-full h-screen object-cover absolute"
         />

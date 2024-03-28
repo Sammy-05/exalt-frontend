@@ -206,6 +206,7 @@ import pic8 from "../assets/services/pic8-min.jpg";
 import pic9 from "../assets/services/pic9.jpg";
 import pic10 from "../assets/services/pic10.jpg";
 import Links from "../assets/links.json";
+import debounce from "lodash/debounce"; // Import debounce function from lodash
 
 const servicesList = [
   {
@@ -246,8 +247,8 @@ const servicesList = [
   },
   {
     serviceNumber: 7,
-    service: 'Copy Writing',
-    text: 'Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.',
+    service: "Copy Writing",
+    text: "Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.",
     pic: pic10,
   },
   {
@@ -263,20 +264,20 @@ const servicesList = [
     pic: pic9,
   },
   // {
-    //   serviceNumber: 10,
-    //   service: '',
-    //   text: '',
-    // },
-    // {
-    //   serviceNumber: 7,
-    //   service: "Bookkeeping",
-    //   text: "Keep your finances in order and ensure compliance with our professional bookkeeping services. From managing ledgers to preparing financial statements, we handle all aspects of bookkeeping with meticulous attention to detail.",
-    //   pic: pic7,
-    // },
-    // {
-      //   serviceNumber: 12,
-      //   service: '',
-      //   text: '',
+  //   serviceNumber: 10,
+  //   service: '',
+  //   text: '',
+  // },
+  // {
+  //   serviceNumber: 7,
+  //   service: "Bookkeeping",
+  //   text: "Keep your finances in order and ensure compliance with our professional bookkeeping services. From managing ledgers to preparing financial statements, we handle all aspects of bookkeeping with meticulous attention to detail.",
+  //   pic: pic7,
+  // },
+  // {
+  //   serviceNumber: 12,
+  //   service: '',
+  //   text: '',
   // },
 ];
 
@@ -284,10 +285,11 @@ const ServicesMembersPanel = () => {
   const [chunkSize, setChunkSize] = useState(window.innerWidth >= 768 ? 3 : 2);
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = debounce(() => {
+      // Debounce the resize event handler
       setChunkSize(window.innerWidth >= 768 ? 3 : 2);
-    };
-    
+    }, 200);
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -317,6 +319,26 @@ const ServicesMembersPanel = () => {
     return chunked_arr;
   };
 
+  useEffect(() => {
+    // Preload images
+    const images = [
+      pic1,
+      pic2,
+      pic3,
+      pic4,
+      pic5,
+      pic6,
+      pic7,
+      pic8,
+      pic9,
+      pic10,
+    ];
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []); // Run once on component mount
+
   const rows = chunk(servicesList, chunkSize);
 
   const handleButtonClick = (url) => {
@@ -344,7 +366,7 @@ const ServicesMembersPanel = () => {
                 <div className="flex w-11/12 md:w-5/6 flex-col gap-y-10">
                   <div className="w-full h-full">
                     {service.pic && (
-                      <img
+                      <img // Replace img tag with LazyLoadImage
                         src={service.pic}
                         alt="meeting"
                         className="w-full h-44 md:h-[250px] object-cover md:pt-10"
@@ -374,23 +396,23 @@ const ServicesMembersPanel = () => {
           ))}
         </div>
       ))}
-      <div
-        className={`flex justify-center bg-white items-center py-2 md:py-8`}
-      >
+      <div className={`flex justify-center bg-white items-center py-2 md:py-8`}>
         <div className="">
-            <button
-              onClick={()=>{handleButtonClick(Links.Calendly)}}
-              className="font-georgia font-bold text-mobile-p md:text-base hover:border-navyblue  rounded-xl px-3 md:px-5 py-2 md:py-3 flex border-2 border-white items-center bg-navyblue hover:bg-white transition-colors group"
-            >
-              <div className="md:text-button flex items-center group-hover:text-navyblue  text-white">
-                Let's discuss your Business Needs
-                <FontAwesomeIcon
-                  icon={faArrowRight}
-                  className="text-white md:text-2xl ml-4 group-hover:text-navyblue"
-                />
-              </div>
-            </button>
-          </div>
+          <button
+            onClick={() => {
+              handleButtonClick(Links.Calendly);
+            }}
+            className="font-georgia font-bold text-mobile-p md:text-base hover:border-navyblue  rounded-xl px-3 md:px-5 py-2 md:py-3 flex border-2 border-white items-center bg-navyblue hover:bg-white transition-colors group"
+          >
+            <div className="md:text-button flex items-center group-hover:text-navyblue  text-white">
+              Let's discuss your Business Needs
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="text-white md:text-2xl ml-4 group-hover:text-navyblue"
+              />
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   );

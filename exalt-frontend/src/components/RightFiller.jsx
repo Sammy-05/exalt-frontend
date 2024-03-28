@@ -35,7 +35,7 @@ const LeftFiller = (props) => {
   };
 
   return (
-    <div className="bg-navyblue w-full text-white flex md:flex-row flex-col text-left md:py-0 py-10">
+    <div className="bg-navyblue w-full text-white flex md:flex-row flex-col text-left md:py-0 py-10 group">
       <div
         className={`mx-10 md:w-1/2 md:mx-0 md:${
           isMobile
@@ -50,7 +50,7 @@ const LeftFiller = (props) => {
         />
       </div>
       <div className="md:w-1/2 flex items-center">
-        <div className="mx-10 md:mx-20 md:py-10">
+        <div className="mx-10 md:mx-20 md:py-10 transition-transform group-hover:scale-105">
           <div className="font-georgia text-mobile-heading md:text-heading">
             <h1>{heading}</h1>
           </div>

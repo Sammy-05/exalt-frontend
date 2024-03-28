@@ -7,6 +7,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PrimaryPanel from "../components/primaryPanel";
 import pic11 from "../assets/services/pic11.jpg";
+import background from "../assets/Backgrounds/bg4.jpg";
+
 
 const Services = () => {
   return (
@@ -16,6 +18,7 @@ const Services = () => {
         heading="Our Services - Tailored to Your Business Needs"
         text="Discover a Range of Solutions from Global Experts."
         buttontext="Explore"
+        image={background}
       />
 
       {/* <ServicesSecondaryPanel

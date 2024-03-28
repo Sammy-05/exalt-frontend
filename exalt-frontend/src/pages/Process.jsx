@@ -12,6 +12,8 @@ import pic4 from "../assets/process/pic4.jpg"
 import pic5 from "../assets/process/pic5.jpg"
 import pic6 from "../assets/process/pic6.jpg"
 import pic7 from "../assets/process/pic7.jpg"
+import background from "../assets/Backgrounds/bg7.jpg";
+
 
 
 
@@ -25,6 +27,7 @@ const Process = () => {
         subheading="Efficient, Transparent, and Tailored to Your Needs"
         text="At Exalt Solutions, we pride ourselves on a seamless and client-centric approach. From the initial meeting to the final delivery, our process is designed to ensure efficiency, transparency, and satisfaction."
         buttontext="Explore"
+        image={background}
       />
       <div>
         <h1 className="text-mobile-heading md:text-heading text-navyblue flex font-georgia justify-center py-10">
@@ -79,6 +82,9 @@ const Process = () => {
         pageName="process"
         picName={pic7}
       />
+      <div className="py-5">
+      </div>
+
       <CenterFiller
         heading="Committed to your Success"
         text="At every step, Exalt Solutions is committed to your success. We combine our expertise with a deep understanding of your needs to deliver solutions that truly make a difference. Ready to start? Let’s talk about how we can help your business reach new heights."

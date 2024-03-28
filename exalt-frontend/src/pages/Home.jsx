@@ -13,6 +13,7 @@ import Footer from "../components/Footer";
 import pic1 from "../assets/Home/pic1.jpg";
 import pic2 from "../assets/Home/pic2.jpg";
 import homeBackground5 from "../assets/homeBackground5.jpg";
+import background from '../assets/homeBackground3.jpg';
 
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
         heading="Empowering Your Business with Global Talent"
         text="Outsource with Excellence, Deliver with Confidence."
         buttontext="Explore"
+        image={background}
       />
       
       {/* <CenterFiller

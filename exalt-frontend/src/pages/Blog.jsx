@@ -187,24 +187,26 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import blogsData from '../assets/blogsData.json';
+import background from "../assets/Backgrounds/bg6.jpg";
+
 
 const Blog = () => {
 
   return (
     <div>
       <Navbar />
-      <HalfPrimaryPanel heading="Featured Insights" />
+      <HalfPrimaryPanel heading="Featured Insights" image={background}/>
 
       <div className="grid grid-cols-1 md:grid-cols-2">
         {blogsData.map((blog, index) => (
           <Link key={index} to={`/individualBlog/${blog.blogID-1}`}>
             <div className={`md:h-screen col-span-1 ${index % 2 === 0 ? 'bg-navyblue text-white' : 'bg-white text-navyblue'} ${index % 3 === 0 || index % 3 === 3 || index % 3 === 4 ? 'md:bg-navyblue md:text-white' : 'md:bg-white md:text-navyblue'}`}>
 
-              <div className="mx-10 md:mx-20 py-10 md:py-20">
+              <div className="mx-10 md:mx-20 py-10 md:py-20 transition-transform hover:scale-105">
                 <div className="">
                   <img
                     className="w-full h-[250px] object-fill"
-                    src={servicePhoto}
+                    src={background}
                     alt=""
                   />
                 </div>

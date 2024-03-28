@@ -1,10 +1,9 @@
-import background from "../assets/homeBackground3.jpg";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 
 const TertiaryPanel = (props) => {
-  const { heading, subheading, text, buttontext } = props;
+  const { heading, subheading, text, buttontext, image } = props;
   const [navbarHeight, setNavbarHeight] = useState(0);
 
   useEffect(() => {
@@ -41,7 +40,7 @@ const TertiaryPanel = (props) => {
   return (
     <div className=" relative w-full h-screen">
       <img
-        src={background}
+        src={image}
         alt="meeting"
         className="w-full h-full object-cover object-center absolute z-0"
       />

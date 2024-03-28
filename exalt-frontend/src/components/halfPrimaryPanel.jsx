@@ -3,7 +3,7 @@ import background from "../assets/homeBackground3.jpg";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const HalfPrimaryPanel = (props) => {
-  const { heading, text } = props;
+  const { heading, text, image } = props;
 
   return (
     <div>
@@ -11,7 +11,7 @@ const HalfPrimaryPanel = (props) => {
         <div className=" w-full h-[60vh] bg-navyblue absolute opacity-70"></div>
 
         <img
-          src={background}
+          src={image}
           alt="meeting"
           className="w-full h-[60vh] object-cover "
         />

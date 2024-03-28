@@ -1,10 +1,9 @@
-import background from '../assets/homeBackground3.jpg';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 
 const PrimaryPanel = (props) => {
-  const { heading, text, buttontext } = props;
+  const { heading, text, buttontext, image } = props;
 
   const [navbarHeight, setNavbarHeight] = useState(0);
 
@@ -42,7 +41,7 @@ const PrimaryPanel = (props) => {
     <div className="relative w-full">
       <div className=" w-full h-screen bg-navyblue absolute opacity-70"></div>
       <img
-        src={background}
+        src={image}
         alt="meeting"
         className="w-full h-screen object-cover "
       />

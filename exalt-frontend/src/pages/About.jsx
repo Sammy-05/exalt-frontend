@@ -4,6 +4,7 @@ import LeftFiller from "../components/LeftFiller";
 import RightFiller from "../components/RightFiller";
 import PrimaryPanel from "../components/primaryPanel";
 import SecondaryPanel from "../components/secondaryPanel";
+
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef } from "react";
@@ -15,6 +16,7 @@ import pic2 from "../assets/about/pic2.jpg";
 import pic3 from "../assets/about/pic3.jpg";
 import pic4 from "../assets/about/pic4.jpg";
 import pic5 from "../assets/about/pic5.jpg";
+import background from "../assets/Backgrounds/bg1.jpg";
 
 const About = () => {
   const projectsCounterRef = useRef(null);
@@ -78,6 +80,7 @@ const About = () => {
         heading="Shaping the Future of Outsourcing"
         text="Empowerment Through Innovation, Integrity, and Collaboration"
         buttontext="Explore"
+        image={background}
       />
       <SecondaryPanel
         heading="About Us?"

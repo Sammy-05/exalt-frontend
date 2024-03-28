@@ -62,15 +62,15 @@ const Portfolio = () => {
                 />
                 <div className="absolute flex flex-col justify-center items-center h-full md:h-screen z-20">
                   <div className="flex flex-col gap-y-7 mx-10 md:mx-0 md:w-3/4">
-                    <h1 className="text-white text-mobile-mainheading md:text-mainheading font-georgia font-bold md:h-40">
+                    <h1 className="text-white text-mobile-heading md:text-mainheading font-georgia font-bold md:h-40">
                       {item[0].heading1}
                     </h1>
-                    <p className="text-mobile-subheading md:text-subheading text-white md:h-44">
+                    <p className="text-mobile-button md:text-subheading text-white md:h-44">
                       {item[0].subheading1}
                     </p>
 
                     <div>
-                      <button onClick={()=>{handleButtonClick(item[0].url1)}} className="font-georgia font-bold hover:bg-violet hover:text-white bg-white text-navyblue px-3 py-2 items-center">
+                      <button onClick={()=>{handleButtonClick(item[0].url1)}} className="font-georgia font-bold hover:bg-violet hover:text-white bg-white text-navyblue md:text-p text-mobile-p px-3 py-2 items-center">
                         Read More
                       </button>
                     </div>
@@ -85,15 +85,15 @@ const Portfolio = () => {
                 />
                 <div className="absolute flex flex-col justify-center items-center h-full md:h-screen z-20">
                   <div className="flex flex-col gap-y-7 mx-10  md:mx-0 md:w-3/4">
-                    <h1 className="text-white text-mobile-mainheading md:text-mainheading font-georgia font-bold md:h-40">
+                    <h1 className="text-white text-mobile-heading md:text-mainheading font-georgia font-bold md:h-40">
                       {item[1].heading2}
                     </h1>
-                    <p className="text-mobile-subheading md:text-subheading text-white md:h-44">
+                    <p className="text-mobile-button md:text-subheading text-white md:h-44">
                       {item[1].subheading2}
                     </p>
 
                     <div>
-                      <button onClick={()=>{handleButtonClick(item[1].url2)}} className="font-georgia font-bold hover:bg-violet hover:text-white bg-white text-navyblue px-3 py-2 items-center">
+                      <button onClick={()=>{handleButtonClick(item[1].url2)}} className="font-georgia font-bold hover:bg-violet hover:text-white md:text-p text-mobile-p bg-white text-navyblue px-3 py-2 items-center">
                         Read More
                       </button>
                     </div>
