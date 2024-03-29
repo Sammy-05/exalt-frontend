@@ -263,22 +263,6 @@ const servicesList = [
     text: "Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.",
     pic: pic9,
   },
-  // {
-  //   serviceNumber: 10,
-  //   service: '',
-  //   text: '',
-  // },
-  // {
-  //   serviceNumber: 7,
-  //   service: "Bookkeeping",
-  //   text: "Keep your finances in order and ensure compliance with our professional bookkeeping services. From managing ledgers to preparing financial statements, we handle all aspects of bookkeeping with meticulous attention to detail.",
-  //   pic: pic7,
-  // },
-  // {
-  //   serviceNumber: 12,
-  //   service: '',
-  //   text: '',
-  // },
 ];
 
 const ServicesMembersPanel = () => {
