@@ -4,233 +4,180 @@
 // import HalfPrimaryPanel from '../components/halfPrimaryPanel';
 // import Navbar from '../components/Navbar';
 // import Footer from '../components/Footer';
-
-// import blogsData from '../assets/blogsData.json';
-
-
 // import { Link } from 'react-router-dom';
+// import blogsData from '../assets/blogsData.json';
+// import background from "../assets/Backgrounds/bg6.jpg";
 
 // const Blog = () => {
-//   const blogs = [
-//     [
-//       {
-//         heading1: 'The Outsourcing Boom',
-//         subheading1: 'How Businesses are Thriving with Global Talent',
-//         photo1: servicePhoto,
-//         text1:
-//           'In the age of information, data is the new currency. In every gigabyte of data, there lies a story waiting to be told, insights waiting to be discovered, and strategies waiting to be formulated. Data analysis, the process of inspecting, cleansing, transforming, and modeling data, has become a cornerstone in the decision-making process of modern businesses.',
-//       },
-//       {
-//         heading2: 'The Outsourcing Boom',
-//         subheading2: 'How Businesses are Thriving with Global Talent',
-//         photo2: servicePhoto,
-//         text2:
-//           'In the age of information, data is the new currency. In every gigabyte of data, there lies a story waiting to be told, insights waiting to be discovered, and strategies waiting to be formulated. Data analysis, the process of inspecting, cleansing, transforming, and modeling data, has become a cornerstone in the decision-making process of modern businesses.',
-//       },
-//       {
-//         heading3: 'The Outsourcing Boom',
-//         subheading3: 'How Businesses are Thriving with Global Talent',
-//         photo3: servicePhoto,
-//         text3:
-//           'In the age of information, data is the new currency. In every gigabyte of data, there lies a story waiting to be told, insights waiting to be discovered, and strategies waiting to be formulated. Data analysis, the process of inspecting, cleansing, transforming, and modeling data, has become a cornerstone in the decision-making process of modern businesses.',
-//       },
-//       {
-//         heading4: 'The Outsourcing Boom',
-//         subheading4: 'How Businesses are Thriving with Global Talent',
-//         photo4: servicePhoto,
-//         text4:
-//           'In the age of information, data is the new currency. In every gigabyte of data, there lies a story waiting to be told, insights waiting to be discovered, and strategies waiting to be formulated. Data analysis, the process of inspecting, cleansing, transforming, and modeling data, has become a cornerstone in the decision-making process of modern businesses.',
-//       },
-//     ],
-//   ];
 
 //   return (
 //     <div>
 //       <Navbar />
-//       <HalfPrimaryPanel heading="Featured Insights" />
+//       <HalfPrimaryPanel heading="Featured Insights" image={background}/>
 
-//       {blogsData.map((blog, index) => {
-//         return (
-//           <div>
-//             <div className="grid grid-cols-2">
-//               <Link to={`/individualBlog/0`}>
-//                 <div className="col-span-1 bg-navyblue text-white">
-//                   <div className="mx-20 py-20">
-//                     <div className="">
-//                       <img
-//                         className="w-full h-[250px] object-fill"
-//                         src={blog[0].photo1}
-//                         alt=""
-//                       />
-//                     </div>
-//                     <div className="flex items-center gap-x-8 pt-4">
-//                       <h1 className="text-4xl font-georgia">
-//                         {blog[0].heading1}
-//                       </h1>
-//                       <FontAwesomeIcon
-//                         className="text-3xl"
-//                         icon={faArrowRight}
-//                       />
-//                     </div>
-//                     <div className="text-subheading font-thin pt-1">
-//                       <p>{blog[0].subheading1}</p>
-//                     </div>
-//                     <div className="pt-10 text-p">
-//                       <p>{blog[0].text1}</p>
-//                     </div>
-//                   </div>
+//       <div className="grid grid-cols-1 md:grid-cols-2">
+//         {blogsData.map((blog, index) => (
+//           <Link key={index} to={`/individualBlog/${blog.blogID-1}`}>
+//             <div className={`md:h-screen col-span-1 ${index % 2 === 0 ? 'bg-navyblue text-white' : 'bg-white text-navyblue'} ${index % 3 === 0 || index % 3 === 3 || index % 3 === 4 ? 'md:bg-navyblue md:text-white' : 'md:bg-white md:text-navyblue'}`}>
+
+//               <div className="mx-10 md:mx-20 py-10 md:py-20 transition-transform hover:scale-105">
+//                 <div className="">
+//                   <img
+//                     className="w-full h-[250px] object-fill"
+//                     src={background}
+//                     alt=""
+//                   />
 //                 </div>
-//               </Link>
-//               <Link to={`/individualBlog/1`}>
-//                 <div className="col-span-1 bg-white text-navyblue">
-//                   <div className="mx-20 py-20">
-//                     <div className="">
-//                       <img
-//                         className="w-full h-[250px] object-fill"
-//                         src={blog[1].photo2}
-//                         alt=""
-//                       />
-//                     </div>
-//                     <div className="flex items-center gap-x-8 pt-4">
-//                       <h1 className="text-4xl font-georgia">
-//                         {blog[1].heading2}
-//                       </h1>
-//                       <FontAwesomeIcon
-//                         className="text-3xl"
-//                         icon={faArrowRight}
-//                       />
-//                     </div>
-//                     <div className="text-subheading font-thin pt-1">
-//                       <p>{blog[1].subheading2}</p>
-//                     </div>
-//                     <div className="pt-10 text-p">
-//                       <p>{blog[1].text2}</p>
-//                     </div>
-//                   </div>
+//                 <div className="flex items-center gap-x-8 pt-4">
+//                   <h1 className="text-mobile-heading md:text-4xl font-georgia">
+//                     {blog.mainHeading}
+//                   </h1>
+//                   <FontAwesomeIcon
+//                     className="text-2xl md:text-3xl"
+//                     icon={faArrowRight}
+//                   />
 //                 </div>
-//               </Link>
+//                 <div className="text-mobile-subheading md:text-subheading font-thin pt-1">
+//                   <p>{blog.mainSubHeading}</p>
+//                 </div>
+//                 <div className="pt-10 text-mobile-p md:text-p">
+//                   <p>{blog.displayText[0]}</p>
+//                 </div>
+//               </div>
 //             </div>
-//             <div className="grid grid-cols-2">
-//               <Link to={`/individualBlog/2`}>
-//                 <div className="col-span-1 bg-white text-navyblue  ">
-//                   <div className="mx-20 py-20">
-//                     <div className="">
-//                       <img
-//                         className="w-full h-[250px] object-fill"
-//                         src={blog[2].photo3}
-//                         alt=""
-//                       />
-//                     </div>
-//                     <div className="flex items-center gap-x-8 pt-4">
-//                       <h1 className="text-4xl font-georgia">
-//                         {blog[2].heading3}
-//                       </h1>
-//                       <FontAwesomeIcon
-//                         className="text-3xl"
-//                         icon={faArrowRight}
-//                       />
-//                     </div>
-//                     <div className="text-subheading font-thin pt-1">
-//                       <p>{blog[2].subheading3}</p>
-//                     </div>
-//                     <div className="pt-10 text-p">
-//                       <p>{blog[2].text3}</p>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </Link>
-//               <Link to={`/individualBlog/3`}>
-//                 <div className="col-span-1 bg-navyblue text-white">
-//                   <div className="mx-20 py-20">
-//                     <div className="">
-//                       <img
-//                         className="w-full h-[250px] object-fill"
-//                         src={blog[3].photo4}
-//                         alt=""
-//                       />
-//                     </div>
-//                     <div className="flex items-center gap-x-8 pt-4">
-//                       <h1 className="text-4xl font-georgia">
-//                         {blog[3].heading4}
-//                       </h1>
-//                       <FontAwesomeIcon
-//                         className="text-3xl"
-//                         icon={faArrowRight}
-//                       />
-//                     </div>
-//                     <div className="text-subheading font-thin pt-1">
-//                       <p>{blog[3].subheading4}</p>
-//                     </div>
-//                     <div className="pt-10 text-p">
-//                       <p>{blog[3].text4}</p>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </Link>
-//             </div>
-//           </div>
-//         );
-//       })}
+//           </Link>
+//         ))}
+//       </div>
+
 //       <Footer />
 //     </div>
 //   );
 // };
 
 // export default Blog;
-
-
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import servicePhoto from '../assets/servicePhoto.png';
-import HalfPrimaryPanel from '../components/halfPrimaryPanel';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
-import blogsData from '../assets/blogsData.json';
+import HalfPrimaryPanel from "../components/halfPrimaryPanel";
+import author from "../assets/memberPhoto1.jpg"
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import blogsData from "../assets/blogsData.json";
 import background from "../assets/Backgrounds/bg6.jpg";
-
+import logo from "../assets/logoPhone.png";
+import { useEffect, useState } from "react";
 
 const Blog = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  const handleBlockClicks = (blogID) => {
+    window.location.href = `/individualBlog/${blogID}`;
+  };
 
   return (
+    // <div>
+    //   <Navbar />
+    //   <HalfPrimaryPanel heading="Featured Insights" image={background} />
+    //   <div
+    //     className={`grid ${
+    //       window.innerWidth > 768 ? "grid-cols-3 mx-16" : "grid-cols-1 mx-5"
+    //     } `}
+    //   >
+    //     {blogsData.map((blog, index) => (
+    //       <div className="flex flex-col mx-3 py-5 rounded-2xl">
+    //         <div>
+    //           <img
+    //             src={background}
+    //             className="w-full h-[250px] object-fill rounded-t-2xl"
+    //             alt=""
+    //           />
+    //         </div>
+    //         <div className="mx-2">
+    //           <div className="flex gap-x-8 pt-4">
+    //             <h1 className="text-mobile-heading md:text-3xl font-georgia">
+    //               {blog.mainHeading}
+    //             </h1>
+    //           </div>
+    //           <div className="text-[16px] md:text-button font-thin pt-1">
+    //             <p>{blog.mainSubHeading}</p>
+    //           </div>
+    //           <div className="pt-10 text-mobile-p md:text-p">
+    //             <p>{blog.displayText[0]}</p>{" "}
+    //           </div>
+    //           <div className="w-5 h-1 text-violet">gh</div>
+    //         </div>
+    //       </div>
+    //     ))}
+    //   </div>
+
+    //   <Footer />
+    // </div>
     <div>
       <Navbar />
-      <HalfPrimaryPanel heading="Featured Insights" image={background}/>
+      <HalfPrimaryPanel heading="Featured Insights" image={background} />
+      <div
+        className={`grid ${
+          window.innerWidth > 768 ? "grid-cols-3 mx-16 py-16" : "grid-cols-1 mx-5"
+        } `}
+      >
+        {blogsData.map((blog, index) => {
+          const sentences = blog.displayText[0].split(/\.|\?|!/);
+          // Taking only the first sentence
+          const firstSentence = sentences[0].trim() + ". " + sentences[1].trim() + ".";
+          return (
+            <div
+              key={index}
+              className="flex flex-col mx-5 my-5 hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 ease-in-out rounded-2xl bg-grey hover:bg-navyblue hover:text-white group text-navyblue drop-shadow-3xl"
+              style={{ flex: "1 1 300px", marginBottom: "20px" }}
+              onClick={() => handleBlockClicks(blog.blogID - 1)}
+            >
+              <div>
+                <img
+                  src={background}
+                  className="w-full h-[250px] object-fill rounded-t-2xl"
+                  alt=""
+                />
+              </div>
+              <div className="mx-7 flex flex-col justify-between h-full">
+                <div>
+                  <div className="flex gap-x-8 pt-4">
+                    <h1 className="text-violet group-hover:text-lightblue text-[22px] md:text-3xl font-georgia">
+                      {blog.mainHeading}
+                    </h1>
+                  </div>
+                  <div className="text-[16px] md:text-button font-thin pt-1">
+                    <p>{blog.mainSubHeading}</p>
+                  </div>
+                  <div className="pt-5 md:pt-10 text-mobile-p md:text-[16px] flex-1">
+                    <p>{firstSentence}</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="pt-3 md:pt-10 text-navbarscroll">
+                    <hr />
+                  </div>
+                  <div className="pt-3 pb-4 flex items-center">
+                    <img className="w-1/12 rounded-full" src={author} alt="" />
+                    <p className="text-[12px] md:text-[16px] pl-2">
+                      Imran Anwar
+                    </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        {blogsData.map((blog, index) => (
-          <Link key={index} to={`/individualBlog/${blog.blogID-1}`}>
-            <div className={`md:h-screen col-span-1 ${index % 2 === 0 ? 'bg-navyblue text-white' : 'bg-white text-navyblue'} ${index % 3 === 0 || index % 3 === 3 || index % 3 === 4 ? 'md:bg-navyblue md:text-white' : 'md:bg-white md:text-navyblue'}`}>
-
-              <div className="mx-10 md:mx-20 py-10 md:py-20 transition-transform hover:scale-105">
-                <div className="">
-                  <img
-                    className="w-full h-[250px] object-fill"
-                    src={background}
-                    alt=""
-                  />
-                </div>
-                <div className="flex items-center gap-x-8 pt-4">
-                  <h1 className="text-mobile-heading md:text-4xl font-georgia">
-                    {blog.mainHeading}
-                  </h1>
-                  <FontAwesomeIcon
-                    className="text-2xl md:text-3xl"
-                    icon={faArrowRight}
-                  />
-                </div>
-                <div className="text-mobile-subheading md:text-subheading font-thin pt-1">
-                  <p>{blog.mainSubHeading}</p>
-                </div>
-                <div className="pt-10 text-mobile-p md:text-p">
-                  <p>{blog.displayText[0]}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </Link>
-        ))}
+          );
+        })}
       </div>
-
       <Footer />
     </div>
   );

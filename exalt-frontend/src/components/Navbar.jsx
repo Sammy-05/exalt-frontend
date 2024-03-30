@@ -16,6 +16,8 @@ const Navbar = () => {
   const [visible, setVisible] = useState(true);
   const [currentScrollPosState, setCurrentScrollPos] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,6 +26,18 @@ const Navbar = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     // Update activePage state when location changes
@@ -208,7 +222,7 @@ const Navbar = () => {
             icon={isMenuOpen ? faTimes : faBars}
             className={` ${
               isMenuOpen ? "text-white" : "text-navyblue"
-            } text-3xl  cursor-pointer`}
+            } text-3xl hover:cursor-pointer`}
             onClick={toggleMenu}
           />
         </div>
@@ -219,25 +233,25 @@ const Navbar = () => {
             className="flex flex-col items-end gap-y-3 py-5 mr-5 font-georgia text-mobile-subheading "
             onClick={closeMenu}
           >
-            <h1 className="" onClick={() => handleNavigate("/")}>
+            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/")}>
               Home
             </h1>
-            <h1 className="" onClick={() => handleNavigate("/about")}>
+            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/about")}>
               About
             </h1>
-            <h1 className="" onClick={() => handleNavigate("/services")}>
+            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/services")}>
               Services
             </h1>
-            <h1 className="" onClick={() => handleNavigate("/blog")}>
+            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/blog")}>
               Blog
             </h1>
-            <h1 className="" onClick={() => handleNavigate("/process")}>
+            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/process")}>
               Process
             </h1>
-            <h1 className="" onClick={() => handleNavigate("/portfolio")}>
+            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/portfolio")}>
               Portfolio
             </h1>
-            <h1 className="" onClick={() => handleNavigate("/contact")}>
+            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/contact")}>
               Contact
             </h1>
           </div>

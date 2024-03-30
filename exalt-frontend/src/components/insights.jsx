@@ -17,7 +17,7 @@ const Insights = () => {
     console.log(text);
     console.log("type of text: ", typeof(text));
     const words = text.split('.');
-    const truncatedWords = words.slice(0, 2);
+    const truncatedWords = words.slice(0, maxLength);
     return truncatedWords.join(' ') + '...';
   };
   
@@ -56,7 +56,7 @@ const Insights = () => {
                   {blog.mainSubHeading}
                 </h2>
                 <p className="font-roboto font-normal text-mobile-p md:text-p  ">
-                  {truncateText(blog.displayText[0], 25)}
+                  {truncateText(blog.displayText[0], 3)}
                 </p>
               </div>
               <div className="w-full flex justify-end items-center pt-5 mb-3">

@@ -8,6 +8,9 @@ module.exports = {
         georgia: ['Georgia', 'serif'],
         roboto: ['Roboto', 'sans-serif'],
       },
+      dropShadow: {
+        '3xl': '0px 10px 10px rgba(0, 0, 0, 0.25)',
+      },
       fontSize: {
         'p': '18px',
         'subheading': '22px',
