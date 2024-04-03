@@ -18,7 +18,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -185,7 +184,7 @@ const Navbar = () => {
       </div>
       <div className="col-span-2 flex justify-end items-center gap-x-5">
         <div>
-          <a href={`tel:${whatsappNumber}`}>
+          <a href={`https://wa.me/${whatsappNumber}`}>
             <FontAwesomeIcon
               icon={faWhatsapp}
               className="hover:cursor-pointer transition-transform transform hover:scale-110 duration-300 ease-in-out hover:text-violet text-lightblue text-4xl ml-4"
@@ -205,7 +204,9 @@ const Navbar = () => {
   ) : (
     <div
       className={`drop-shadow-xl w-full ${
-        isMenuOpen ? "bg-navyblue text-white rounded-b-2xl fixed" : "bg-white text-navyblue"
+        isMenuOpen
+          ? "bg-navyblue text-white rounded-b-2xl fixed"
+          : "bg-white text-navyblue"
       } z-50`}
     >
       <div className="flex items-center justify-center p-2">
@@ -233,25 +234,46 @@ const Navbar = () => {
             className="flex flex-col items-end gap-y-3 py-5 mr-5 font-georgia text-mobile-subheading "
             onClick={closeMenu}
           >
-            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/")}>
+            <h1
+              className={`hover:cursor-pointer hover:text-lightblue`}
+              onClick={() => handleNavigate("/")}
+            >
               Home
             </h1>
-            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/about")}>
+            <h1
+              className={`hover:cursor-pointer hover:text-lightblue`}
+              onClick={() => handleNavigate("/about")}
+            >
               About
             </h1>
-            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/services")}>
+            <h1
+              className={`hover:cursor-pointer hover:text-lightblue`}
+              onClick={() => handleNavigate("/services")}
+            >
               Services
             </h1>
-            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/blog")}>
+            <h1
+              className={`hover:cursor-pointer hover:text-lightblue`}
+              onClick={() => handleNavigate("/blog")}
+            >
               Blog
             </h1>
-            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/process")}>
+            <h1
+              className={`hover:cursor-pointer hover:text-lightblue`}
+              onClick={() => handleNavigate("/process")}
+            >
               Process
             </h1>
-            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/portfolio")}>
+            <h1
+              className={`hover:cursor-pointer hover:text-lightblue`}
+              onClick={() => handleNavigate("/portfolio")}
+            >
               Portfolio
             </h1>
-            <h1 className={`hover:cursor-pointer hover:text-lightblue`} onClick={() => handleNavigate("/contact")}>
+            <h1
+              className={`hover:cursor-pointer hover:text-lightblue`}
+              onClick={() => handleNavigate("/contact")}
+            >
               Contact
             </h1>
           </div>

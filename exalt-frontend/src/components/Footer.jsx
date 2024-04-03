@@ -131,7 +131,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex gap-x-5">
-          <a href={`tel:${whatsappNumber}`}>
+          <a href={`https://wa.me/${whatsappNumber}`}>
             <FontAwesomeIcon
               icon={faWhatsapp}
               className="text-lightblue text-3xl hover:text-violet cursor-pointer"
@@ -141,7 +141,9 @@ const Footer = () => {
           <FontAwesomeIcon
             icon={faLinkedin}
             className="text-lightblue text-3xl hover:text-violet cursor-pointer"
-            onClick={()=>{handleButtonClick(Links.LinkedIn)}}
+            onClick={() => {
+              handleButtonClick(Links.LinkedIn);
+            }}
           />
         </div>
       </div>
