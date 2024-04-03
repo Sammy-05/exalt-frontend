@@ -48,8 +48,8 @@ const Portfolio = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="h-screen relative">
+      <Navbar />
         {portfolio.map((item, index) => {
           return (
             <div className="grid grid-cols-1 md:grid-cols-2 h-full">
@@ -106,7 +106,7 @@ const Portfolio = () => {
       <CenterFiller
         heading="Ready to Elevate Your Business with Global Expertise?"
         text="Let's discuss how we can tailor our services to your unique needs."
-        buttontext="Book a Meeting Now"
+        buttontext="Book a Meeting"
       />
       <Footer />
       </div>

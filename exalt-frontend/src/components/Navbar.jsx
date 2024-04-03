@@ -177,7 +177,7 @@ const Navbar = () => {
                 : "text-violet"
               : currentScrollPosState > 0
               ? "hover:text-lightblue cursor-pointer"
-              : "text-navyblue cursor-pointer"
+              : "hover:text-violet cursor-pointer"
           }
         >
           <h1 onClick={() => handleNavigate("/contact")}>Contact</h1>
@@ -204,9 +204,9 @@ const Navbar = () => {
     </div>
   ) : (
     <div
-      className={`fixed drop-shadow-xl w-full ${
-        isMenuOpen ? "bg-navyblue text-white rounded-b-2xl" : "bg-white text-navyblue"
-      } z-20 transition-all duration-300 ease-in-out`}
+      className={`drop-shadow-xl w-full ${
+        isMenuOpen ? "bg-navyblue text-white rounded-b-2xl fixed" : "bg-white text-navyblue"
+      } z-50`}
     >
       <div className="flex items-center justify-center p-2">
         <div className="w-2/3 flex items-center gap-x-3">
@@ -262,63 +262,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// div className="mx-5 pt-4 grid pb-4 grid-cols-4">
-//         <div className="col-span-3">
-//           <div className="flex gap-x-3">
-//             <img
-//               src={logo}
-//               alt=""
-//               className="w-1/6 items-center justify-center flex"
-//             />
-//             <div className="flex flex-col justify-center">
-//               <p className="text-darkred font-extrabold">Tom & Jerry Coin</p>
-//               <p className="text-[10px] text-lightred">
-//                 New crypto coin in the market
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="col-span-1 flex justify-end items-center z-20">
-//           <div
-//             className=" w-10 h-10 rounded-md flex items-center justify-center cursor-pointer"
-//             onClick={toggleMenu}
-//           >
-//             <FontAwesomeIcon
-//               icon={isMenuOpen ? faTimes : faBars}
-//               className={`text-3xl ${
-//                 isMenuOpen ? "text-lightyellow" : "text-darkred"
-//               }`}
-//             />
-//           </div>
-//         </div>
-
-//         {isMenuOpen && (
-//           <div
-//             className="fixed flex w-full z-10 bg-button rounded-xl text-lightyellow"
-//             onClick={closeMenu}
-//           >
-//             <div className="bg-circles w-3/4 h-3/4 p-8 rounded-md">
-//               <p className="text-subheading hover:underline underline-offset-2 hover:cursor-pointer mb-4">
-//                 Home
-//               </p>
-//               <p className="text-subheading hover:underline underline-offset-2 hover:cursor-pointer mb-4">
-//                 About
-//               </p>
-//               <p className="text-subheading hover:underline underline-offset-2 hover:cursor-pointer mb-4">
-//                 Services
-//               </p>
-//               <p className="text-subheading hover:underline underline-offset-2 hover:cursor-pointer mb-4">
-//                 Buy Coins
-//               </p>
-//               <p className="text-subheading hover:underline underline-offset-2 hover:cursor-pointer mb-4">
-//                 Episodes
-//               </p>
-//               <p className="text-subheading hover:underline underline-offset-2 hover:cursor-pointer">
-//                 Contact Us
-//               </p>
-//             </div>
-//           </div>
-//         )}
-//       </div>

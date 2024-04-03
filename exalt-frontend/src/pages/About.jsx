@@ -147,17 +147,19 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
-          <button
-            onClick={() => handleButtonClick(Links.Calendly)}
-            className="font-georgia font-bold text-mobile-p md:text-base hover:bg-violet bg-navyblue text-white rounded-xl px-3 md:px-5 py-2 md:py-2 flex border-2 border-white items-center"
-          >
-            Start Your Journey With Us
-            <FontAwesomeIcon
-              icon={faArrowRight}
-              className="text-white md:text-2xl ml-4"
-            />
-          </button>
+        <div className="flex justify-center ">
+          <div className="group">
+            <button
+              onClick={() => handleButtonClick(Links.Calendly)}
+              className="font-georgia font-bold text-mobile-button md:text-button group-hover:text-navyblue group-hover:bg-white bg-navyblue text-white rounded-xl px-3 md:px-5 py-2 md:py-2 flex border-2 border-white items-center"
+            >
+              Start Your Journey With Us
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="text-white md:text-2xl ml-4 group-hover:text-navyblue"
+              />
+            </button>
+          </div>
         </div>
       </div>
       <LeftFiller

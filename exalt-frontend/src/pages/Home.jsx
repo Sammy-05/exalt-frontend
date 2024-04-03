@@ -51,6 +51,8 @@ const Home = () => {
         buttontext="Book a Call"
         pageName="home"
         picName={pic1}
+        onclickFunction="call"
+
       />
       <Companies />
       <RightFiller
@@ -60,6 +62,8 @@ const Home = () => {
         buttontext="Book a Call"
         pageName="home"
         picName={pic2}
+        onclickFunction="call"
+
         
       />
       <Insights/>

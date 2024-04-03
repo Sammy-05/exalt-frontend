@@ -339,7 +339,7 @@ const ServicesMembersPanel = () => {
             chunkSize === 3
               ? "grid-cols-3 bg-white"
               : `grid-cols-2 ${rowIndex % 2 === 0 ? "bg-white" : "bg-navyblue"}`
-          } justify-center items-center`}
+          } justify-center items-start md:items-center`}
         >
           {row.map((service, index) => (
             <div

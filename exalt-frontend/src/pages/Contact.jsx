@@ -67,10 +67,10 @@ const Contact = () => {
           alt="meeting"
           className="w-full h-screen object-cover absolute"
         />
-        <div className="w-1/3 ml-48 h-screen bg-navyblue relative opacity-90">
-          <div className="absolute inset-0 flex flex-col gap-y-10 justify-center ml-16 text-white text-left">
+        <div className="md:w-1/3 mx-10 md:ml-48 h-screen bg-navyblue relative opacity-90">
+          <div className="absolute inset-0 flex flex-col gap-y-10 justify-center ml-8 md:ml-16 text-white text-left">
             <div>
-              <div className="font-georgia text-6xl pb-14">
+              <div className="font-georgia text-heading md:text-6xl pb-14">
                 <h1>Contact Us</h1>
               </div>
               <form onSubmit={handleSubmit}>
