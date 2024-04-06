@@ -203,7 +203,7 @@ const Navbar = () => {
     </div>
   ) : (
     <div
-      className={`drop-shadow-xl w-full ${
+      className={`${activePage === "/portfolio" ? "relative" : "absolute"} drop-shadow-xl w-full ${
         isMenuOpen
           ? "bg-navyblue text-white rounded-b-2xl fixed"
           : "bg-white text-navyblue"

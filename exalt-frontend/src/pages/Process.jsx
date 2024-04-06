@@ -14,9 +14,6 @@ import pic6 from "../assets/process/pic6.jpg"
 import pic7 from "../assets/process/pic7.jpg"
 import background from "../assets/Backgrounds/bg7.jpg";
 
-
-
-
 const Process = () => {
 
   return (

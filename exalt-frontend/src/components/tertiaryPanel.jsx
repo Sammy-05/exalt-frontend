@@ -1,49 +1,48 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 const TertiaryPanel = (props) => {
   const { heading, subheading, text, buttontext, image } = props;
-  const [navbarHeight, setNavbarHeight] = useState(0);
+  // const [navbarHeight, setNavbarHeight] = useState(0);
 
-  useEffect(() => {
-    // Function to get the height of the Navbar component
-    const getNavbarHeight = () => {
-      const navbar = document.getElementById('navbar');
-      if (navbar) {
-        const navbarHeight = navbar.offsetHeight;
-        setNavbarHeight(navbarHeight);
+  // useEffect(() => {
+  //   // Function to get the height of the Navbar component
+  //   const getNavbarHeight = () => {
+  //     const navbar = document.getElementById("navbar");
+  //     if (navbar) {
+  //       const navbarHeight = navbar.offsetHeight;
+  //       setNavbarHeight(navbarHeight);
 
-        console.log('Navbar Height:', navbarHeight);
-        // You can use navbarHeight as needed
-      }
-    };
+  //       console.log("Navbar Height:", navbarHeight);
+  //       // You can use navbarHeight as needed
+  //     }
+  //   };
 
-    // Call the function when the component mounts
-    getNavbarHeight();
-
-    // Optionally, you can add cleanup code if needed
-    return () => {
-      // Cleanup code
-    };
-  }, []);
+  //   // Call the function when the component mounts
+  //   getNavbarHeight();
+  // }, []);
 
   const handleButtonClick = () => {
-    const destination = window.innerHeight + navbarHeight;
+    const destination = window.innerHeight;
     window.scrollTo({
       top: destination,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
-  
 
   return (
-    <div className=" relative w-full h-screen">
-      <img
-        src={image}
-        alt="meeting"
-        className="w-full h-full object-cover object-center absolute z-0"
-      />
+    <div
+      className="h-screen relative"
+      style={{
+        backgroundImage: `url(${image})`,
+        /* Create the parallax scrolling effect */
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
       <div className="h-screen w-full bg-navyblue absolute opacity-80"></div>
 
       <div className="absolute text-white flex flex-col items-center justify-center h-full w-full text-center">
@@ -58,7 +57,10 @@ const TertiaryPanel = (props) => {
         </div>
         {buttontext ? (
           <div className="pt-20">
-            <button onClick={handleButtonClick} className="font-georgia font-bold text-mobile-button md:text-base hover:bg-violet bg-lightblue text-white px-3 py-2 md:px-7 md:py-3 flex  items-center">
+            <button
+              onClick={handleButtonClick}
+              className="font-georgia font-bold text-mobile-button md:text-base hover:bg-violet bg-lightblue text-white px-3 py-2 md:px-7 md:py-3 flex  items-center"
+            >
               {buttontext}
               <FontAwesomeIcon
                 icon={faArrowRight}
