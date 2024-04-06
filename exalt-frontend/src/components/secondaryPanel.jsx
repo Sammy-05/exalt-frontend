@@ -5,7 +5,7 @@ const SecondaryPanel = (props) => {
 
   return (
     <div className='flex items-center justify-center'>
-      <div className="bg-white text-navyblue flex flex-col md:flex-row text-left w-full md:w-[90%] py-5 md:py-10 items-center justify-center hover:drop-shadow-2xl hover:cursor-pointer md:my-5 ">
+      <div className="bg-white text-navyblue flex flex-col md:flex-row text-left w-full md:w-[90%] py-5 md:py-10 items-center justify-center hover:drop-shadow-3xl hover:cursor-pointer md:my-5 ">
         <div className="w-11/12 flex md:flex-row flex-col items-center justify-center">
           <div className="md:w-1/2 flex justify-center items-center  ">
             <img
