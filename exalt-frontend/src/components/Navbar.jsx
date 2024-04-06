@@ -193,7 +193,7 @@ const Navbar = () => {
         </div>
         <div
           onClick={() => {
-            window.location.href = Links.Calendly;
+            window.open(Links.Calendly, "_blank")
           }}
           className={`hover:bg-violet hover:cursor-pointer bg-lightblue h-full w-1/2 flex items-center justify-center transition duration-300 ease-in-out`}
         >
