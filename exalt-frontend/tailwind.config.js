@@ -34,6 +34,7 @@ module.exports = {
       white: "#ffffff",
       grey: "#F0F0F0",
       navbarscroll: "#313236",
+      blogtext: "#696F6D"
     },
   },
   plugins: [],

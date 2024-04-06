@@ -1,5 +1,5 @@
-import memberPhoto1 from '../assets/memberPhoto1.jpg';
-import memberPhoto2 from '../assets/memberPhoto2.jpg';
+// import memberPhoto1 from '../assets/memberPhoto1.jpg';
+// import memberPhoto2 from '../assets/memberPhoto2.jpg';
 import { faQuoteLeft, faQuoteLeftAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

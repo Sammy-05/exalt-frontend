@@ -56,7 +56,8 @@
 
 // export default Blog;
 import HalfPrimaryPanel from "../components/halfPrimaryPanel";
-import author from "../assets/memberPhoto1.jpg"
+// import author from "../assets/memberPhoto1.jpg"
+import author from "../assets/blogs/Faraz.jpg"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import blogsData from "../assets/blogsData.json";
@@ -168,7 +169,7 @@ const Blog = () => {
                   <div className="pt-3 pb-4 flex items-center">
                     <img className="w-1/12 rounded-full" src={author} alt="" />
                     <p className="text-[12px] md:text-[16px] pl-2">
-                      Imran Anwar
+                      {blog.author}
                     </p>
 
                   </div>

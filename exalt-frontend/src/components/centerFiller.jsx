@@ -34,15 +34,15 @@ const CenterFiller = (props) => {
               <div className="">
                 <button
                   onClick={handleButtonClick}
-                  className="font-georgia font-bold text-mobile-p md:text-base  rounded-xl px-3 md:px-5 py-2 md:py-2 flex border-2 border-white items-center bg-navyblue hover:bg-white transition-colors group"
+                  className="font-georgia font-bold text-mobile-p md:text-base  rounded-xl px-3 md:px-5 py-2 md:py-3 flex border-2 border-white items-center bg-navyblue hover:bg-white transition-colors group"
                 >
-                  <div className="flex items-center text-mobile-p md:text-button  group-hover:text-navyblue  text-white">
+                  <div className="flex items-center text-mobile-p md:text-button  group-hover:text-navyblue text-left  text-white">
                     {buttontext}
+                  </div>
                     <FontAwesomeIcon
                       icon={faArrowRight}
-                      className="text-white md:text-2xl ml-4 group-hover:text-navyblue"
+                      className="text-white md:text-2xl ml-2 md:ml-4 group-hover:text-navyblue"
                     />
-                  </div>
                 </button>
               </div>
             </div>

@@ -26,15 +26,15 @@ const IndividualBlog = ({ props }) => {
           text={blogData[blogId]?.displayText}
           image={background}
         />
-        <div className="py-20">
+        <div className="py-10 md:py-20">
           {blogData[blogId]?.body?.map((bodyItem, index) => (
             <div
               key={index}
-              className={`${"bg-white"} px-20 flex flex-col gap-y-5 py-8 mx-40`}
+              className={`${"bg-white"} mx-10 md:px-20 flex flex-col gap-y-5 py-5 md:py-8 md:mx-60`}
             >
-              <h1 className="font-georgia text-4xl ">{bodyItem.bodyHeading}</h1>
+              <h1 className="font-georgia text-[24px] md:text-heading ">{bodyItem.bodyHeading}</h1>
               {bodyItem.text?.map((text) => (
-                <p className="text-xl ">{text}</p>
+                <p className="md:text-subheading text-mobile-button text-blogtext font-light">{text}</p>
               ))}
             </div>
           ))}
@@ -42,7 +42,7 @@ const IndividualBlog = ({ props }) => {
         <CenterFiller
           heading={blogData[blogId]?.consultationHeading}
           text={blogData[blogId]?.consultationText}
-          buttontext="Book a Meeting Now"
+          buttontext="Book a Meeting"
         />
         {/* {blogData[blogId]?.author ? (
           <LeftFiller
