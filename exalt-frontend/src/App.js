@@ -8,6 +8,8 @@ import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import IndividualBlog from './pages/IndividualBlog';
+import UploadBlog from './pages/UploadBlog';
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/individualBlog/:blogId" element={<IndividualBlog blogId />} />
+        <Route path="/uploadBlog" element={<UploadBlog />} />
 
       </Routes>
     </div>

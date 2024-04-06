@@ -350,11 +350,10 @@ const ServicesMembersPanel = () => {
                 <div className="flex w-11/12 md:w-5/6 flex-col gap-y-10">
                   <div className="w-full h-full">
                     {service.pic && (
-                      <img // Replace img tag with LazyLoadImage
-                        src={service.pic}
+                      <img 
+                        src={`https://picsum.photos/1080/1960?random=${service.serviceNumber}`}
                         alt="meeting"
                         className="w-full h-44 md:h-[250px] object-cover md:pt-10"
-                        loading="lazy"
                       />
                     )}
                   </div>
