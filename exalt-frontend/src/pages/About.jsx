@@ -1,22 +1,22 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import LeftFiller from "../components/LeftFiller";
-import RightFiller from "../components/RightFiller";
-import PrimaryPanel from "../components/primaryPanel";
-import SecondaryPanel from "../components/secondaryPanel";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import LeftFiller from '../components/LeftFiller';
+import RightFiller from '../components/RightFiller';
+import PrimaryPanel from '../components/primaryPanel';
+import SecondaryPanel from '../components/secondaryPanel';
 
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useRef } from "react";
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useRef } from 'react';
 
-import Links from "../assets/links.json";
+import Links from '../assets/links.json';
 
-import pic1 from "../assets/about/pic1.jpg";
-import pic2 from "../assets/about/pic2.jpg";
-import pic3 from "../assets/about/pic3.jpg";
-import pic4 from "../assets/about/pic4.jpg";
-import pic5 from "../assets/about/pic5.jpg";
-import background from "../assets/Backgrounds/bg1.jpg";
+import pic1 from '../assets/about/pic1.jpg';
+import pic2 from '../assets/about/pic2.jpg';
+import pic3 from '../assets/about/pic3.jpg';
+import pic4 from '../assets/about/pic4.jpg';
+import pic5 from '../assets/about/pic5.jpg';
+import background from '../assets/Backgrounds/bg1.jpg';
 
 const About = () => {
   const projectsCounterRef = useRef(null);
@@ -31,7 +31,7 @@ const About = () => {
         if (!startTimestamp) startTimestamp = timestamp;
         const progress = Math.min((timestamp - startTimestamp) / duration, 1);
         element.textContent =
-          Math.floor(progress * (end - start) + start) + "+"; // Append plus sign
+          Math.floor(progress * (end - start) + start) + '+';
         if (progress < 1) {
           window.requestAnimationFrame(step);
         }
@@ -40,7 +40,7 @@ const About = () => {
     };
 
     const options = {
-      threshold: 0.5, // When 50% of the element is visible
+      threshold: 0.5,
     };
 
     const handleIntersect = (entries) => {
@@ -64,13 +64,12 @@ const About = () => {
     if (entriesCounterRef.current) observer.observe(entriesCounterRef.current);
 
     return () => {
-      observer.disconnect(); // Cleanup when component unmounts
+      observer.disconnect();
     };
   }, []);
 
   const handleButtonClick = (url) => {
-    // open the url in the new tab
-    window.open(url, "_blank");
+    window.open(url, '_blank');
   };
 
   return (
@@ -173,7 +172,6 @@ const About = () => {
         heading="Vision Statement"
         subheading="A Vision for Global Business Synergy"
         text="Our vision is to become a leading force in the outsourcing industry, seamlessly integrating businesses from diverse markets. We aspire to be the bridge that connects ambitions to realities, facilitating growth and success in new and flourishing markets."
-        // buttontext="Book a Call"
         pageName="about"
         picName={pic2}
       />
@@ -181,7 +179,6 @@ const About = () => {
         heading="Our Mission"
         subheading="Empowering Global Businesses, One Project at a Time"
         text="Exalt Solutions is dedicated to empowering businesses with exceptional outsourcing services. From insightful market research to cutting-edge data analysis and comprehensive software solutions, we tailor each service to meet and exceed the unique demands of our clients."
-        // buttontext="Book a Call"
         pageName="about"
         picName={pic3}
       />
@@ -192,7 +189,7 @@ const About = () => {
         buttontext="Unveil Our Process"
         pageName="about"
         picName={pic4}
-        onclickFunction={"/process"}
+        onclickFunction={'/process'}
       />
       <LeftFiller
         heading="Impact and Legacy"

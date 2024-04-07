@@ -1,33 +1,8 @@
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { useEffect, useState } from 'react';
 
 const PrimaryPanel = (props) => {
   const { heading, text, buttontext, image } = props;
-
-  // const [navbarHeight, setNavbarHeight] = useState(0);
-
-  // useEffect(() => {
-  //   // Function to get the height of the Navbar component
-  //   const getNavbarHeight = () => {
-  //     const navbar = document.getElementById('navbar');
-  //     if (navbar) {
-  //       const navbarHeight = navbar.offsetHeight;
-  //       setNavbarHeight(navbarHeight);
-
-  //       console.log('Navbar Height:', navbarHeight);
-  //       // You can use navbarHeight as needed
-  //     }
-  //   };
-
-  //   // Call the function when the component mounts
-  //   getNavbarHeight();
-
-  //   // Optionally, you can add cleanup code if needed
-  //   return () => {
-  //     // Cleanup code
-  //   };
-  // }, []);
 
   const handleButtonClick = () => {
     const destination = window.innerHeight;
@@ -50,11 +25,6 @@ const PrimaryPanel = (props) => {
     
     >
       <div className=" w-full h-screen bg-navyblue absolute opacity-70"></div>
-      {/* <img
-        src={image}
-        alt="meeting"
-        className="w-full h-screen object-cover "
-      /> */}
       <div className="mx-6 md:mx-20 absolute inset-0 flex flex-col justify-center items-center md:items-start text-center md:text-left text-white font-bold">
         <div>
           <div className="font-georgia text-mobile-mainheading md:text-6xl md:w-2/3 md:leading-normal">

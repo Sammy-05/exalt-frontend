@@ -5,8 +5,6 @@ import { useParams } from "react-router-dom";
 import TertiaryPanel from "../components/tertiaryPanel";
 import background from "../assets/Backgrounds/bg4-min.jpg"
 import CenterFiller from "../components/centerFiller";
-import LeftFiller from "../components/LeftFiller";
-import pic3 from "../assets/about/pic3.jpg";
 import { useEffect } from "react";
 
 const IndividualBlog = ({ props }) => {
@@ -44,17 +42,7 @@ const IndividualBlog = ({ props }) => {
           text={blogData[blogId]?.consultationText}
           buttontext="Book a Meeting"
         />
-        {/* {blogData[blogId]?.author ? (
-          <LeftFiller
-            heading={blogData[blogId]?.author}
-            subheading={blogData[blogId]["Upwork Profile Link"]}
-            text={blogData[blogId]?.authortext}
-            picName={pic3}
-            pageName="blog"
-          />
-        ) : (
-          []
-        )} */}
+        
       </div>
 
       <Footer />

@@ -39,7 +39,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    // Update activePage state when location changes
+    
     setActivePage(location.pathname);
 
     const handleScroll = () => {
@@ -52,7 +52,6 @@ const Navbar = () => {
           currentScrollPos < 10
       );
 
-      // Show navbar if scrolling up or at the top of the page
       if (prevScrollPos > currentScrollPos || currentScrollPos <= 0) {
         setVisible(true);
       }

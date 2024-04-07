@@ -1,68 +1,9 @@
-// import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import servicePhoto from '../assets/servicePhoto.png';
-// import HalfPrimaryPanel from '../components/halfPrimaryPanel';
-// import Navbar from '../components/Navbar';
-// import Footer from '../components/Footer';
-// import { Link } from 'react-router-dom';
-// import blogsData from '../assets/blogsData.json';
-// import background from "../assets/Backgrounds/bg6.jpg";
-
-// const Blog = () => {
-
-//   return (
-//     <div>
-//       <Navbar />
-//       <HalfPrimaryPanel heading="Featured Insights" image={background}/>
-
-//       <div className="grid grid-cols-1 md:grid-cols-2">
-//         {blogsData.map((blog, index) => (
-//           <Link key={index} to={`/individualBlog/${blog.blogID-1}`}>
-//             <div className={`md:h-screen col-span-1 ${index % 2 === 0 ? 'bg-navyblue text-white' : 'bg-white text-navyblue'} ${index % 3 === 0 || index % 3 === 3 || index % 3 === 4 ? 'md:bg-navyblue md:text-white' : 'md:bg-white md:text-navyblue'}`}>
-
-//               <div className="mx-10 md:mx-20 py-10 md:py-20 transition-transform hover:scale-105">
-//                 <div className="">
-//                   <img
-//                     className="w-full h-[250px] object-fill"
-//                     src={background}
-//                     alt=""
-//                   />
-//                 </div>
-//                 <div className="flex items-center gap-x-8 pt-4">
-//                   <h1 className="text-mobile-heading md:text-4xl font-georgia">
-//                     {blog.mainHeading}
-//                   </h1>
-//                   <FontAwesomeIcon
-//                     className="text-2xl md:text-3xl"
-//                     icon={faArrowRight}
-//                   />
-//                 </div>
-//                 <div className="text-mobile-subheading md:text-subheading font-thin pt-1">
-//                   <p>{blog.mainSubHeading}</p>
-//                 </div>
-//                 <div className="pt-10 text-mobile-p md:text-p">
-//                   <p>{blog.displayText[0]}</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </Link>
-//         ))}
-//       </div>
-
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default Blog;
 import HalfPrimaryPanel from "../components/halfPrimaryPanel";
-// import author from "../assets/memberPhoto1.jpg"
 import author from "../assets/blogs/Faraz.jpg"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import blogsData from "../assets/blogsData.json";
 import background from "../assets/Backgrounds/bg6-min.jpg";
-import logo from "../assets/logoPhone.png";
 import { useEffect, useState } from "react";
 
 const Blog = () => {
@@ -96,7 +37,7 @@ const Blog = () => {
       >
         {blogsData.map((blog, index) => {
           const sentences = blog.displayText[0].split(/\.|\?|!/);
-          // Taking only the first sentence
+          
           const firstSentence = sentences[0].trim() + ". " + sentences[1].trim() + ".";
           return (
             <div

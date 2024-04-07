@@ -1,7 +1,3 @@
-import background from "../assets/homeBackground3.jpg";
-// import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 const HalfPrimaryPanel = (props) => {
   const { heading, text, image } = props;
 
@@ -9,7 +5,6 @@ const HalfPrimaryPanel = (props) => {
       <div className="h-[60vh]"
       style={{
         backgroundImage: `url(${image})`,
-        /* Create the parallax scrolling effect */
         backgroundAttachment: "fixed",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -32,9 +27,6 @@ const HalfPrimaryPanel = (props) => {
           </div>
         </div>
       </div>
-
-      
-    // </div>
   );
 };
 

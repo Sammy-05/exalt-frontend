@@ -1,27 +1,10 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { useEffect, useState } from "react";
+
 
 const TertiaryPanel = (props) => {
   const { heading, subheading, text, buttontext, image } = props;
-  // const [navbarHeight, setNavbarHeight] = useState(0);
 
-  // useEffect(() => {
-  //   // Function to get the height of the Navbar component
-  //   const getNavbarHeight = () => {
-  //     const navbar = document.getElementById("navbar");
-  //     if (navbar) {
-  //       const navbarHeight = navbar.offsetHeight;
-  //       setNavbarHeight(navbarHeight);
-
-  //       console.log("Navbar Height:", navbarHeight);
-  //       // You can use navbarHeight as needed
-  //     }
-  //   };
-
-  //   // Call the function when the component mounts
-  //   getNavbarHeight();
-  // }, []);
 
   const handleButtonClick = () => {
     const destination = window.innerHeight;
@@ -36,7 +19,6 @@ const TertiaryPanel = (props) => {
       className="h-screen relative"
       style={{
         backgroundImage: `url(${image})`,
-        /* Create the parallax scrolling effect */
         backgroundAttachment: "fixed",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

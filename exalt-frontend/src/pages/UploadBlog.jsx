@@ -1,69 +1,12 @@
-// import React, { useState } from "react";
-// // import axios from "axios";
-
-// const UploadBlog = () => {
-//   const [title, setTitle] = useState("");
-//   const [content, setContent] = useState("");
-//   const [image, setImage] = useState(null);
-//   const [loading, setLoading] = useState(false);
-
-//   const handleUpload = async () => {
-//     setLoading(true);
-//     const formData = new FormData();
-//     formData.append("title", title);
-//     formData.append("content", content);
-//     formData.append("image", image);
-
-//     // try {
-//     //   await axios.post("/api/blogs", formData, {
-//     //     headers: {
-//     //       "Content-Type": "multipart/form-data",
-//     //     },
-//     //   });
-//     //   setLoading(false);
-//     //   alert("Blog uploaded successfully");
-//     // } catch (error) {
-//     //   setLoading(false);
-//     //   alert("Failed to upload blog");
-//     // }
-//   };
-
-//   function convertToBase64(e) {
-//     const fileReader = new FileReader();
-
-//     fileReader.readAsDataURL(e.target.files[0]);
-
-//     fileReader.onload = () => {
-//       console.log(fileReader.result);
-//       setImage(fileReader.result);
-//     };
-
-//     fileReader.onerror = (error) => {
-//       console.error("Error: ", error);
-//     };
-//   }
-
-//   return (
-//     <div className="flex flex-col">
-//       <h1>Upload Blog</h1>
-
-//       <input type="file" accept="image/*" onChange={convertToBase64} />
-
-//       {image && <img width={100} height={100} src={image} alt="" />}
-//     </div>
-//   );
-// };
-
-// export default UploadBlog;
 import React, { useEffect, useState } from "react";
-import axios from "axios"; // Import Axios
+import axios from "axios"; 
 
 const UploadBlog = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [blogs, setBlogs] = useState([]); // Create a state variable to store the blogs
+  const [blogs, setBlogs] = useState([]); 
 
   useEffect(() => {
     axios.get("http://localhost:3001/blogs").then((response) => {

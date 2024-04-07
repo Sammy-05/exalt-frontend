@@ -1,29 +1,26 @@
-import blogPhoto1 from "../assets/blogPhoto1.png";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import blogsData from "../assets/blogsData.json";
+import blogPhoto1 from '../assets/blogPhoto1.png';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import blogsData from '../assets/blogsData.json';
 
-import Links from "../assets/links.json";
+import Links from '../assets/links.json';
 
 const Insights = () => {
-  //   const { heading, text, buttontext } = props;
-
   const handleNavigate = () => {
-    window.open(Links.Calendly, "_blank");
+    window.open(Links.Calendly, '_blank');
   };
 
   const truncateText = (text, maxLength) => {
     console.log(text);
-    console.log("type of text: ", typeof text);
-    const words = text.split(".");
+    console.log('type of text: ', typeof text);
+    const words = text.split('.');
     const truncatedWords = words.slice(0, maxLength);
-    return truncatedWords.join(" ") + "...";
+    return truncatedWords.join(' ') + '...';
   };
 
   const handleBlockClicks = (blogId) => {
-    window.open(`/individualBlog/${blogId}`, "_blank");
-  }
-
+    window.open(`/individualBlog/${blogId}`, '_blank');
+  };
 
   return (
     <div className=" bg-white w-full px-10 md:px-20 py-5 md:py-10">
@@ -38,12 +35,11 @@ const Insights = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2">
-        
         {blogsData.slice(0, 2).map((blog, index) => (
           <div
             key={index}
             className="flex flex-col md:mx-5 my-5 hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 ease-in-out rounded-2xl bg-white hover:bg-navyblue hover:text-white group text-navyblue drop-shadow-3xl"
-            style={{ flex: "1 1 300px", marginBottom: "20px" }}
+            style={{ flex: '1 1 300px', marginBottom: '20px' }}
             onClick={() => handleBlockClicks(blog.blogID - 1)}
           >
             <div>

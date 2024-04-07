@@ -23,7 +23,7 @@ const Contact = () => {
     e.preventDefault();
     let messageBody = "Dear Sir/Ma'am,\n\n";
     messageBody += `My name is ${formData.name}`;
-    // messageBody += `Email: ${formData.email}\n`;
+    
     if (formData.company) {
       messageBody += ` and I am from ${formData.company}.\n\n`;
     }
@@ -85,7 +85,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder=""
-                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent" // Added bg-transparent class
+                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent" 
                       required
                     />
                   </div>
@@ -99,7 +99,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder=""
-                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent" // Added bg-transparent class
+                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent" 
                       required
                     />
                   </div>
@@ -111,7 +111,7 @@ const Contact = () => {
                       value={formData.company}
                       onChange={handleChange}
                       placeholder=""
-                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent" // Added bg-transparent class
+                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent" 
                     />
                   </div>
                   <div className="flex flex-col gap-y-2">
@@ -124,7 +124,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder=""
-                      className="w-full px-4 py-2 bg-navyblue placeholder-white text-white h-32 border border-white bg-transparent" // Added bg-transparent class
+                      className="w-full px-4 py-2 bg-navyblue placeholder-white text-white h-32 border border-white bg-transparent" 
                       required
                     ></textarea>
                   </div>

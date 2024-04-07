@@ -1,91 +1,87 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import pic1 from "../assets/services/pic1.jpg";
-import pic2 from "../assets/services/pic2.jpg";
-import pic3 from "../assets/services/pic3.jpg";
-import pic4 from "../assets/services/pic4.jpg";
-import pic5 from "../assets/services/pic5.jpg";
-import pic6 from "../assets/services/pic6.jpg";
-import pic7 from "../assets/services/pic7.jpg";
-import pic8 from "../assets/services/pic8.jpg";
-import pic9 from "../assets/services/pic9.jpg";
-import pic10 from "../assets/services/pic10.jpg";
-import Links from "../assets/links.json";
-
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import pic1 from '../assets/services/pic1.jpg';
+import pic2 from '../assets/services/pic2.jpg';
+import pic3 from '../assets/services/pic3.jpg';
+import pic4 from '../assets/services/pic4.jpg';
+import pic5 from '../assets/services/pic5.jpg';
+import pic6 from '../assets/services/pic6.jpg';
+import pic8 from '../assets/services/pic8.jpg';
+import pic9 from '../assets/services/pic9.jpg';
+import pic10 from '../assets/services/pic10.jpg';
+import Links from '../assets/links.json';
 
 const servicesList = [
   {
     serviceNumber: 1,
-    service: "Market Research",
-    text: "Unlock market insights and drive your business strategy with our comprehensive market research services. Our team provides in-depth analysis of market trends, consumer behavior, and competitive landscapes to inform your decision-making process.",
+    service: 'Market Research',
+    text: 'Unlock market insights and drive your business strategy with our comprehensive market research services. Our team provides in-depth analysis of market trends, consumer behavior, and competitive landscapes to inform your decision-making process.',
     pic: pic1,
   },
   {
     serviceNumber: 2,
-    service: "Data Analysis",
-    text: "Transform data into actionable insights with our data analysis services. We specialize in interpreting complex data sets to provide clear, concise, and relevant information that supports your business objectives.",
+    service: 'Data Analysis',
+    text: 'Transform data into actionable insights with our data analysis services. We specialize in interpreting complex data sets to provide clear, concise, and relevant information that supports your business objectives.',
     pic: pic2,
   },
   {
     serviceNumber: 3,
-    service: "ML/AI Devlopment",
-    text: "Harness the power of cutting-edge technology with our expertise in developing machine learning and AI solutions tailored to optimize and elevate your business processes.",
+    service: 'ML/AI Devlopment',
+    text: 'Harness the power of cutting-edge technology with our expertise in developing machine learning and AI solutions tailored to optimize and elevate your business processes.',
     pic: pic3,
   },
   {
     serviceNumber: 4,
-    service: "Software Development",
-    text: "Craft innovative, scalable, and customized software solutions with our dedicated team. From conceptualization to implementation, we deliver reliable software that aligns seamlessly with your business goals.",
+    service: 'Software Development',
+    text: 'Craft innovative, scalable, and customized software solutions with our dedicated team. From conceptualization to implementation, we deliver reliable software that aligns seamlessly with your business goals.',
     pic: pic4,
   },
   {
     serviceNumber: 5,
-    service: "Web/App Development",
-    text: "Transform your digital presence with our expert web and app development services. We create user-centric, responsive, and feature-rich solutions, ensuring a seamless and engaging experience for your audience.",
+    service: 'Web/App Development',
+    text: 'Transform your digital presence with our expert web and app development services. We create user-centric, responsive, and feature-rich solutions, ensuring a seamless and engaging experience for your audience.',
     pic: pic5,
   },
   {
     serviceNumber: 6,
-    service: "Data Labelling",
-    text: "Expertly annotated data for AI and machine learning success. Our team specializes in precise data labeling for image, text, and more, ensuring quality training for your innovative projects.",
+    service: 'Data Labelling',
+    text: 'Expertly annotated data for AI and machine learning success. Our team specializes in precise data labeling for image, text, and more, ensuring quality training for your innovative projects.',
     pic: pic6,
   },
   {
     serviceNumber: 7,
-    service: "Copy Writing",
-    text: "Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.",
+    service: 'Copy Writing',
+    text: 'Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.',
     pic: pic10,
   },
   {
     serviceNumber: 8,
-    service: "Financial Modeling",
-    text: "Plan for the future with confidence using our financial forecasting services. We provide insights into financial trends, helping you make informed decisions and strategize for long-term success.",
+    service: 'Financial Modeling',
+    text: 'Plan for the future with confidence using our financial forecasting services. We provide insights into financial trends, helping you make informed decisions and strategize for long-term success.',
     pic: pic8,
   },
   {
     serviceNumber: 9,
-    service: "Recruiting",
-    text: "Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.",
+    service: 'Recruiting',
+    text: 'Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.',
     pic: pic9,
   },
 ];
 
 const ServicesMembersPanel = () => {
-  
   const handleButtonClick = (url) => {
-    // open the url in the new tab
-    window.open(url, "_blank");
+    
+    window.open(url, '_blank');
   };
 
   return (
-    
     <div>
       <div
         className={`grid ${
           window.innerWidth > 768
-            ? "grid-cols-3 mx-16 py-16"
-            : "grid-cols-1 mx-1"
+            ? 'grid-cols-3 mx-16 py-16'
+            : 'grid-cols-1 mx-1'
         } `}
       >
         {servicesList.map((service, index) => {
