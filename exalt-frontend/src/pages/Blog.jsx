@@ -61,7 +61,7 @@ import author from "../assets/blogs/Faraz.jpg"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import blogsData from "../assets/blogsData.json";
-import background from "../assets/Backgrounds/bg6.jpg";
+import background from "../assets/Backgrounds/bg6-min.jpg";
 import logo from "../assets/logoPhone.png";
 import { useEffect, useState } from "react";
 
