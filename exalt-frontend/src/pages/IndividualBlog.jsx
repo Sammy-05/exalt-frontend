@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import blogData from "../assets/blogsData.json";
 import { useParams } from "react-router-dom";
 import TertiaryPanel from "../components/tertiaryPanel";
-import background from "../assets/Backgrounds/bg4.jpg"
+import background from "../assets/Backgrounds/bg4-min.jpg"
 import CenterFiller from "../components/centerFiller";
 import LeftFiller from "../components/LeftFiller";
 import pic3 from "../assets/about/pic3.jpg";

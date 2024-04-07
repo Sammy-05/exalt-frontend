@@ -5,14 +5,14 @@ import CenterFiller from "../components/centerFiller";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-import pic1 from "../assets/process/pic1.jpg"
-import pic2 from "../assets/process/pic2.jpg"
-import pic3 from "../assets/process/pic3.jpg"
-import pic4 from "../assets/process/pic4.jpg"
-import pic5 from "../assets/process/pic5.jpg"
-import pic6 from "../assets/process/pic6.jpg"
-import pic7 from "../assets/process/pic7.jpg"
-import background from "../assets/Backgrounds/bg7.jpg";
+import pic1 from "../assets/process/pic1-min.jpg"
+import pic2 from "../assets/process/pic2-min.jpg"
+import pic3 from "../assets/process/pic3-min.jpg"
+import pic4 from "../assets/process/pic4-min.jpg"
+import pic5 from "../assets/process/pic5-min.jpg"
+import pic6 from "../assets/process/pic6-min.jpg"
+import pic7 from "../assets/process/pic7-min.jpg"
+import background from "../assets/Backgrounds/bg7-min.jpg";
 
 const Process = () => {
 
