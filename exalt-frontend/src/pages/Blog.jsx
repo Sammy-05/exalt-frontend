@@ -85,43 +85,7 @@ const Blog = () => {
   };
 
   return (
-    // <div>
-    //   <Navbar />
-    //   <HalfPrimaryPanel heading="Featured Insights" image={background} />
-    //   <div
-    //     className={`grid ${
-    //       window.innerWidth > 768 ? "grid-cols-3 mx-16" : "grid-cols-1 mx-5"
-    //     } `}
-    //   >
-    //     {blogsData.map((blog, index) => (
-    //       <div className="flex flex-col mx-3 py-5 rounded-2xl">
-    //         <div>
-    //           <img
-    //             src={background}
-    //             className="w-full h-[250px] object-fill rounded-t-2xl"
-    //             alt=""
-    //           />
-    //         </div>
-    //         <div className="mx-2">
-    //           <div className="flex gap-x-8 pt-4">
-    //             <h1 className="text-mobile-heading md:text-3xl font-georgia">
-    //               {blog.mainHeading}
-    //             </h1>
-    //           </div>
-    //           <div className="text-[16px] md:text-button font-thin pt-1">
-    //             <p>{blog.mainSubHeading}</p>
-    //           </div>
-    //           <div className="pt-10 text-mobile-p md:text-p">
-    //             <p>{blog.displayText[0]}</p>{" "}
-    //           </div>
-    //           <div className="w-5 h-1 text-violet">gh</div>
-    //         </div>
-    //       </div>
-    //     ))}
-    //   </div>
-
-    //   <Footer />
-    // </div>
+    
     <div>
       <Navbar />
       <HalfPrimaryPanel heading="Featured Insights" image={background} />

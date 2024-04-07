@@ -197,16 +197,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
 import pic1 from "../assets/services/pic1.jpg";
 import pic2 from "../assets/services/pic2.jpg";
-import pic3 from "../assets/services/pic3-min.jpg";
-import pic4 from "../assets/services/pic4-min.jpg";
-import pic5 from "../assets/services/pic5-min.jpg";
-import pic6 from "../assets/services/pic6-min.jpg";
+import pic3 from "../assets/services/pic3.jpg";
+import pic4 from "../assets/services/pic4.jpg";
+import pic5 from "../assets/services/pic5.jpg";
+import pic6 from "../assets/services/pic6.jpg";
 import pic7 from "../assets/services/pic7.jpg";
-import pic8 from "../assets/services/pic8-min.jpg";
+import pic8 from "../assets/services/pic8.jpg";
 import pic9 from "../assets/services/pic9.jpg";
 import pic10 from "../assets/services/pic10.jpg";
 import Links from "../assets/links.json";
-import debounce from "lodash/debounce"; // Import debounce function from lodash
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
+// import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const servicesList = [
   {
@@ -266,64 +268,64 @@ const servicesList = [
 ];
 
 const ServicesMembersPanel = () => {
-  const [chunkSize, setChunkSize] = useState(window.innerWidth >= 768 ? 3 : 2);
+  // const [chunkSize, setChunkSize] = useState(window.innerWidth >= 768 ? 3 : 2);
 
-  useEffect(() => {
-    const handleResize = debounce(() => {
-      // Debounce the resize event handler
-      setChunkSize(window.innerWidth >= 768 ? 3 : 2);
-    }, 200);
+  // useEffect(() => {
+  //   const handleResize = debounce(() => {
+  //     // Debounce the resize event handler
+  //     setChunkSize(window.innerWidth >= 768 ? 3 : 2);
+  //   }, 200);
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
-  const chunk = (array, size) => {
-    const chunked_arr = [];
-    for (let i = 0; i < array.length; i += size) {
-      if (i === 9) {
-        const tempArr = [];
-        tempArr.push({
-          serviceNumber: 10,
-          service: "",
-          text: "",
-        });
-        tempArr.push(array[array.length - 1]);
-        tempArr.push({
-          serviceNumber: 12,
-          service: "",
-          text: "",
-        });
-        chunked_arr.push(tempArr);
-        continue;
-      }
-      chunked_arr.push(array.slice(i, i + size));
-    }
+  // const chunk = (array, size) => {
+  //   const chunked_arr = [];
+  //   for (let i = 0; i < array.length; i += size) {
+  //     if (i === 9) {
+  //       const tempArr = [];
+  //       tempArr.push({
+  //         serviceNumber: 10,
+  //         service: "",
+  //         text: "",
+  //       });
+  //       tempArr.push(array[array.length - 1]);
+  //       tempArr.push({
+  //         serviceNumber: 12,
+  //         service: "",
+  //         text: "",
+  //       });
+  //       chunked_arr.push(tempArr);
+  //       continue;
+  //     }
+  //     chunked_arr.push(array.slice(i, i + size));
+  //   }
 
-    return chunked_arr;
-  };
+  //   return chunked_arr;
+  // };
 
-  useEffect(() => {
-    // Preload images
-    const images = [
-      pic1,
-      pic2,
-      pic3,
-      pic4,
-      pic5,
-      pic6,
-      pic7,
-      pic8,
-      pic9,
-      pic10,
-    ];
-    images.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, []); // Run once on component mount
+  // useEffect(() => {
+  //   // Preload images
+  //   const images = [
+  //     pic1,
+  //     pic2,
+  //     pic3,
+  //     pic4,
+  //     pic5,
+  //     pic6,
+  //     pic7,
+  //     pic8,
+  //     pic9,
+  //     pic10,
+  //   ];
+  //   images.forEach((src) => {
+  //     const img = new Image();
+  //     img.src = src;
+  //   });
+  // }, []); // Run once on component mount
 
-  const rows = chunk(servicesList, chunkSize);
+  // const rows = chunk(servicesList, chunkSize);
 
   const handleButtonClick = (url) => {
     // open the url in the new tab
@@ -331,71 +333,126 @@ const ServicesMembersPanel = () => {
   };
 
   return (
+    // <div>
+    //   {rows.map((row, rowIndex) => (
+    //     <div
+    //       key={rowIndex}
+    //       className={`grid ${
+    //         chunkSize === 3
+    //           ? "grid-cols-3 bg-white"
+    //           : `grid-cols-2 ${rowIndex % 2 === 0 ? "bg-white" : "bg-navyblue"}`
+    //       } justify-center items-start md:items-center`}
+    //     >
+    //       {row.map((service, index) => (
+    //         <div
+    //           key={index}
+    //           className="relative py-5 md:my-4  flex flex-col justify-center items-center group"
+    //         >
+    //           <div className="md:hover:drop-shadow-2xl  md:group-hover:bg-navyblue flex items-center justify-center md:hover:cursor-pointer">
+    //             <div className="flex w-11/12 md:w-5/6 flex-col gap-y-10">
+    //               <div className="w-full h-full">
+    //                 {service.pic && (
+    //                   <img
+    //                     src={`https://picsum.photos/1080/1960?random=${service.serviceNumber}`}
+    //                     alt="meeting"
+    //                     className="w-full h-44 md:h-[250px] object-cover md:pt-10"
+    //                   />
+    //                 )}
+    //               </div>
+    //               <div
+    //                 className={` text-lg  flex flex-col gap-y-10 ${
+    //                   chunkSize === 3
+    //                     ? "text-navyblue md:group-hover:text-white transition-transform group-hover:scale-105 duration-300 ease-out"
+    //                     : `${
+    //                         rowIndex % 2 === 0 ? "text-navyblue" : "text-white"
+    //                       }`
+    //                 }`}
+    //               >
+    //                 <h1 className="text-mobile-subheading md:text-[34px] font-normal font-georgia text-left md:h-16 ">
+    //                   {service.service}
+    //                 </h1>
+    //                 <p className="text-mobile-p md:text-lg font-normal h-60 md:h-44 ">
+    //                   {service.text}
+    //                 </p>
+    //               </div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       ))}
+    //     </div>
+    //   ))}
+    //   <div className={`flex justify-center bg-white items-center py-2 md:py-8`}>
+    //     <div className="">
+    //       <button
+    //         onClick={() => {
+    //           handleButtonClick(Links.Calendly);
+    //         }}
+    //         className="font-georgia font-bold text-mobile-p md:text-base hover:border-navyblue  rounded-xl px-3 md:px-5 py-2 md:py-3 flex border-2 border-white items-center bg-navyblue hover:bg-white transition-colors group"
+    //       >
+    //         <div className="md:text-button flex items-center group-hover:text-navyblue  text-white">
+    //           Let's discuss your Business Needs
+    //           <FontAwesomeIcon
+    //             icon={faArrowRight}
+    //             className="text-white md:text-2xl ml-4 group-hover:text-navyblue"
+    //           />
+    //         </div>
+    //       </button>
+    //     </div>
+    //   </div>
+    // </div>
     <div>
-      {rows.map((row, rowIndex) => (
-        <div
-          key={rowIndex}
-          className={`grid ${
-            chunkSize === 3
-              ? "grid-cols-3 bg-white"
-              : `grid-cols-2 ${rowIndex % 2 === 0 ? "bg-white" : "bg-navyblue"}`
-          } justify-center items-start md:items-center`}
-        >
-          {row.map((service, index) => (
+      <div
+        className={`grid ${
+          window.innerWidth > 768
+            ? "grid-cols-3 mx-16 py-16"
+            : "grid-cols-1 mx-1"
+        } `}
+      >
+        {servicesList.map((service, index) => {
+          return (
             <div
               key={index}
-              className="relative py-5 md:my-4  flex flex-col justify-center items-center group"
+              className="flex flex-col mx-5 my-5 hover:cursor-pointer transform hover:scale-105 transition-transform duration-300 ease-in-out rounded-lg bg-grey hover:bg-navyblue hover:text-white group text-navyblue drop-shadow-3xl"
             >
-              <div className="md:hover:drop-shadow-2xl  md:group-hover:bg-navyblue flex items-center justify-center md:hover:cursor-pointer">
-                <div className="flex w-11/12 md:w-5/6 flex-col gap-y-10">
-                  <div className="w-full h-full">
-                    {service.pic && (
-                      <img 
-                        src={`https://picsum.photos/1080/1960?random=${service.serviceNumber}`}
-                        alt="meeting"
-                        className="w-full h-44 md:h-[250px] object-cover md:pt-10"
-                      />
-                    )}
-                  </div>
-                  <div
-                    className={` text-lg  flex flex-col gap-y-10 ${
-                      chunkSize === 3
-                        ? "text-navyblue md:group-hover:text-white transition-transform group-hover:scale-105 duration-300 ease-out"
-                        : `${
-                            rowIndex % 2 === 0 ? "text-navyblue" : "text-white"
-                          }`
-                    }`}
-                  >
-                    <h1 className="text-mobile-subheading md:text-[34px] font-normal font-georgia text-left md:h-16 ">
+              <div>
+                <img
+                  src={service.pic}
+                  className="w-full h-[250px] object-fill rounded-t-lg"
+                  alt=""
+                />
+              </div>
+              <div className="mx-5 flex flex-col justify-between h-full">
+                <div>
+                  <div className="flex gap-x-8 pt-4">
+                    <h1 className="text-violet group-hover:text-lightblue text-[22px] md:text-3xl font-georgia">
                       {service.service}
                     </h1>
-                    <p className="text-mobile-p md:text-lg font-normal h-60 md:h-44 ">
-                      {service.text}
-                    </p>
+                  </div>
+
+                  <div className="pt-5 md:pt-5 text-mobile-p md:text-[16px] flex-1 pb-10">
+                    <p>{service.text}</p>
                   </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      ))}
+          );
+        })}
+      </div>
       <div className={`flex justify-center bg-white items-center py-2 md:py-8`}>
-        <div className="">
-          <button
-            onClick={() => {
-              handleButtonClick(Links.Calendly);
-            }}
-            className="font-georgia font-bold text-mobile-p md:text-base hover:border-navyblue  rounded-xl px-3 md:px-5 py-2 md:py-3 flex border-2 border-white items-center bg-navyblue hover:bg-white transition-colors group"
-          >
-            <div className="md:text-button flex items-center group-hover:text-navyblue  text-white">
-              Let's discuss your Business Needs
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                className="text-white md:text-2xl ml-4 group-hover:text-navyblue"
-              />
-            </div>
-          </button>
-        </div>
+        <button
+          onClick={() => {
+            handleButtonClick(Links.Calendly);
+          }}
+          className="font-georgia font-bold text-mobile-p md:text-base hover:border-navyblue  rounded-xl px-3 md:px-5 py-2 md:py-3 flex border-2 border-white items-center bg-navyblue hover:bg-white transition-colors group"
+        >
+          <div className="md:text-button flex items-center group-hover:text-navyblue  text-white">
+            Let's discuss your Business Needs
+            <FontAwesomeIcon
+              icon={faArrowRight}
+              className="text-white md:text-2xl ml-4 group-hover:text-navyblue"
+            />
+          </div>
+        </button>
       </div>
     </div>
   );
