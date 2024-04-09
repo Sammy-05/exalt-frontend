@@ -4,10 +4,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import blogsData from "../assets/blogsData.json";
 import background from "../assets/Backgrounds/bg6-min.jpg";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Blog = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [blogs, setBlogs] = useState([]);
+
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -17,6 +20,14 @@ const Blog = () => {
     };
   }, []);
 
+  useEffect(() => {
+    axios.get("http://localhost:3001/blogs").then((response) => {
+      console.log(response.data);
+      setBlogs(response.data);
+    });
+  }, []);
+
+  
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
