@@ -53,14 +53,14 @@ const Insights = () => {
               <div>
                 <div className="flex gap-x-8 pt-4">
                   <h1 className="text-violet group-hover:text-lightblue text-[22px] md:text-3xl font-georgia">
-                    {blog.mainHeading}
+                    {blog.Main_Heading}
                   </h1>
                 </div>
                 <div className="text-[16px] md:text-button font-light pt-1">
-                  <p>{blog.mainSubHeading}</p>
+                  <p>{blog.Sub_Heading}</p>
                 </div>
                 <div className="pt-5 md:pt-10 text-mobile-p md:text-[16px] flex-1">
-                  <p>{truncateText(blog.displayText[0], 3)}</p>
+                  <p>{truncateText(blog.Display_Text[0], 3)}</p>
                 </div>
               </div>
               <div className="w-full flex justify-end items-end pt-5 mb-3">

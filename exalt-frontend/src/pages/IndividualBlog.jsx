@@ -19,13 +19,13 @@ const IndividualBlog = ({ props }) => {
       <Navbar />
       <div>
         <TertiaryPanel
-          heading={blogData[blogId]?.mainHeading}
-          subheading={blogData[blogId]?.mainSubHeading}
-          text={blogData[blogId]?.displayText}
+          heading={blogData[blogId]?.Main_Heading}
+          subheading={blogData[blogId]?.Sub_Heading}
+          text={blogData[blogId]?.Display_Text}
           image={background}
         />
         <div className="py-10 md:py-20">
-          {blogData[blogId]?.body?.map((bodyItem, index) => (
+          {blogData[blogId]?.Main_Content?.map((bodyItem, index) => (
             <div
               key={index}
               className={`${"bg-white"} mx-10 md:px-20 flex flex-col gap-y-5 py-5 md:py-8 md:mx-60`}

@@ -1,19 +1,19 @@
 [
   {
     "blogID": 1,
-    "mainHeading": "The Outsourcing Boom",
-    "mainSubHeading": "How Businesses are Thriving with Global Talent",
-    "displayText": [
+    "Main_Heading": "The Outsourcing Boom",
+    "Sub_Heading": "How Businesses are Thriving with Global Talent",
+    "Display_Text": [
       "The business world is witnessing an unprecedented shift – the Outsourcing Boom. This global movement is not just about cost-cutting; it's a strategic play to harness world-class talent and innovative solutions. Let's delve into how businesses are capitalizing on this trend, leveraging global talent to achieve remarkable success."
     ],
-    "author": "Huzaifa Imran",
+    "Author_Name": "Huzaifa Imran",
     "Upwork Profile Link": "https://www.upwork.com/freelancers/anwarimran",
     "authortext": "Imran Anwar is an accomplished content writer with 12 years of diverse experience. Known for his skillful crafting of website copy, blogs, and email campaigns, he is a top-rated writer on Upwork. Imran excels in creating engaging narratives that resonate with a wide audience, demonstrating a unique blend of creativity and professionalism in his work.",
     "consultationHeading": "Schedule Your Strategic Consultation",
     "consultationText": [
       "Discover the potential of global outsourcing for your business. Book a strategic consultation with Exalt Solutions today and join the ranks of companies like TechNovate and RetailGenius, who are leveraging global talent for unmatched success."
     ],
-    "body": [
+    "Main_Content": [
       {
         "bodyHeading": "The Power of Global Talent: Realizing Unseen Potential",
         "text": [
@@ -60,19 +60,19 @@
   },
   {
     "blogID": 2,
-    "mainHeading": "Data Analysis Demystified",
-    "mainSubHeading": "Turning Data into Business Strategies",
-    "displayText": [
+    "Main_Heading": "Data Analysis Demystified",
+    "Sub_Heading": "Turning Data into Business Strategies",
+    "Display_Text": [
       "In the age of information, data is the new currency. In every gigabyte of data, there lies a story waiting to be told, insights waiting to be discovered, and strategies waiting to be formulated. Data analysis, the process of inspecting, cleansing, transforming, and modeling data, has become a cornerstone in the decision-making process of modern businesses. But what exactly is data analysis, and how can it transform mere numbers into actionable business strategies? Let's demystify this concept and explore its transformative power."
     ],
-    "author": "Faraz Zafar",
+    "Author_Name": "Faraz Zafar",
     "Upwork Profile Link": "https://www.upwork.com/freelancers/anwarimran",
     "authortext": "Imran Anwar is an accomplished content writer with 12 years of diverse experience. Known for his skillful crafting of website copy, blogs, and email campaigns, he is a top-rated writer on Upwork. Imran excels in creating engaging narratives that resonate with a wide audience, demonstrating a unique blend of creativity and professionalism in his work.",
     "consultationHeading": "Unlock Your Business Potential with Data Analysis",
     "consultationText": [
       "Ready to transform your data into a powerful strategic tool? Contact Exalt Solutions today to schedule a consultation. Discover how our data analysis services can propel your business to new heights of success."
     ],
-    "body": [
+    "Main_Content": [
       {
         "bodyHeading": "Understanding Data Analysis",
         "text": [
@@ -135,18 +135,18 @@
   },
   {
     "blogID": 3,
-    "mainHeading": "Breaking into New Markets",
-    "mainSubHeading": "The Role of Market Research in Global Expansion",
-    "displayText": [
+    "Main_Heading": "Breaking into New Markets",
+    "Sub_Heading": "The Role of Market Research in Global Expansion",
+    "Display_Text": [
       "In the fast-paced world of business, expansion into new, global markets is often the key to unlocking unprecedented growth and opportunities. However, venturing into uncharted territories comes with its unique set of challenges. The diversity in customer behaviors, cultural nuances, and regulatory landscapes across different regions can turn a promising venture into a perilous journey. This is where the power of market research becomes indispensable.",
       "Market research serves as the compass and map for businesses embarking on the journey of global expansion. It provides invaluable insights into consumer preferences, market trends, and competitive landscapes, paving the way for informed decision-making and strategic planning."
     ],
-    "author": "Imran Anwar",
+    "Author_Name": "Imran Anwar",
     "Upwork Profile Link": "https://www.upwork.com/freelancers/anwarimran",
     "authortext": "Imran Anwar is an accomplished content writer with 12 years of diverse experience. Known for his skillful crafting of website copy, blogs, and email campaigns, he is a top-rated writer on Upwork. Imran excels in creating engaging narratives that resonate with a wide audience, demonstrating a unique blend of creativity and professionalism in his work.",
     "consultationHeading": "Ready to Elevate Your Business with Global Expertise?",
     "consultationText": "Discover how our tailored research can guide your business strategy.",
-    "body": [
+    "Main_Content": [
       {
         "bodyHeading": "Understanding Market Research",
         "text": [
@@ -188,17 +188,17 @@
   },
   {
     "blogID": 4,
-    "mainHeading": "Talent Sourcing in the Digital Age",
-    "mainSubHeading": "How to Attract and Retain the Best",
-    "displayText": [
+    "Main_Heading": "Talent Sourcing in the Digital Age",
+    "Sub_Heading": "How to Attract and Retain the Best",
+    "Display_Text": [
       "In today's fast-paced digital age, businesses are constantly evolving to keep up with the ever-changing landscape of technology and consumer demands. One of the critical factors that can make or break a company's success is its ability to attract and retain top talent. The digital age has revolutionized the way we source and engage with potential candidates, making it essential for organizations to adapt and stay ahead of the competition. In this blog, we'll explore some strategies for talent sourcing in the digital age and share insights on how to attract and retain the best talent for your organization."
     ],
-    "author": "Imran Anwar",
+    "Author_Name": "Imran Anwar",
     "Upwork Profile Link": "https://www.upwork.com/freelancers/anwarimran",
     "authortext": "Imran Anwar is an accomplished content writer with 12 years of diverse experience. Known for his skillful crafting of website copy, blogs, and email campaigns, he is a top-rated writer on Upwork. Imran excels in creating engaging narratives that resonate with a wide audience, demonstrating a unique blend of creativity and professionalism in his work.",
     "consultationHeading": "Ready to Elevate Your Business with Global Expertise?",
     "consultationText": "Discover how our tailored research can guide your business strategy.",
-    "body": [
+    "Main_Content": [
       {
         "bodyHeading": "Leverage Online Platforms:",
         "text": [
@@ -242,19 +242,19 @@
   },
   {
     "blogID": 5,
-    "mainHeading": "Unlocking Growth: The Power of Outsourcing for Startups",
-    "mainSubHeading": "Driving Efficiency and Innovation Through Strategic Partnerships",
-    "displayText": [
+    "Main_Heading": "Unlocking Growth: The Power of Outsourcing for Startups",
+    "Sub_Heading": "Driving Efficiency and Innovation Through Strategic Partnerships",
+    "Display_Text": [
     "In the fast-paced world of startups, efficiency, agility, and resource optimization are paramount to success. However, limited budgets and manpower often pose significant challenges for emerging businesses striving to compete in the market. This is where outsourcing emerges as a game-changer, offering startups the opportunity to unlock growth by tapping into external resources and expertise. In this article, we'll delve into the myriad benefits of outsourcing for startups, exploring how it enables cost efficiency, access to specialized skills, scalability, increased productivity, and more. Join us as we uncover the transformative potential of outsourcing and its role in propelling startups towards sustainable growth and success."
     ],
-    "author": "Faraz Zafar",
+    "Author_Name": "Faraz Zafar",
     "Upwork Profile Link": "https://www.upwork.com/freelancers/farazzafar",
     "authortext": "Faraz Zafar is an experienced business strategist with a passion for helping startups thrive in competitive environments. With a background in entrepreneurship and management consulting, Faraz specializes in optimizing operations and driving growth through strategic outsourcing partnerships.",
     "consultationHeading": "Unlock Your Startup's Potential with Outsourcing",
     "consultationText": [
     "Ready to take your startup to the next level? Contact Faraz Zafar Consulting today to explore how strategic outsourcing can fuel your growth and innovation initiatives."
     ],
-    "body": [
+    "Main_Content": [
     {
     "bodyHeading": "1. Cost Efficiency:",
     "text": [
@@ -307,19 +307,19 @@
     },
     {
       "blogID": 6,
-      "mainHeading": "The Future of Work: Embracing Remote Collaboration and Virtual Teams",
-      "mainSubHeading": "Navigating the New Frontier of Work in the Digital Age",
-      "displayText": [
+      "Main_Heading": "The Future of Work: Embracing Remote Collaboration and Virtual Teams",
+      "Sub_Heading": "Navigating the New Frontier of Work in the Digital Age",
+      "Display_Text": [
           "In recent years, the traditional landscape of work has undergone a profound transformation, propelled by advancements in technology, shifting demographics, and changing attitudes towards work-life balance. One of the most significant trends to emerge from this evolution is the rise of remote collaboration and virtual teams. In this blog post, we'll explore the dynamics of remote work, examine its benefits and challenges, and delve into strategies for effectively managing and optimizing virtual teams in the digital age."
       ],
-      "author": "Huzaifa Imran",
+      "Author_Name": "Huzaifa Imran",
       "Upwork Profile Link": "https://www.upwork.com/freelancers/imranhuzaifa",
       "authortext": "Huzaifa Imran is a seasoned writer and researcher specializing in topics related to technology, workplace dynamics, and productivity. With a keen interest in the future of work, Huzaifa explores the intersection of technology and human behavior to uncover insights that drive organizational success.",
       "consultationHeading": "Unlock the Potential of Remote Collaboration",
       "consultationText": [
           "Ready to embrace the future of work? Contact Huzaifa Imran Consulting today to learn how remote collaboration and virtual teams can revolutionize your organization's approach to work."
       ],
-      "body": [
+      "Main_Content": [
           {
               "bodyHeading": "1. The Remote Work Revolution:",
               "text": [
@@ -372,19 +372,19 @@
   },
   {
     "blogID": 7,
-    "mainHeading": "Navigating the Path from Concept to Code: Unraveling the Software Development Journey",
-    "mainSubHeading": "A Comprehensive Guide to Software Development Lifecycle",
-    "displayText": [
+    "Main_Heading": "Navigating the Path from Concept to Code: Unraveling the Software Development Journey",
+    "Sub_Heading": "A Comprehensive Guide to Software Development Lifecycle",
+    "Display_Text": [
         "Embarking on a software development project is akin to setting sail on a voyage into the unknown, where each phase presents unique challenges and opportunities. From the initial spark of an idea to the final deployment of a fully-functional solution, the journey is filled with twists and turns that require careful navigation and expert guidance. In this exploration of the software development lifecycle, we'll delve into the intricacies of each stage, uncovering the strategies and insights that drive success in an ever-evolving landscape."
     ],
-    "author": "Taha Abid",
+    "Author_Name": "Taha Abid",
     "Upwork Profile Link": "https://www.upwork.com/freelancers/abidtaha",
     "authortext": "Taha Abid is a seasoned software engineer and project manager with a passion for unraveling the complexities of the software development lifecycle. With years of experience in leading cross-functional teams and delivering high-quality solutions, Taha brings a wealth of expertise to every project he undertakes.",
     "consultationHeading": "Embark on Your Software Development Journey",
     "consultationText": [
         "Ready to turn your software ideas into reality? Contact Taha Abid Consulting today to embark on a successful software development journey. Let's navigate the path from concept to code together."
     ],
-    "body": [
+    "Main_Content": [
         {
             "bodyHeading": "1. Setting Sail: Ideation and Discovery",
             "text": [
@@ -437,19 +437,19 @@
 },
 {
   "blogID": 8,
-  "mainHeading": "Unlocking Business Potential: A Practical Guide to Implementing Machine Learning and Artificial Intelligence",
-  "mainSubHeading": "Empowering Organizations to Harness the Power of ML/AI",
-  "displayText": [
+  "Main_Heading": "Unlocking Business Potential: A Practical Guide to Implementing Machine Learning and Artificial Intelligence",
+  "Sub_Heading": "Empowering Organizations to Harness the Power of ML/AI",
+  "Display_Text": [
       "In today's fast-paced digital landscape, businesses are constantly seeking innovative ways to gain a competitive edge and drive growth. Machine learning (ML) and artificial intelligence (AI) have emerged as powerful tools that can revolutionize operations, enhance decision-making, and unlock new opportunities for organizations across industries. However, for many business leaders, the prospect of implementing ML/AI solutions can seem daunting. In this guide, we'll demystify the process and provide practical steps for incorporating ML/AI into your business operations."
   ],
-  "author": "Taha Abid",
+  "Author_Name": "Taha Abid",
   "Upwork Profile Link": "https://www.upwork.com/freelancers/~012a8bc0d27c490c01",
   "authortext": "Taha Abid is a technology enthusiast with a passion for helping businesses leverage the power of machine learning and artificial intelligence to drive innovation and achieve strategic objectives. With a background in computer science and extensive experience in software development, Taha brings a wealth of knowledge and expertise to every ML/AI project he undertakes.",
   "consultationHeading": "Transform Your Business with Machine Learning and AI",
   "consultationText": [
       "Ready to unlock new levels of efficiency, insight, and innovation in your organization? Contact Taha Abid Consulting today to schedule a consultation and embark on your ML/AI journey with confidence."
   ],
-  "body": [
+  "Main_Content": [
       {
           "bodyHeading": "Step 1: Define Your Objectives",
           "text": [
@@ -499,19 +499,19 @@
 },
 {
   "blogID": 9,
-  "mainHeading": "Unveiling the Strategic Impact of Financial Forecasting in Business Growth",
-  "mainSubHeading": "Empowering Businesses to Navigate Uncertainties and Drive Success",
-  "displayText": [
+  "Main_Heading": "Unveiling the Strategic Impact of Financial Forecasting in Business Growth",
+  "Sub_Heading": "Empowering Businesses to Navigate Uncertainties and Drive Success",
+  "Display_Text": [
       "In today's dynamic business landscape, strategic decision-making is paramount for driving sustainable growth and staying ahead of the competition. Financial forecasting stands out as a powerful tool that empowers businesses to navigate uncertainties, capitalize on opportunities, and achieve their long-term objectives. In this article, we'll delve into the strategic significance of financial forecasting and explore how it can propel businesses towards success."
   ],
-  "author": "Huzaifa Imran",
+  "Author_Name": "Huzaifa Imran",
   "Upwork Profile Link": "https://www.upwork.com/freelancers/imranhuzaifa",
   "authortext": "Huzaifa Imran is a finance expert with a passion for helping businesses harness the power of financial forecasting to drive growth and achieve their strategic objectives. With extensive experience in financial analysis and strategic planning, Huzaifa brings a unique blend of expertise to every project he undertakes.",
   "consultationHeading": "Unlock Your Business Potential with Financial Forecasting",
   "consultationText": [
       "Ready to leverage the power of financial forecasting to drive strategic growth in your business? Contact Huzaifa Imran Consulting today to schedule a consultation. Let's navigate uncertainties and unlock new opportunities together."
   ],
-  "body": [
+  "Main_Content": [
       {
           "bodyHeading": "Understanding Financial Forecasting:",
           "text": [

@@ -36,7 +36,7 @@ const Blog = () => {
         } `}
       >
         {blogsData.map((blog, index) => {
-          const sentences = blog.displayText[0].split(/\.|\?|!/);
+          const sentences = blog.Display_Text[0].split(/\.|\?|!/);
           
           const firstSentence = sentences[0].trim() + ". " + sentences[1].trim() + ".";
           return (
@@ -57,11 +57,11 @@ const Blog = () => {
                 <div>
                   <div className="flex gap-x-8 pt-4">
                     <h1 className="text-violet group-hover:text-lightblue text-[22px] md:text-3xl font-georgia">
-                      {blog.mainHeading}
+                      {blog.Main_Heading}
                     </h1>
                   </div>
                   <div className="text-[16px] md:text-button font-thin pt-1">
-                    <p>{blog.mainSubHeading}</p>
+                    <p>{blog.Sub_Heading}</p>
                   </div>
                   <div className="pt-5 md:pt-10 text-mobile-p md:text-[16px] flex-1">
                     <p>{firstSentence}</p>
@@ -74,7 +74,7 @@ const Blog = () => {
                   <div className="pt-3 pb-4 flex items-center">
                     <img className="w-1/12 rounded-full" src={author} alt="" />
                     <p className="text-[12px] md:text-[16px] pl-2">
-                      {blog.author}
+                      {blog.Author_Name}
                     </p>
 
                   </div>
