@@ -1,0 +1,13 @@
+.blogPostContent h1 {
+  color: darkslategray;
+  line-height: 1.6;
+  font-size: 50px;
+  /* Add more styling as needed */
+}
+
+.blogPostContent p {
+  color: darkslategray;
+  line-height: 1.6;
+  font-size: 20px;
+  /* Add more styling as needed */
+}
