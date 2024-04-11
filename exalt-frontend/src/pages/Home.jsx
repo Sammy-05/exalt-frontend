@@ -9,7 +9,6 @@ import SecondaryPanel from '../components/secondaryPanel';
 import ServicesPanel from '../components/servicesPanel';
 import Navbar from '../components/Navbar';
 import Footer from "../components/Footer";
-
 import pic1 from "../assets/Home/pic1.jpg";
 import pic2 from "../assets/Home/pic2.jpg";
 import background from '../assets/homeBackground3.jpg';
