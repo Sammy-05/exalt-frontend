@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import QuillEditor from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
-import '../custom.css';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import QuillEditor from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import "../custom.css";
 
 const UploadBlog = () => {
-  const [mainHeading, setMainHeading] = useState('');
-  const [subHeading, setSubHeading] = useState('');
-  const [displayText, setDisplayText] = useState('');
-  const [mainContent, setMainContent] = useState('');
+  const [mainHeading, setMainHeading] = useState("");
+  const [subHeading, setSubHeading] = useState("");
+  const [displayText, setDisplayText] = useState("");
+  const [mainContent, setMainContent] = useState("");
   const [authorPic, setAuthorPic] = useState(null);
   const [displayPic, setDisplayPic] = useState(null);
-  const [authorName, setAuthorName] = useState('');
+  const [authorName, setAuthorName] = useState("");
   const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/blogs').then((response) => {
+    axios.get("http://localhost:3001/blogs").then((response) => {
       console.log(response.data);
       setBlogs(response.data);
     });
@@ -25,8 +25,8 @@ const UploadBlog = () => {
   const handleUpload = async () => {
     setLoading(true);
 
-    console.log('main heading', mainContent);
-    console.log('display', displayText);
+    console.log("main heading", mainContent);
+    console.log("display", displayText);
 
     const requestData = {
       Main_Heading: mainHeading,
@@ -39,12 +39,12 @@ const UploadBlog = () => {
     };
 
     try {
-      await axios.post('http://localhost:3001/save_blog', requestData);
+      await axios.post("http://localhost:3001/save_blog", requestData);
       setLoading(false);
-      alert('Blog uploaded successfully');
+      alert("Blog uploaded successfully");
     } catch (error) {
       setLoading(false);
-      alert('Failed to upload blog');
+      alert("Failed to upload blog");
     }
   };
 
@@ -59,7 +59,7 @@ const UploadBlog = () => {
     };
 
     fileReader.onerror = (error) => {
-      console.error('Error: ', error);
+      console.error("Error: ", error);
     };
   }
   function convertToBase64AuthorPic(e) {
@@ -73,7 +73,7 @@ const UploadBlog = () => {
     };
 
     fileReader.onerror = (error) => {
-      console.error('Error: ', error);
+      console.error("Error: ", error);
     };
   }
 
@@ -153,16 +153,16 @@ const UploadBlog = () => {
         Upload Blog
       </button>
 
-      {blogs.map((blog) => (
-        <div>
-          <div
-            className="blogPostContent"
-            dangerouslySetInnerHTML={{ __html: blog.Main_Content }}
-          />
-
-          
-        </div>
-      ))}
+      <div className="mx-10 md:px-20 flex flex-col gap-y-5 py-5 md:py-8 md:mx-60">
+        {blogs.map((blog) => (
+          <div>
+            <div
+              className="blogPostContent"
+              dangerouslySetInnerHTML={{ __html: blog.Main_Content }}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

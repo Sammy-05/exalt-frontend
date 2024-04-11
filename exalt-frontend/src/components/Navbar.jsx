@@ -39,7 +39,6 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    
     setActivePage(location.pathname);
 
     const handleScroll = () => {
@@ -192,7 +191,7 @@ const Navbar = () => {
         </div>
         <div
           onClick={() => {
-            window.open(Links.Calendly, "_blank")
+            window.open(Links.Calendly, "_blank");
           }}
           className={`hover:bg-violet hover:cursor-pointer bg-lightblue h-full w-1/2 flex items-center justify-center transition duration-300 ease-in-out`}
         >
@@ -202,10 +201,14 @@ const Navbar = () => {
     </div>
   ) : (
     <div
-      className={`${activePage === "/portfolio" ? "relative" : "absolute"} drop-shadow-xl w-full ${
+      className={`drop-shadow-xl w-full ${
         isMenuOpen
-          ? "bg-navyblue text-white rounded-b-2xl fixed"
-          : "bg-white text-navyblue"
+          ? `bg-navyblue text-white rounded-b-2xl ${
+              activePage === "/portfolio" ? "absolute" : "absolute fixed"
+            }`
+          : `bg-white text-navyblue ${
+              activePage === "/portfolio" ? "" : "absolute"
+            }`
       } z-50`}
     >
       <div className="flex items-center justify-center p-2">
@@ -275,6 +278,24 @@ const Navbar = () => {
             >
               Contact
             </h1>
+            <div className="flex pt-5 gap-x-10">
+              <button>
+                <a href={`https://wa.me/${whatsappNumber}`}>
+                  <FontAwesomeIcon
+                    icon={faWhatsapp}
+                    className="hover:cursor-pointer transition-transform transform hover:scale-110 duration-300 ease-in-out hover:text-violet text-lightblue text-4xl"
+                  />
+                </a>
+              </button>
+              <button
+                onClick={() => {
+                  window.open(Links.Calendly, "_blank");
+                }}
+                className={`hover:bg-violet hover:cursor-pointer px-3 py-2 rounded-lg bg-lightblue h-full flex items-center justify-center transition duration-300 ease-in-out`}
+              >
+                <p className="text-white text-button">Book a Meeting</p>
+              </button>
+            </div>
           </div>
         </div>
       )}

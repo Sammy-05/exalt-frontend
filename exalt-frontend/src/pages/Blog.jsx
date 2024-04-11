@@ -20,12 +20,12 @@ const Blog = () => {
     };
   }, []);
 
-  useEffect(() => {
-    axios.get("http://localhost:3001/blogs").then((response) => {
-      console.log(response.data);
-      setBlogs(response.data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get("http://localhost:3001/blogs").then((response) => {
+  //     console.log(response.data);
+  //     setBlogs(response.data);
+  //   });
+  // }, []);
 
   
   const handleResize = () => {
