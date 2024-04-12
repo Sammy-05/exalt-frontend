@@ -93,7 +93,7 @@ const Blog = () => {
               <div>
                 <img
                   src={Background[blog.blogID - 1]}
-                  className="w-full h-[250px] object-cover rounded-t-2xl"
+                  className="w-full h-[250px] object-fill rounded-t-2xl"
                   alt=""
                 />
               </div>
