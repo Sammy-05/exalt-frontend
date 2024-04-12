@@ -4,8 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import blogsData from '../assets/blogsData.json';
 
 import Links from '../assets/links.json';
+import pic1 from "../assets/blogs/pic1.jpg"
+import pic2 from "../assets/blogs/pic2.jpg"
 
 const Insights = () => {
+
+  const Background = [
+    pic1,
+    pic2,
+  ];
+
   const handleNavigate = () => {
     window.open(Links.Calendly, '_blank');
   };
@@ -44,7 +52,7 @@ const Insights = () => {
           >
             <div>
               <img
-                src={blogPhoto1}
+                src={Background[blog.blogID - 1]}
                 className="w-full h-[250px] object-fill rounded-t-2xl"
                 alt=""
               />

@@ -1,5 +1,4 @@
 import HalfPrimaryPanel from "../components/halfPrimaryPanel";
-import author from "../assets/blogs/Faraz.jpg"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import blogsData from "../assets/blogsData.json";
@@ -7,10 +6,44 @@ import background from "../assets/Backgrounds/bg6-min.jpg";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import Faraz from "../assets/blogs/Faraz.jpg"
+import Huzaifa from "../assets/blogs/Huzaifa.jpg"
+import Imran from "../assets/blogs/Imran.jpg"
+import Taha from "../assets/blogs/Taha.jpg"
+
+import pic1 from "../assets/blogs/pic1.jpg"
+import pic2 from "../assets/blogs/pic2.jpg"
+import pic3 from "../assets/blogs/pic3.jpg"
+import pic4 from "../assets/blogs/pic4.jpg"
+import pic5 from "../assets/blogs/pic5.jpg"
+import pic6 from "../assets/blogs/pic6.jpg"
+import pic7 from "../assets/blogs/pic7.jpg"
+import pic8 from "../assets/blogs/pic8.jpg"
+import pic9 from "../assets/blogs/pic9.jpg"
+
+
 const Blog = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [blogs, setBlogs] = useState([]);
 
+  const AuthorPics = [
+    { "Faraz Zafar" : Faraz },
+    { "Huzaifa Imran" : Huzaifa },
+    { "Imran Anwar" : Imran },
+    { "Taha Abid" : Taha }
+  ];
+
+  const Background = [
+    pic1,
+    pic2,
+    pic3,
+    pic4,
+    pic5,
+    pic6,
+    pic7,
+    pic8,
+    pic9
+  ];
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -59,8 +92,8 @@ const Blog = () => {
             >
               <div>
                 <img
-                  src={background}
-                  className="w-full h-[250px] object-fill rounded-t-2xl"
+                  src={Background[blog.blogID - 1]}
+                  className="w-full h-[250px] object-cover rounded-t-2xl"
                   alt=""
                 />
               </div>
@@ -83,7 +116,7 @@ const Blog = () => {
                     <hr />
                   </div>
                   <div className="pt-3 pb-4 flex items-center">
-                    <img className="w-1/12 rounded-full" src={author} alt="" />
+                    <img className="w-1/12 rounded-full" src={AuthorPics.find(author => Object.keys(author)[0] === blog.Author_Name)[blog.Author_Name]} alt="" />
                     <p className="text-[12px] md:text-[16px] pl-2">
                       {blog.Author_Name}
                     </p>
