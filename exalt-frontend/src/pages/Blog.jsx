@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import blogsData from "../assets/blogsData.json";
 import background from "../assets/Backgrounds/bg6-min.jpg";
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 import Faraz from "../assets/blogs/Faraz.jpg"
 import Huzaifa from "../assets/blogs/Huzaifa.jpg"
@@ -24,7 +23,7 @@ import pic9 from "../assets/blogs/pic9.jpg"
 
 const Blog = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [blogs, setBlogs] = useState([]);
+  // const [blogs, setBlogs] = useState([]);
 
   const AuthorPics = [
     { "Faraz Zafar" : Faraz },
@@ -53,12 +52,6 @@ const Blog = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   axios.get("http://localhost:3001/blogs").then((response) => {
-  //     console.log(response.data);
-  //     setBlogs(response.data);
-  //   });
-  // }, []);
 
   
   const handleResize = () => {

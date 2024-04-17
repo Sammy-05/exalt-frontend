@@ -1,8 +1,6 @@
-import blogPhoto1 from '../assets/blogPhoto1.png';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import blogsData from '../assets/blogsData.json';
-
 import Links from '../assets/links.json';
 import pic1 from "../assets/blogs/pic1.jpg"
 import pic2 from "../assets/blogs/pic2.jpg"
