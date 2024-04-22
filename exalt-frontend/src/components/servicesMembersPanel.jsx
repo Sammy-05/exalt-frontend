@@ -51,8 +51,8 @@ const servicesList = [
   },
   {
     serviceNumber: 7,
-    service: 'Copy Writing',
-    text: 'Find the right talent for your team with our specialized recruiting services. We connect you with skilled professionals from the global south, ensuring a perfect fit for your company’s needs.',
+    service: 'Copywriting',
+    text: 'Elevate your brand with our expert copywriting services. From captivating website content to persuasive marketing materials, we craft compelling narratives that resonate with your audience and drive results.',
     pic: pic10,
   },
   {
