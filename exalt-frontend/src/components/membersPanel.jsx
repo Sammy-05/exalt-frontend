@@ -12,7 +12,7 @@ const MembersPanel = () => {
         <div className="relative w-4/5 md:w-full md:mx-10 flex flex-col justify-center items-start md:items-center my-5 md:my-20 text-white gap-y-10 transition-transform transform hover:scale-105">
           <div className="flex flex-col justify-center items-start md:items-center">
             <div className="pb-5">
-              <img className="rounded-full w-[80px]" src={client1} alt="" />
+              <img className="rounded-full w-[80px]" src={client2} alt="" />
             </div>
 
             <h1 className="text-mobile-mainheading md:text-mainheading  font-georgia">
@@ -43,7 +43,7 @@ const MembersPanel = () => {
         <div className="relative w-4/5 md:w-full md:mx-10 flex flex-col justify-center items-start md:items-center my-5 md:my-20 text-white gap-y-10 transition-transform transform hover:scale-105">
           <div className="flex flex-col justify-center items-start md:items-center">
             <div className="pb-5">
-              <img className="rounded-full w-[80px]" src={client2} alt="" />
+              <img className="rounded-full w-[80px]" src={client1} alt="" />
             </div>
             <h1 className="text-mobile-mainheading md:text-mainheading font-georgia">
               {" "}
