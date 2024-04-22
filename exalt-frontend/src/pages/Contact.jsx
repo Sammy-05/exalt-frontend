@@ -1,56 +1,24 @@
-import { useState } from "react";
-import HalfPrimaryPanel from "../components/halfPrimaryPanel";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import background from "../assets/Backgrounds/bg5-min.jpg";
-import background1 from "../assets/Backgrounds/bg3-min.jpg";
-
-
-
+import { useEffect } from 'react';
+import HalfPrimaryPanel from '../components/halfPrimaryPanel';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import background from '../assets/Backgrounds/bg5-min.jpg';
+import background1 from '../assets/Backgrounds/bg3-min.jpg';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
 
-  const emailAddress = ["faraz.zafar@exaltsolutions.co","info@exaltsolutions.co"]
-  const emailSubject = "Exalt Website Contact";
+  const [state, handleSubmit] = useForm('mvoedoez');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let messageBody = "Dear Sir/Ma'am,\n\n";
-    messageBody += `My name is ${formData.name}`;
-    
-    if (formData.company) {
-      messageBody += ` and I am from ${formData.company}.\n\n`;
+  
+  useEffect(() => {
+    if (state.succeeded) {
+      alert('Your message has been sent. We will contact you shortly. Thank you!');
+      for(const form of document.getElementsByTagName('form')) {
+        form.reset();
+      }
     }
-    else
-    {
-      messageBody += `.\n\n`;
-    }
-    messageBody += `${formData.message}`;
-  
-    messageBody += "\n\nSincerely,\n";
-    messageBody += `${formData.name}`;
-  
-    const mailtoLink = `mailto:${emailAddress.join(",")}?subject=${encodeURIComponent(
-      emailSubject
-    )}&body=${encodeURIComponent(messageBody)}`;
-  
-    window.location.href = mailtoLink;
-  };
-  
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  }, [state.succeeded]);
 
   return (
     <div>
@@ -73,19 +41,20 @@ const Contact = () => {
               <div className="font-georgia text-heading md:text-6xl pb-14">
                 <h1>Contact Us</h1>
               </div>
+
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-col gap-y-5 w-4/5">
                   <div className="flex flex-col gap-y-2">
                     <h1 className="text-p font-thin">
                       Name <span className="font-bold text-asterik">*</span>
                     </h1>
+
                     <input
+                      id="name"
                       type="text"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
                       placeholder=""
-                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent" 
+                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent"
                       required
                     />
                   </div>
@@ -94,43 +63,47 @@ const Contact = () => {
                       Email <span className="font-bold text-asterisk">*</span>
                     </h1>
                     <input
+                      id="email"
                       type="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleChange}
                       placeholder=""
-                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent" 
+                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent"
                       required
                     />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
+                    />
+                    
                   </div>
                   <div className="flex flex-col gap-y-2">
                     <h1 className="text-p font-thin">Company Name</h1>
                     <input
+                      id="company"
                       type="text"
                       name="company"
-                      value={formData.company}
-                      onChange={handleChange}
                       placeholder=""
-                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent" 
+                      className="w-full px-4 py-3 bg-navyblue placeholder-white text-white border border-white bg-transparent"
                     />
                   </div>
                   <div className="flex flex-col gap-y-2">
                     <h1 className="text-p font-thin">
-                      Message Inquiry{" "}
+                      Message Inquiry{' '}
                       <span className="font-bold text-asterik">*</span>
                     </h1>
                     <textarea
+                      id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleChange}
                       placeholder=""
-                      className="w-full px-4 py-2 bg-navyblue placeholder-white text-white h-32 border border-white bg-transparent" 
+                      className="w-full px-4 py-2 bg-navyblue placeholder-white text-white h-32 border border-white bg-transparent"
                       required
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
+                    disabled={state.submitting}
                     className="bg-white text-navyblue font-bold py-2 px-4 hover:bg-violet hover:text-white"
                   >
                     Submit

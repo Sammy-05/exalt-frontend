@@ -94,19 +94,12 @@ const UploadBlog = () => {
         value={subHeading}
         onChange={(e) => setSubHeading(e.target.value)}
       />
-      {/* <input
-        className="border-2 border-blogtext p-2 rounded-lg w-1/4"
-        type="text"
-        placeholder="Display Text"
-        value={displayText}
-        onChange={(e) => setDisplayText(e.target.value)}
-      /> */}
       <QuillEditor
         className="h-48 w-1/4 p-2"
         theme="snow"
         value={displayText}
         onChange={(value) => setDisplayText(value)}
-        // onChange={(e) => setMainContent(e.target.value)}
+        
       />
       <input
         className="border-2 border-blogtext p-2 rounded-lg w-1/4"
@@ -115,18 +108,13 @@ const UploadBlog = () => {
         value={authorName}
         onChange={(e) => setAuthorName(e.target.value)}
       />
-      {/* <textarea
-        className="border-2 border-blogtext p-2 rounded-lg w-1/4"
-        placeholder="Content"
-        value={mainContent}
-        onChange={(e) => setMainContent(e.target.value)}
-      ></textarea> */}
+     
       <QuillEditor
         className="h-48 w-1/4 p-2"
         theme="snow"
         value={mainContent}
         onChange={(value) => setMainContent(value)}
-        // onChange={(e) => setMainContent(e.target.value)}
+        
       />
       <div>
         <h1 className="font-georgia text-button pb-2">
