@@ -8,6 +8,7 @@ import logo5 from '../assets/Home/logo5.png';
 import logo7 from '../assets/Home/logo7.png';
 import logo10 from '../assets/Home/logo10.png';
 import logo11 from '../assets/Home/logo11.png';
+import logo12 from '../assets/Home/logo12.png'
 import './imageSlider.css';
 
 const Companies = () => {
@@ -20,6 +21,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -28,6 +30,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -36,6 +39,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -44,6 +48,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -52,6 +57,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -60,6 +66,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -68,6 +75,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -76,6 +84,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -84,6 +93,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -92,6 +102,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -100,6 +111,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -108,6 +120,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -116,6 +129,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
     logo1,
     logo2,
     logo3,
@@ -124,6 +138,7 @@ const Companies = () => {
     logo7,
     logo10,
     logo11,
+    logo12,
   ];
 
   return (
