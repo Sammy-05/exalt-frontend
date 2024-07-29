@@ -84,7 +84,7 @@ const Navbar = () => {
           src={logo}
           onClick={() => handleNavigate("/")}
           alt="logo"
-          className="hover:cursor-pointer w-[25%] pb-2 transition-transform transform hover:scale-110"
+          className="hover:cursor-pointer w-[15%] pb-2 pt-2 pl-2 transition-transform transform hover:scale-110"
         />
       </div>
       <div className="text-p font-thin col-span-4 flex justify-evenly items-center">
