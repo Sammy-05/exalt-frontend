@@ -27,7 +27,7 @@ const servicesList = [
   },
   {
     serviceNumber: 3,
-    service: 'ML/AI Devlopment',
+    service: 'ML/AI Development',
     text: 'Harness the power of cutting-edge technology with our expertise in developing machine learning and AI solutions tailored to optimize and elevate your business processes.',
     pic: pic3,
   },
