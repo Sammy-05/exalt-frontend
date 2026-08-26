@@ -1,5 +1,7 @@
 # Exalt — Frontend
 
+**Live:** https://exaltsolutions.co
+
 A multi-page marketing and portfolio site for a digital agency: services, process, case studies,
 a blog with rich-text articles, and a working contact pipeline.
 
